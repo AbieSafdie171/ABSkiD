@@ -1,0 +1,17 @@
+
+
+Description: Welcome to A B Ski D, a skiing amusment park on Mars!
+
+
+			 Ski down our Martian slopes for the time of your life! After that, remember to visit our gift shop, cafeteria, and spa to
+			 spend all the remaining money you have :)
+
+
+How to play: 
+
+
+Pickups: X factor
+		 O2
+		 Warmth
+		 Alcohol
+		 Water
