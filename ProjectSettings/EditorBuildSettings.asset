@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/HowtoPlay.unity
+    guid: ad061f70440744109bec914749dd9516
+  - enabled: 1
+    path: Assets/Scenes/Abie_Safdie.unity
+    guid: a3affdd706a734c43b8a7e4fdfc4af50
+  - enabled: 1
+    path: Assets/Scenes/Daniel_Moss.unity
+    guid: cd41016d308224e049f6ce8f54ba9c45
+  - enabled: 1
+    path: Assets/Scenes/Sasha_Kaplow.unity
+    guid: 487b126bc08f443ae8e5e1f4d9e48072
+  - enabled: 1
+    path: Assets/Scenes/Jordan_Zicklin.unity
+    guid: e30bc613c38c845e28d2b0f4cd211c89
   m_configObjects: {}

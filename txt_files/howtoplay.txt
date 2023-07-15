@@ -15,3 +15,7 @@ Pickups: X factor
 		 Warmth
 		 Alcohol
 		 Water
+
+
+		 217 52 255
+		 183 255 52
