@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Mady_Barth.unity
     guid: a2c4bd188973d443a8b92a8302d629a0
   - enabled: 1
-    path: Assets/Scenes/Alex_malve.unity
+    path: Assets/Scenes/Alex_Malve.unity
     guid: 30c610c060f724a969d0870e0469e056
   - enabled: 1
     path: Assets/Scenes/Jordan_Cooper.unity
@@ -53,4 +53,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jacque_Velasco.unity
     guid: ce8c4ff085ef64e908f1b29b3baeeb46
+  - enabled: 1
+    path: Assets/Scenes/Hannah_Abikzer.unity
+    guid: 96bc50b4f53e24aae8eafd0f38ba399e
+  - enabled: 1
+    path: Assets/Scenes/Lilah_Silberman.unity
+    guid: 571448c618ea54d798db2b93a9c3555a
   m_configObjects: {}
