@@ -796,8 +796,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Strengths: Killer mustache, Knowledge of alcohol, Dating apps, Judaism,
-    Annoying Roy'
+  m_text: 'Strengths: The Outdoors, Crosswords, Knowing everyone, Hillel Check-in'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -886,7 +885,7 @@ GameObject:
   - component: {fileID: 431723203}
   - component: {fileID: 431723204}
   m_Layer: 5
-  m_Name: DanielMoss
+  m_Name: JordanZicklin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1864,8 +1863,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Stats: \nCoolness - 50\nSpeed - 75\nStamina - 60\nSkiing IQ - 5\nAlcohol
-    Tolerance - 10\n"
+  m_text: "Stats: \nCoolness - 10\nSpeed - 99\nStamina - 99\nSkiing IQ - 99\nAlcohol
+    Tolerance - 85\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2392,7 +2391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t- Clears the effects of Alcohol"
+  m_text: "  - Grants \"Dad Bod\" giving you \nimmunity for 5 seconds to obstacles"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2455,7 +2454,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 583.1239, y: 216.19629, z: -837.5381, w: -248.46811}
+  m_margin: {x: 632.66504, y: 249.73088, z: -813.379, w: -284.1172}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2662,9 +2661,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Bio: Hailing from sunny Huntington Beach, California, D$ knows his way
-    around the slopes. Oh wait... nvm. Well, this will probably be a disaster...
-    may as well get drunk then. Rennie''s awaits at the bottom!'
+  m_text: 'Bio: Jordan knows his way around the Hoodoo slopes, but will that translate
+    to the slopes on Mars? Who knows. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2799,7 +2797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Weaknesses: Dating apps'
+  m_text: 'Weaknesses: Has one outfit, On academic probation '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3221,7 +3219,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Daniel "D$" Moss
+  m_text: Jordan "JZ" Zicklin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3284,7 +3282,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -169.89554, y: -112.77051, z: -392.44873, w: 70.14957}
+  m_margin: {x: -146.89584, y: -112.77051, z: -392.44873, w: 70.14957}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3458,7 +3456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'X Factor: Alcohol'
+  m_text: "X Factor: Extreme Dad \nEnergy"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3570,8 +3568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -700, y: 0}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: -700, y: -100}
+  m_SizeDelta: {x: 300, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086753789
 MonoBehaviour:
@@ -3593,7 +3591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: efd8d5e0ebf0642d795db3aaa9cc5c4b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a153c14bb5521477f8b9751c21032c8d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -2,7 +2,7 @@ Abie "Abicus" Safdie -
 
 Bio: Founder and CEO of A B Ski D industries, Abie is an innovative, yet morally corrupt billionaire in the making. Due to his predatory business practices, A B Ski D is the most profitable theme park in the world. 
 
-Strengths: Rennie's Trivia, Intramural Sports, downing 10 shekel shots, wrapping tefillin, having luscious locks, being incredible
+Strengths:     
 Weaknesses: Fear of glitter, Fear of fire, Irrational attachment to Teddy Bears, skis into trees
 
 Stats:
@@ -129,7 +129,7 @@ Mady Barth -
 
 Bio: Mady Barth is a wildcard. Literally who knows. 
 
-Strengths: Gym, stylish, high energy, wildcard
+Strengths: Gym, Stylish, High Energy, Wildcard
 Weaknesses: wildcard
 
 Stats:
@@ -186,7 +186,7 @@ Alex Malve -
 
 Bio: New leader of Hillel, Alex does it all. Catch her on Monday building days to get the whole scoop of what Alex is all about!
 
-Strengths: Reads, tennis, calvin klein
+Strengths: Reads, Tennis, Calvin Klein
 Weaknesses: Bad at hillel check-in
 
 Stats:
@@ -260,8 +260,8 @@ Romie Avivi -
 
 Bio: Snoopy's biggest fan, Romie 
 
-Strengths: craft center, dancing, loves snoopy
-Weaknesses: roommates with lucinda
+Strengths: Craft Center, Dancing, Loves Snoopy
+Weaknesses: Roommates with Lucinda
 
 Stats:
 
@@ -278,8 +278,8 @@ Maddie Studer -
 
 Bio: Maddie might be too cool for skiing on Mars, but no one is too cool for A B Ski D. 
 
-Strengths: Science, the outdoors
-Weaknesses: Gets cold easily, can't dance, roommates with lucinda
+Strengths: Science, The Outdoors
+Weaknesses: Gets Cold Easily, Can't Dance, Roommates with Lucinda
 
 Stats:
 Coolness - 99 (minus 70 from weakness) = 29

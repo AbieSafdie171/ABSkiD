@@ -23,4 +23,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jordan_Zicklin.unity
     guid: e30bc613c38c845e28d2b0f4cd211c89
+  - enabled: 1
+    path: Assets/Scenes/Julia_Frank.unity
+    guid: e50a73dfb394140e091c36586d02a464
+  - enabled: 1
+    path: Assets/Scenes/Jonah_Kaplan.unity
+    guid: e658501cf2c44419abe7108dc4bd9283
+  - enabled: 1
+    path: Assets/Scenes/Romie_Avivi.unity
+    guid: 74988e7423db24134bece62dea22c9f9
+  - enabled: 1
+    path: Assets/Scenes/Maddie_Studer.unity
+    guid: c7cce9e91bebf4e2d912b7a2c2d69305
+  - enabled: 1
+    path: Assets/Scenes/Mady_Barth.unity
+    guid: a2c4bd188973d443a8b92a8302d629a0
+  - enabled: 1
+    path: Assets/Scenes/Alex_malve.unity
+    guid: 30c610c060f724a969d0870e0469e056
+  - enabled: 1
+    path: Assets/Scenes/Jordan_Cooper.unity
+    guid: 2d32b1703d8f549d8833bd8a18c8fa75
+  - enabled: 1
+    path: Assets/Scenes/Kaya_Rubinstein.unity
+    guid: 2ea32320acc9545f9b7595d18e52e8c3
+  - enabled: 1
+    path: Assets/Scenes/Lucie_Nortman.unity
+    guid: 296db6e0db8a843cf93be075ea757e84
+  - enabled: 1
+    path: Assets/Scenes/Jacque_Velasco.unity
+    guid: ce8c4ff085ef64e908f1b29b3baeeb46
   m_configObjects: {}
