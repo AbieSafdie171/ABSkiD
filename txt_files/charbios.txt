@@ -389,7 +389,7 @@ Weaknesses: ?
 
 Stats:
 
-Coolness - 55
+Coolness - 65
 Speed - 10
 Stamina - 65
 Skiing IQ - 70

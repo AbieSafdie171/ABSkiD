@@ -796,8 +796,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Strengths: Incredible hair, Excellent hair/eye color combo, Frequent visitor
-    of Rennie''s, From Colorado'
+  m_text: 'Strengths: Bossman, Can Handle D$, Drinking, Izzy
+
+    and Kuma'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -886,7 +887,7 @@ GameObject:
   - component: {fileID: 431723203}
   - component: {fileID: 431723204}
   m_Layer: 5
-  m_Name: JacqueVelasco
+  m_Name: AndyGitelson
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1865,8 +1866,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Stats: \nCoolness - 70\nSpeed - 75\nStamina - 65\nSkiing IQ - 70\nAlcohol
-    Tolerance - 60\n"
+  m_text: "Stats: \nCoolness - 65\nSpeed - 10\nStamina - 65\nSkiing IQ - 70\nAlcohol
+    Tolerance - 85\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2393,8 +2394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t- The Rings of Curls really\n\t  amplify things (doubles the\n         
-    effect of pickups)"
+  m_text: "\t- ?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2664,8 +2664,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Bio: Hillel''s very own Social Action Cohort intern, Jacque possesses
-    all that is needed to be a viable skiier.'
+  m_text: 'Bio: The boss of Hillel, Andy knows what it''s like to be in control.
+    But he''s not in control anymore motherfucker. Abie is. Good luck man.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2800,7 +2800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Weaknesses: None'
+  m_text: "Weaknesses: Non Hazy IPA Beers, \nD$'s Mouth"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3358,7 +3358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jacque Velasco
+  m_text: Andy Gitelson
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3595,7 +3595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'X Factor: Curls'
+  m_text: 'X Factor: Boss'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3730,7 +3730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7633fc4fae33a4fc8ae08f1bd3afcb8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3922335d073c45c4a1652e5d6b0f018, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

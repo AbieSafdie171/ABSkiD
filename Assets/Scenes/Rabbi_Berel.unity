@@ -796,8 +796,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Strengths: Incredible hair, Excellent hair/eye color combo, Frequent visitor
-    of Rennie''s, From Colorado'
+  m_text: 'Strengths: L''Chaim!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -886,7 +885,7 @@ GameObject:
   - component: {fileID: 431723203}
   - component: {fileID: 431723204}
   m_Layer: 5
-  m_Name: JacqueVelasco
+  m_Name: RabbiBerel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1865,8 +1864,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Stats: \nCoolness - 70\nSpeed - 75\nStamina - 65\nSkiing IQ - 70\nAlcohol
-    Tolerance - 60\n"
+  m_text: "Stats: \nCoolness - 90\nSpeed - 85\nStamina - 80\nSkiing IQ - 70\nAlc
+    Tolerance - L'Chaim!!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -1929,7 +1928,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 634.9064, y: -117.54202, z: -802.28735, w: 185.0256}
+  m_margin: {x: 634.9064, y: -117.54202, z: -860.32104, w: 185.0256}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2393,8 +2392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t- The Rings of Curls really\n\t  amplify things (doubles the\n         
-    effect of pickups)"
+  m_text: "\t- L'Chaim!!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2664,8 +2662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Bio: Hillel''s very own Social Action Cohort intern, Jacque possesses
-    all that is needed to be a viable skiier.'
+  m_text: 'Bio: L''Chaim!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2800,7 +2797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Weaknesses: None'
+  m_text: 'Weaknesses: L''Chaim!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3181,7 +3178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1947054275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3222,8 +3219,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "*Note: Maddie loses 70 coolness points because of her\n\t  weakness to
-    get cold easily\n"
+  m_text: '*Note: Hineni
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3286,7 +3284,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -103.86365, y: 288.79797, z: -506.53662, w: -189.13734}
+  m_margin: {x: -377.48416, y: 324.23123, z: -506.53662, w: -189.13734}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3358,7 +3356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jacque Velasco
+  m_text: Rabbi Berel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3595,7 +3593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'X Factor: Curls'
+  m_text: 'X Factor: L''Chaim!!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3730,7 +3728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7633fc4fae33a4fc8ae08f1bd3afcb8b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2942cc258f3b74a20b5b8e2e46e6d8e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

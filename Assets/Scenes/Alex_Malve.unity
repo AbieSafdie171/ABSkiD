@@ -1864,8 +1864,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Stats: \nCoolness - 65\nSpeed - 60\nStamina - 70\nSkiing IQ - 70\nAlcohol
-    Tolerance - 40\n"
+  m_text: "Stats: \nCoolness - 65 - 50 = 15\nSpeed - 60\nStamina - 70\nSkiing IQ
+    - 70\nAlcohol Tolerance - 40\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2392,7 +2392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t- ?"
+  m_text: "\t- Springboard your way to \n          Spring (Grants full warmth)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2798,7 +2798,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Weaknesses: Bad at Hillel Check-in'
+  m_text: 'Weaknesses: Bad at Hillel Check-in,
+
+    Afraid of the Sun, Gets Cold
+    Easily'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3179,7 +3182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1947054275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3220,8 +3223,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "*Note: Maddie loses 70 coolness points because of her\n\t  weakness to
-    get cold easily\n"
+  m_text: "*Note: Alex loses 50 coolness points because of her\n\t  weakness to get
+    cold easily\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -3593,7 +3596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'X Factor: ?'
+  m_text: 'X Factor: Springboard'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
