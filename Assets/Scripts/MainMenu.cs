@@ -6,16 +6,32 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-    public void CharacterSelect(){
+    public AudioSource src;
 
-        SceneManager.LoadScene("Abie_Safdie");
+    public void PlayEffect(){
+
+        src.time = 1.05f;
+        src.Play();        
 
     }
 
+    public void CharacterSelect(){
+
+        PlayEffect();
+
+        SceneManager.LoadScene("Abie_Safdie");
+
+        
+    }
+
+        
+
+    
+
     public void HowToPlay(){
 
-
-            SceneManager.LoadScene("HowtoPlay");
+        PlayEffect();
+        SceneManager.LoadScene("HowtoPlay");
 
 
 
@@ -23,6 +39,7 @@ public class MainMenu : MonoBehaviour
 
 
     public void QuitGame(){
+        
         Application.Quit();
     }
 }

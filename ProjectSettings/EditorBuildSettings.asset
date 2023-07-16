@@ -71,4 +71,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rabbi_Berel.unity
     guid: ec633bc44ae1b4e36b0da19fc586cab0
+  - enabled: 1
+    path: Assets/Scenes/Bri_Tafoya.unity
+    guid: a75914dd1f2564a9caedc7fb725765c5
+  - enabled: 1
+    path: Assets/Scenes/Roy_Wonder.unity
+    guid: dd2e2861ba5a34e01b789adcbd660844
+  - enabled: 1
+    path: Assets/Scenes/Lucinda_Smith.unity
+    guid: b4c112651dbec413fb0159985b7ba815
+  - enabled: 1
+    path: Assets/Scenes/Rabbi_Meir.unity
+    guid: 01f665f5b9d0d4a80a77a930c58364fe
+  - enabled: 1
+    path: Assets/Scenes/Portia_Carney.unity
+    guid: 5f118bcda746a42cbac3094c390e62d2
   m_configObjects: {}

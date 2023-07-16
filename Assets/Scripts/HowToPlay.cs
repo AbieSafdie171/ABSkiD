@@ -5,8 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class HowToPlay : MonoBehaviour
 {
-    public void BackButton (){
 
+    public AudioSource src;
+
+    public void PlayEffect(){
+
+        src.time = 1.05f;
+        src.Play();        
+
+    }
+
+    public void BackButton (){
+        
+        PlayEffect();
         SceneManager.LoadScene("MainMenu");
 
 
