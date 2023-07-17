@@ -86,4 +86,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Portia_Carney.unity
     guid: 5f118bcda746a42cbac3094c390e62d2
+  - enabled: 1
+    path: Assets/Scenes/SkiScene.unity
+    guid: 57b20c68b4c6a43709736a15254114af
   m_configObjects: {}

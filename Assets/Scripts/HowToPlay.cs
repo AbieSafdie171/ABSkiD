@@ -22,4 +22,9 @@ public class HowToPlay : MonoBehaviour
 
 
     }
+
+    public void PlayButton(){
+        PlayEffect();
+        SceneManager.LoadScene("SkiScene");
+    }
 }
