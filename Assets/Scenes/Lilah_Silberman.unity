@@ -1867,7 +1867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Stats: \nCoolness - 90\nSpeed - 70\nStamina - 80\nSkiing IQ - 70\nAlcohol
+  m_text: "Stats: \nCoolness - 99\nSpeed - 70\nStamina - 80\nSkiing IQ - 70\nAlcohol
     Tolerance - 25\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
