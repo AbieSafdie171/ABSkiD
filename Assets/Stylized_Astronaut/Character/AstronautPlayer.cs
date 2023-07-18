@@ -20,18 +20,32 @@ namespace AstronautPlayer
 		}
 
 		void Update (){
-			if (Input.GetKey ("w")) {
-				anim.SetInteger ("AnimationPar", 0);
-			}  else {
-				anim.SetInteger ("AnimationPar", 0);
-			}
 
 			if(controller.isGrounded){
-				moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
+				moveDirection = transform.forward * speed;
 			}
 
 			float turn = Input.GetAxis("Horizontal");
-			transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+			Debug.Log(transform.eulerAngles.y);
+
+			float val = turn * turnSpeed * Time.deltaTime;
+
+			float curAngle = transform.eulerAngles.y;
+
+			if (curAngle < 270 && curAngle > 250){
+				transform.Rotate(0, 2, 0);}
+			else if (curAngle > 90 && curAngle < 110){
+				transform.Rotate(0, -2, 0);}
+
+			// turn right
+			if (val > 0 && (curAngle >= 270 || curAngle <= 90)){
+				transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);}
+
+			// turn left
+			if (val < 0 && (curAngle >= 270 || curAngle <= 90)){
+				transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);}
+
+			
 			controller.Move(moveDirection * Time.deltaTime);
 			moveDirection.y -= gravity * Time.deltaTime;
 		}

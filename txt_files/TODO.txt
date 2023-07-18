@@ -2,10 +2,17 @@
 	More if i want
 
 - Char Bios
-	Romie
-	Ella
-	Chloe
 	Lucie
-	...
 
-- Main Menu Button Sound Effects
+- Ski Figure
+- Fix the Camera
+- Endless Mode
+
+
+TURN LEFT NEGATIVE
+> 270 and < 0
+
+
+TURN RIGHT POSITIVE
+
+> 270(5) and < 90
