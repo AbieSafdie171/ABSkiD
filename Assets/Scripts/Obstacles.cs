@@ -5,19 +5,20 @@ using UnityEngine;
 public class Obstacles : MonoBehaviour
 {
 
-    AstronautPlayer astronautPlayer;
+    // AstronautPlayer astronautPlayer;
 
     public AudioSource treeSound;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        astronautPlayer = GameObject.FindObjectOfType<AstronautPlayer>();
+        // astronautPlayer = GameObject.FindObjectOfType<AstronautPlayer>();
     }
 
     private void OnTriggerEnter(Collider other){
 
-            Debug.Log("Collision!!");
+            // Debug.Log(gameObject.name);
             if (gameObject != null)
                 treeSound.Play();
 

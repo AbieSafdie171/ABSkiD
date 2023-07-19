@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeSound: {fileID: 6802156726748865971}
+  healthBar: {fileID: 8728098326979349356, guid: 8deedbbcb75b043f8883d37142dee702, type: 3}
 --- !u!1001 &1175709664776920337
 PrefabInstance:
   m_ObjectHideFlags: 0

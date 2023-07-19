@@ -18,6 +18,8 @@ using System.Collections;
 
 		public GameObject rightSki;
 
+		public HealthBar healthBar;
+
 		void Start () {
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
@@ -62,6 +64,48 @@ using System.Collections;
 
 			moveDirection.y -= gravity * Time.deltaTime;
 		}
+
+
+	private void OnTriggerEnter(Collider other){
+
+            if (other.gameObject.name == "tree 5(Clone)"){
+				int cHealth = healthBar.GetCurrentHealth();
+				cHealth--;
+				healthBar.SetHealth(cHealth);
+				}
+
+			if (other.gameObject.name == "tree 6(Clone)"){
+        		int cHealth = healthBar.GetCurrentHealth();
+				cHealth--;
+				healthBar.SetHealth(cHealth);
+				}
+
+			if (other.gameObject.name == "tree 16(Clone)"){
+        		int cHealth = healthBar.GetCurrentHealth();
+				cHealth--;
+				healthBar.SetHealth(cHealth);
+				}
+
+			if (other.gameObject.name == "Tree Trunk 1(Clone)"){
+        		int cHealth = healthBar.GetCurrentHealth();
+				cHealth--;
+				healthBar.SetHealth(cHealth);
+				}
+
+
+
+			/*
+            if (gameObject != null)
+                treeSound.Play();
+
+            int cHealth = healthBar.GetCurrentHealth();
+
+            cHealth--;
+
+            healthBar.SetHealth(cHealth);
+			*/
+
+    }
 
 
 

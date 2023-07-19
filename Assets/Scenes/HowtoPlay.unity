@@ -2655,9 +2655,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pickups: O2 - Replenish Oxygen\n            Sweater - Replenish Warmth\n           
-    Alcohol - Makes you drunk\n            Water - Reverses Alcohol\n           
-    X Factor - Powers X Factor\n            First Aid - Replenishes Health\n"
+  m_text: "Pickups: O2 - Replenish Oxygen\n            Sun - Replenish Warmth\n           
+    Alcohol - Makes you drunk\n            Watermelon - Reverses Alcohol\n           
+    X Factor - Powers X Factor\n            Heart - Replenishes Health\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}

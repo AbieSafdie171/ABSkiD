@@ -21,7 +21,7 @@ public class Pickups : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
 
-        Debug.Log(gameObject.name);
+        // Debug.Log(gameObject.name);
 
         if (other.gameObject.name != "Player"){
             return;
