@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 
 
@@ -19,6 +20,12 @@ using System.Collections;
 		public GameObject rightSki;
 
 		public HealthBar healthBar;
+
+		public FloatBar oxygenBar;
+
+		public FloatBar heatBar;
+
+		public HealthBar xFactorBar;
 
 		void Start () {
 			controller = GetComponent <CharacterController>();
@@ -74,6 +81,10 @@ using System.Collections;
 				int cHealth = healthBar.GetCurrentHealth();
 				cHealth--;
 				healthBar.SetHealth(cHealth);
+
+				if (healthBar.GetCurrentHealth() == 0){
+					SceneManager.LoadScene("HowtoPlay");
+				}
 			}
 
             if (other.gameObject.name == "Heart(Clone)")
@@ -81,6 +92,29 @@ using System.Collections;
 				int cHealth = healthBar.GetCurrentHealth();
 				cHealth++;
 				healthBar.SetHealth(cHealth);
+			}
+
+			if (other.gameObject.name == "Oxygen(Clone)")
+			{
+				float cHealth = oxygenBar.GetCurrentHealth();
+				cHealth += 200;
+				oxygenBar.SetHealth(cHealth);
+				
+			}
+
+			if (other.gameObject.name == "Sun(Clone)")
+			{
+				float cHealth = heatBar.GetCurrentHealth();
+				cHealth += 200;
+				heatBar.SetHealth(cHealth);
+				
+			}
+
+			if (other.gameObject.name == "X-Factor(Clone)")
+			{
+				int cHealth = xFactorBar.GetCurrentHealth();
+				cHealth++;
+				xFactorBar.SetHealth(cHealth);
 			}
 
 			
