@@ -4,7 +4,6 @@ public class GroundSpawn : MonoBehaviour
 {
     
 
-
     public GameObject groundTile;
 
     Vector3 nextSpawnPoint;

@@ -3,7 +3,7 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
 
-    public int counter = 0;
+    // public int counter = 0;
 
     GroundSpawn groundSpawn;
 
@@ -13,6 +13,11 @@ public class GroundTile : MonoBehaviour
     {
         groundSpawn = GameObject.FindObjectOfType<GroundSpawn>();
         SpawnTree();
+        SpawnTrunk();
+        SpawnLeftRocks();
+        SpawnRightRocks();
+        SpawnLeftBillboardRocks();
+        SpawnRightBillboardRocks();
         
     }
 
@@ -39,8 +44,47 @@ public class GroundTile : MonoBehaviour
 
         Instantiate(treePrefab, spawnPoint.position, Quaternion.identity, transform);
 
+    }
+    public GameObject trunkPrefab;
+    void SpawnTrunk(){
 
+        int index = Random.Range(22, 30);
+        Transform spawnPoint = transform.GetChild(index).transform;
 
+        Instantiate(trunkPrefab, spawnPoint.position, Quaternion.identity, transform);
+
+    }
+
+    public GameObject rockPrefab;
+
+    void SpawnLeftRocks(){
+
+        Transform spawnPointRock = transform.GetChild(18).transform;
+
+        Instantiate(rockPrefab, spawnPointRock.position, Quaternion.identity, transform);
+
+    }
+
+    void SpawnRightRocks(){
+
+        Transform spawnPointRock = transform.GetChild(19).transform;
+
+        Instantiate(rockPrefab, spawnPointRock.position, Quaternion.identity, transform);
+
+    }
+
+    public GameObject rockPrefab2;
+
+    void SpawnLeftBillboardRocks(){
+            Transform spawnPointRock = transform.GetChild(20).transform;
+
+        Instantiate(rockPrefab2, spawnPointRock.position, Quaternion.identity, transform);
+    }
+
+    void SpawnRightBillboardRocks(){
+        Transform spawnPointRock = transform.GetChild(21).transform;
+
+        Instantiate(rockPrefab2, spawnPointRock.position, Quaternion.identity, transform);
     }
 
 

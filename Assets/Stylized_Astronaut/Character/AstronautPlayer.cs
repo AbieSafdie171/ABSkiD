@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-namespace AstronautPlayer
-{
+
 
 	public class AstronautPlayer : MonoBehaviour {
 
@@ -13,6 +12,11 @@ namespace AstronautPlayer
 		public float turnSpeed = 400.0f;
 		private Vector3 moveDirection = Vector3.zero;
 		public float gravity = 20.0f;
+
+
+		public GameObject leftSki;
+
+		public GameObject rightSki;
 
 		void Start () {
 			controller = GetComponent <CharacterController>();
@@ -26,7 +30,6 @@ namespace AstronautPlayer
 			}
 
 			float turn = Input.GetAxis("Horizontal");
-			// Debug.Log(transform.eulerAngles.y);
 
 			float val = turn * turnSpeed * Time.deltaTime;
 
@@ -47,7 +50,19 @@ namespace AstronautPlayer
 
 			
 			controller.Move(moveDirection * Time.deltaTime);
+
+			if (transform.position.x <= -20f){
+				moveDirection.x += 2.0f;
+			}
+
+			if (transform.position.x >= 20f){
+				moveDirection.x -= 2.0f;
+			}
+
+
 			moveDirection.y -= gravity * Time.deltaTime;
 		}
+
+
+
 	}
-}
