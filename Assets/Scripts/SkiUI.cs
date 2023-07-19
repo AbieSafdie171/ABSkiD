@@ -6,8 +6,10 @@ public class SkiUI : MonoBehaviour
 {
 
     private bool lone2Val = false;
+    private bool hero = false;
     public AudioSource src;
     public AudioClip lone2;
+    public AudioClip heroClip;
 
 
     public void PlayEffect(){
@@ -32,6 +34,10 @@ public class SkiUI : MonoBehaviour
             if (lone2Val == false){
                 src.clip = lone2;
                 lone2Val = true;
+                src.Play();
+            } else if (hero == false){
+                src.clip = heroClip;
+                hero = true;
                 src.Play();
             }
         }

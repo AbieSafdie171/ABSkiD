@@ -4,15 +4,10 @@
 - Char Bios
 	Lucie
 
-- Ski Figure
-- Fix the Camera
+
+
+
 - Endless Mode
+- Environment
 
 
-TURN LEFT NEGATIVE
-> 270 and < 0
-
-
-TURN RIGHT POSITIVE
-
-> 270(5) and < 90

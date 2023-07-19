@@ -26,23 +26,23 @@ namespace AstronautPlayer
 			}
 
 			float turn = Input.GetAxis("Horizontal");
-			Debug.Log(transform.eulerAngles.y);
+			// Debug.Log(transform.eulerAngles.y);
 
 			float val = turn * turnSpeed * Time.deltaTime;
 
 			float curAngle = transform.eulerAngles.y;
 
-			if (curAngle < 270 && curAngle > 250){
+			if (curAngle < 290 && curAngle > 270){
 				transform.Rotate(0, 2, 0);}
-			else if (curAngle > 90 && curAngle < 110){
+			else if (curAngle > 70 && curAngle < 90){
 				transform.Rotate(0, -2, 0);}
 
 			// turn right
-			if (val > 0 && (curAngle >= 270 || curAngle <= 90)){
+			if (val > 0 && (curAngle >= 290 || curAngle <= 70)){
 				transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);}
 
 			// turn left
-			if (val < 0 && (curAngle >= 270 || curAngle <= 90)){
+			if (val < 0 && (curAngle >= 290 || curAngle <= 70)){
 				transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);}
 
 			
