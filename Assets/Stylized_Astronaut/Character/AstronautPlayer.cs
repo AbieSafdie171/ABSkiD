@@ -68,42 +68,22 @@ using System.Collections;
 
 	private void OnTriggerEnter(Collider other){
 
-            if (other.gameObject.name == "tree 5(Clone)"){
+            if (other.gameObject.name == "tree 5(Clone)" || other.gameObject.name =="tree 6(Clone)"
+			|| other.gameObject.name == "tree 16(Clone)" || other.gameObject.name == "Tree Trunk 1(Clone)")
+			{
 				int cHealth = healthBar.GetCurrentHealth();
 				cHealth--;
 				healthBar.SetHealth(cHealth);
-				}
+			}
 
-			if (other.gameObject.name == "tree 6(Clone)"){
-        		int cHealth = healthBar.GetCurrentHealth();
-				cHealth--;
+            if (other.gameObject.name == "Heart(Clone)")
+			{
+				int cHealth = healthBar.GetCurrentHealth();
+				cHealth++;
 				healthBar.SetHealth(cHealth);
-				}
+			}
 
-			if (other.gameObject.name == "tree 16(Clone)"){
-        		int cHealth = healthBar.GetCurrentHealth();
-				cHealth--;
-				healthBar.SetHealth(cHealth);
-				}
-
-			if (other.gameObject.name == "Tree Trunk 1(Clone)"){
-        		int cHealth = healthBar.GetCurrentHealth();
-				cHealth--;
-				healthBar.SetHealth(cHealth);
-				}
-
-
-
-			/*
-            if (gameObject != null)
-                treeSound.Play();
-
-            int cHealth = healthBar.GetCurrentHealth();
-
-            cHealth--;
-
-            healthBar.SetHealth(cHealth);
-			*/
+			
 
     }
 
