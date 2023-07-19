@@ -7,6 +7,8 @@ public class Obstacles : MonoBehaviour
 
     AstronautPlayer astronautPlayer;
 
+    public AudioSource treeSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +16,10 @@ public class Obstacles : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-        
+
             Debug.Log("Collision!!");
+            if (gameObject != null)
+                treeSound.Play();
 
     }
 

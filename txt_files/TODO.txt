@@ -7,9 +7,10 @@
 
 
 
-- Collision Sound Effect
-- More Obstacles
+- UI Bars
+
 - Billboards
-- Pickups
+
+- Pickup Sound effects
 
 

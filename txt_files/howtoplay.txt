@@ -10,11 +10,12 @@ Description: Welcome to A B Ski D, a skiing amusment park on Mars!
 How to play: 
 
 
-Pickups: X factor
-		 O2
-		 Warmth
-		 Alcohol
-		 Water
+Pickups: X factor ✅
+		 O2 ✅
+		 Warmth ✅
+		 Alcohol ✅
+		 Watermelon - ✅
+		 Heart - ✅
 
 
 		 217 52 255
