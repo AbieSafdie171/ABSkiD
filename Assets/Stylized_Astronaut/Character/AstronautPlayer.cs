@@ -134,6 +134,8 @@ using UnityEngine.SceneManagement;
 				cHealth4 += 200;
 				oxygenBar.SetHealth(cHealth4);
 
+				GameManager.increaseScore(500);
+
 			}
 
 			

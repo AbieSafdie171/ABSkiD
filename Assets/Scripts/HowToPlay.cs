@@ -8,6 +8,14 @@ public class HowToPlay : MonoBehaviour
 
     public AudioSource src;
 
+    public static string chosenChar;
+
+    public void Start(){
+        Scene currentScene = SceneManager.GetActiveScene();
+        // Debug.Log(currentScene.name);
+        chosenChar = currentScene.name;
+    }
+
     public void PlayEffect(){
 
         src.time = 1.05f;
@@ -22,7 +30,11 @@ public class HowToPlay : MonoBehaviour
 
 
     }
-
+    
+    public static string getCharacter(){
+        return chosenChar;
+    }
+    
     public void PlayButton(){
         PlayEffect();
         SceneManager.LoadScene("SkiScene");

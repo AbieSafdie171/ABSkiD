@@ -8,7 +8,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
 
-
     public HealthBar healthBar;
 
     public FloatBar oxygenBar;
@@ -25,8 +24,14 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text scoreText;
 
+    public TMP_Text chosenPlayer;
+
     public static float getScore(){
         return score;
+    }
+
+    public static void increaseScore(int x){
+        score += x;
     }
 
     private void Awake(){
@@ -41,8 +46,9 @@ public class GameManager : MonoBehaviour
         healthBar.SetMaxHealth(5);
         oxygenBar.SetMaxHealth(1000);
         heatBar.SetMaxHealth(1000);
-
         score = 0;
+
+        chosenPlayer.text = HowToPlay.getCharacter();
     }
 
     // Update is called once per frame
