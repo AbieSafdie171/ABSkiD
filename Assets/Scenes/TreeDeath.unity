@@ -1112,12 +1112,12 @@ GameObject:
   - component: {fileID: 882162388}
   - component: {fileID: 882162387}
   m_Layer: 5
-  m_Name: Stats
+  m_Name: HowToPlay (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &882162386
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1467,7 +1467,7 @@ GameObject:
   - component: {fileID: 1296480034}
   - component: {fileID: 1296480033}
   m_Layer: 5
-  m_Name: Bio
+  m_Name: HowToPlay (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1513,13 +1513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ski down our Martian slopes for the time of your life!!!
-
-    After that,
-    remember to visit our gift shop, cafeteria, and spa to spend all the remaining
-    money you have :)
-
-'
+  m_text: Honestly, that's really embarrassing for you
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -1582,7 +1576,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -331.1735, y: -148.88657, z: -392.44873, w: 70.14957}
+  m_margin: {x: -189.95242, y: -113.3143, z: -392.44873, w: 40.506104}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1608,7 +1602,7 @@ GameObject:
   - component: {fileID: 1392619234}
   - component: {fileID: 1392619233}
   m_Layer: 5
-  m_Name: Controls
+  m_Name: HowToPlay (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1654,8 +1648,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "How to Play: A - Move Left\n                  D - Move Right\t\n                 
-    Space - Use X Factor\t\t     "
+  m_text: 'Score: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -1682,8 +1675,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1718,7 +1711,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -331.1735, y: -223.78577, z: -392.44873, w: 167.56859}
+  m_margin: {x: -380.5793, y: -191.57928, z: -64.39392, w: 167.56859}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2236,12 +2229,12 @@ GameObject:
   - component: {fileID: 2021754648}
   - component: {fileID: 2021754647}
   m_Layer: 5
-  m_Name: Note
+  m_Name: HowToPlay (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2021754646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2418,7 +2411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to AB Ski D!! '
+  m_text: You ran into too many trees :(
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2481,7 +2474,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -378.86572, y: -112.77051, z: -392.44873, w: 70.14957}
+  m_margin: {x: -259.75696, y: -112.77051, z: -392.44873, w: 70.14957}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2507,6 +2500,7 @@ GameObject:
   - component: {fileID: 2054819587}
   - component: {fileID: 2054819586}
   - component: {fileID: 2054819585}
+  - component: {fileID: 2054819589}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2597,6 +2591,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2054819589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054819584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c56b13d07e0489789075ea8353f9e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathScore: {fileID: 1392619233}
 --- !u!1 &2109601492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2609,12 +2616,12 @@ GameObject:
   - component: {fileID: 2109601495}
   - component: {fileID: 2109601494}
   m_Layer: 5
-  m_Name: PICKUPS
+  m_Name: HowToPlay (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2109601493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2655,9 +2662,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pickups: O2 - Replenish Oxygen\n            Sun - Replenish Warmth\n\t   
-    Heart - Replenishes Health\n            Alcohol - Makes you drunk\n           
-    X Factor - Powers X Factor\n\t    Watermelon - Everything!\n"
+  m_text: "Pickups: O2 - Replenish Oxygen\n            Sun - Replenish Warmth\n           
+    Alcohol - Makes you drunk\n            Watermelon - Reverses Alcohol\n           
+    X Factor - Powers X Factor\n            Heart - Replenishes Health\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2720,7 +2727,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 87.0647, y: -220.02939, z: -392.44873, w: 70.14957}
+  m_margin: {x: 109.12341, y: -220.02939, z: -392.44873, w: 70.14957}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

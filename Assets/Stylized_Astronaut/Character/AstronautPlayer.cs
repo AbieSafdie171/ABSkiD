@@ -83,7 +83,7 @@ using UnityEngine.SceneManagement;
 				healthBar.SetHealth(cHealth);
 
 				if (healthBar.GetCurrentHealth() == 0){
-					SceneManager.LoadScene("HowtoPlay");
+					SceneManager.LoadScene("TreeDeath");
 				}
 			}
 
@@ -115,6 +115,25 @@ using UnityEngine.SceneManagement;
 				int cHealth = xFactorBar.GetCurrentHealth();
 				cHealth++;
 				xFactorBar.SetHealth(cHealth);
+			}
+			if (other.gameObject.name == "watermelon(Clone)")
+			{
+				int cHealth = xFactorBar.GetCurrentHealth();
+				cHealth++;
+				xFactorBar.SetHealth(cHealth);
+
+				float cHealth2 = heatBar.GetCurrentHealth();
+				cHealth2 += 200;
+				heatBar.SetHealth(cHealth2);
+
+				int cHealth3 = healthBar.GetCurrentHealth();
+				cHealth3++;
+				healthBar.SetHealth(cHealth3);
+
+				float cHealth4 = oxygenBar.GetCurrentHealth();
+				cHealth4 += 200;
+				oxygenBar.SetHealth(cHealth4);
+
 			}
 
 			

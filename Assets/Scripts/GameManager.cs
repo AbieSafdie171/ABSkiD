@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +17,23 @@ public class GameManager : MonoBehaviour
 
     public int currentHealth;
 
+    public static float score;
+
+    public float time;
+
+    public static GameManager inst;
+
+    public TMP_Text scoreText;
+
+    public static float getScore(){
+        return score;
+    }
+
+    private void Awake(){
+        inst = this;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +41,8 @@ public class GameManager : MonoBehaviour
         healthBar.SetMaxHealth(5);
         oxygenBar.SetMaxHealth(1000);
         heatBar.SetMaxHealth(1000);
+
+        score = 0;
     }
 
     // Update is called once per frame
@@ -30,23 +51,31 @@ public class GameManager : MonoBehaviour
         
         float currentOxygen = oxygenBar.GetCurrentHealth();
 
-        currentOxygen -= (57 * Time.deltaTime);
+        currentOxygen -= (59 * Time.deltaTime);
 
         oxygenBar.SetHealth(currentOxygen);
 
         if (oxygenBar.GetCurrentHealth() == 0){
-				SceneManager.LoadScene("HowtoPlay");
+				SceneManager.LoadScene("OxygenDeath");
 			}
 
         float currentHeat = heatBar.GetCurrentHealth();
 
-        currentHeat -= (57 * Time.deltaTime);
+        currentHeat -= (59 * Time.deltaTime);
 
         heatBar.SetHealth(currentHeat);
 
         if (heatBar.GetCurrentHealth() == 0){
-				SceneManager.LoadScene("HowtoPlay");
-				}
+				SceneManager.LoadScene("ColdDeath");
+			}
+
+        time = (Time.deltaTime * 100);
+
+        score += time;
+
+        score = Mathf.Round(score);
+
+        scoreText.text = "SCORE: " + score;
 
 
     }
