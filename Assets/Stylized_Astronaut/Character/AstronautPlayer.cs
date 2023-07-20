@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 		private Animator anim;
 		private CharacterController controller;
 
+		public AstronautThirdPersonCamera shake;
+
 		public float speed = 600.0f;
 		public float turnSpeed = 400.0f;
 		private Vector3 moveDirection = Vector3.zero;
@@ -135,6 +137,32 @@ using UnityEngine.SceneManagement;
 				oxygenBar.SetHealth(cHealth4);
 
 				GameManager.increaseScore(500);
+
+			}
+
+			if (other.gameObject.name == "Alcohol(Clone)")
+			{
+
+				StartCoroutine(shake.Shake(2f, 0.5f));
+				int cHealth = healthBar.GetCurrentHealth();
+				cHealth--;
+				healthBar.SetHealth(cHealth);
+
+				if (cHealth == 0){
+					SceneManager.LoadScene("AlcoholDeath");
+				}
+
+				float oxHealth = oxygenBar.GetCurrentHealth();
+
+				float heatHealth = heatBar.GetCurrentHealth();
+
+				if (oxHealth >= heatHealth){
+					heatHealth += 200;
+					heatBar.SetHealth(heatHealth);
+				} else{
+					oxHealth += 200;
+					oxygenBar.SetHealth(oxHealth);
+				}
 
 			}
 

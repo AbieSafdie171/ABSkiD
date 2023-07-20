@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AstronautThirdPersonCamera
-{
 
   public class AstronautThirdPersonCamera : MonoBehaviour
   {
@@ -19,25 +17,49 @@ namespace AstronautThirdPersonCamera
     // private float sensitivityX = 20.0f;
     // private float sensitivityY = 20.0f;
 
+
     private void Start()
     {
         camTransform = transform;
     }
 
-    private void Update()
-    {
-        // currentX += Input.GetAxis("Mouse X");
-        // currentY += Input.GetAxis("Mouse Y");
 
-        // currentY = Mathf.Clamp(currentY, Y_ANGLE_MIN, Y_ANGLE_MAX);
+    public IEnumerator Shake(float duration, float magnitude){
+
+          // Vector3 startPos = transform.localPosition;
+
+          float elapsed = 0.0f;
+
+          
+
+          while (elapsed < duration){
+              float x = Random.Range(-1f, 1f) * magnitude;
+              float y = Random.Range(-1f, 1f) * magnitude;
+
+              y = camTransform.position.y - y;
+              x = camTransform.position.x - x;
+
+              camTransform.position = new Vector3(x, y, camTransform.position.z);
+
+
+              elapsed += Time.deltaTime;
+
+              yield return null;
+          }
+
+
     }
 
-    private void LateUpdate()
+
+    private void Update()
     {
         Vector3 dir = new Vector3(0, 0, -distance);
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
         camTransform.position = lookAt.position + rotation * dir;
         camTransform.LookAt(lookAt.position);
+        // Debug.Log(camTransform.position);
     }
+
+
   }
-}
+

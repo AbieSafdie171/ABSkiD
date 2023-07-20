@@ -96,6 +96,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ColdDeath.unity
     guid: 7c57d1b6ae7444d74ba8ca7872273cc6
   - enabled: 1
-    path: Assets/Scenes/TreeDeath.unity
+    path: Assets/Scenes/AlcoholDeath.unity
     guid: 2d962921daf7b440585efd1f3a0cb37f
+  - enabled: 1
+    path: Assets/Scenes/TreeDeath.unity
+    guid: ddecefa76a9224150bc3a17fabf50335
   m_configObjects: {}
