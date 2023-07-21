@@ -26,6 +26,12 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text chosenPlayer;
 
+    public string hillelian = HowToPlay.getCharacter();
+
+    private void Awake(){
+        inst = this;
+    }
+
     public static float getScore(){
         return score;
     }
@@ -34,21 +40,39 @@ public class GameManager : MonoBehaviour
         score += x;
     }
 
-    private void Awake(){
-        inst = this;
+    public void setValues(){
+
+        float baseOxygen = 1000;
+        float baseHeat = 1000;
+        float baseDivisor = 50;
+
+        chosenPlayer.text = HowToPlay.getCharacter();
+        
+        switch(hillelian){
+
+            case "Daniel_Moss":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Daniel_Moss.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Daniel_Moss.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                // Debug.Log("hello");
+                break;
+            default:
+                break;
+
+
+        }
+
+
+
     }
-
-
     // Start is called before the first frame update
     void Start()
     {
-        // currentHealth = 5;
-        healthBar.SetMaxHealth(5);
-        oxygenBar.SetMaxHealth(1000);
-        heatBar.SetMaxHealth(1000);
+        setValues();
         score = 0;
 
-        chosenPlayer.text = HowToPlay.getCharacter();
     }
 
     // Update is called once per frame

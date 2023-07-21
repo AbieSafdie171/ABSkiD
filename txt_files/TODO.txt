@@ -17,7 +17,5 @@
 My Highest Score: 110843 - with 500 bonus per melon
 
 
-// alcohol - minus 1 health, 100 of need most?, screen shake
-
 
 

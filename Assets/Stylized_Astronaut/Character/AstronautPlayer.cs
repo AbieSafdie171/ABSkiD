@@ -32,6 +32,7 @@ using UnityEngine.SceneManagement;
 		void Start () {
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
+			// Debug.Log(DanielMoss.coolness);
 		}
 
 		void Update (){
@@ -142,7 +143,7 @@ using UnityEngine.SceneManagement;
 
 			if (other.gameObject.name == "Alcohol(Clone)")
 			{
-
+				GameManager.increaseScore(250);
 				StartCoroutine(shake.Shake(2f, 0.5f));
 				int cHealth = healthBar.GetCurrentHealth();
 				cHealth--;
