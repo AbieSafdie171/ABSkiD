@@ -50,13 +50,180 @@ public class GameManager : MonoBehaviour
         
         switch(hillelian){
 
+            case "Abie_Safdie":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Abie_Safdie.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Abie_Safdie.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
             case "Daniel_Moss":
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Daniel_Moss.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Daniel_Moss.coolness / baseDivisor));
                 Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
                 Debug.Log("Heat: " + heatBar.GetCurrentHealth());
-                // Debug.Log("hello");
+                break;
+            case "Sasha_Kaplow":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Sasha_Kaplow.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Sasha_Kaplow.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Jordan_Zicklin":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Jordan_Zicklin.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Jordan_Zicklin.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Julia_Frank":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Julia_Frank.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Julia_Frank.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Jonah_Kaplan":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Jonah_Kaplan.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Jonah_Kaplan.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Romie_Avivi":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Romie_Avivi.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Romie_Avivi.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Maddie_Studer":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Maddie_Studer.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Maddie_Studer.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Mady_Barth":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Mady_Barth.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Mady_Barth.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Alex_Malve":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Alex_Malve.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Alex_Malve.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Jordan_Cooper":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Jordan_Cooper.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Jordan_Cooper.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Kaya_Rubinstein":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Kaya_Rubinstein.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Kaya_Rubinstein.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Lucie_Nortman":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Lucie_Nortman.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Lucie_Nortman.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Jacque_Velasco":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Jacque_Velasco.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Jacque_Velasco.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Hannah_Abikzer":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Hannah_Abikzer.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Hannah_Abikzer.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Lilah_Silberman":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Lilah_Silberman.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Lilah_Silberman.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Andy_Gitelson":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Andy_Gitelson.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Andy_Gitelson.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Ella_Diamond":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Ella_Diamond.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Ella_Diamond.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Chloe_Gold":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Chloe_Gold.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Chloe_Gold.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Rabbi_Berel":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Rabbi_Berel.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Rabbi_Berel.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Bri_Tafoya":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Bri_Tafoya.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Bri_Tafoya.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Roy_Wonder":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Roy_Wonder.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Roy_Wonder.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Lucinda_Smith":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Lucinda_Smith.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Lucinda_Smith.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Rabbi_Meir":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Rabbi_Meir.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Rabbi_Meir.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                break;
+            case "Portia_Carney":
+                healthBar.SetMaxHealth(5);
+                oxygenBar.SetMaxHealth(baseOxygen * (Portia_Carney.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Portia_Carney.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
                 break;
             default:
                 break;
