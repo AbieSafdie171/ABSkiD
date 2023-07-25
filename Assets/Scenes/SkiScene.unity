@@ -721,7 +721,7 @@ GameObject:
   - component: {fileID: 729937730}
   - component: {fileID: 729937731}
   m_Layer: 0
-  m_Name: TheLoneliest
+  m_Name: AudioSource1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1587,6 +1587,7 @@ MonoBehaviour:
   time: 0
   scoreText: {fileID: 966636653}
   chosenPlayer: {fileID: 1269276910}
+  hillelian: 
 --- !u!1 &1072239085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,8 +2511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   src: {fileID: 729937731}
-  lone2: {fileID: 8300000, guid: 9c9faa2c86b464852af7465fec92c44f, type: 3}
-  heroClip: {fileID: 8300000, guid: 6dc272fe1b18a4174a82c27f37aaeb02, type: 3}
+  lone2: {fileID: 8300000, guid: f28a9ef62d13440249ac7b1e29edf67f, type: 3}
+  heroClip: {fileID: 8300000, guid: 0ddcde9597f0c4cdeb5fe6fd1c4c593a, type: 3}
 --- !u!4 &1685556216
 Transform:
   m_ObjectHideFlags: 0

@@ -28,6 +28,28 @@ public class GameManager : MonoBehaviour
 
     public string hillelian = HowToPlay.getCharacter();
 
+    // Music Code
+    /*
+    private bool played1 = false;
+    private bool played2 = false;
+    private bool played3 = false;
+
+    public AudioSource src1;
+    public AudioSource src2;
+    public AudioSource src3;
+
+    // Abie_Safdie
+    public AudioClip stellaBrown;
+    public AudioClip danceNight;
+    public AudioClip holdingHero;
+
+    public AudioClip escargotBlues;
+
+    public AudioClip missingYou;
+    */
+
+
+
     private void Awake(){
         inst = this;
     }
@@ -47,6 +69,8 @@ public class GameManager : MonoBehaviour
         float baseDivisor = 50;
 
         chosenPlayer.text = HowToPlay.getCharacter();
+
+        hillelian = HowToPlay.getCharacter();
         
         switch(hillelian){
 
@@ -54,8 +78,11 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Abie_Safdie.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Abie_Safdie.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+
+
+
+                // Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                // Debug.Log("Heat: " + heatBar.GetCurrentHealth());
                 break;
             case "Daniel_Moss":
                 healthBar.SetMaxHealth(5);
@@ -274,6 +301,25 @@ public class GameManager : MonoBehaviour
 
         scoreText.text = "SCORE: " + score;
 
+        /*
+        if (!src1.isPlaying && played1 == false){
+            src1.Play();
+            played1 = true;
+        } else if (!src2.isPlaying && played2 == false){
+            src2.Play();
+            played2 = true;
+        } else {
+            src3.Play();
+
+        }
+
+        if (played1 && played2 && played3){
+            played1 = false;
+            played2 = false;
+            played3 = false;
+
+        }
+        */
 
     }
 }

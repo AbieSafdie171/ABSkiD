@@ -527,8 +527,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Strengths: Trivia, Downing 10 shekel shots, Wrapping tefillin, Having
-    luscious locks, Real talks, Being incredible, Retweeting'
+  m_text: 'Strengths: Downing 10 shekel shots, Wrapping tefillin, Having luscious
+    locks, Real talks, Being incredible, Retweeting'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2801,7 +2801,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Weaknesses: Fear of glitter, Fear of Fire,
+  m_text: 'Weaknesses: Fear of Glitter, Fear of Fire,
 
     Irrational attachment
     to Teddy Bears,
