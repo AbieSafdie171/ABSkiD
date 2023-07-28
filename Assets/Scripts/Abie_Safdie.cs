@@ -9,10 +9,29 @@ public class Abie_Safdie : MonoBehaviour
 
     public static int speed = 99;
 
-    public static int stamina = 10;
+    public static int stamina = 15;
 
     public static int skiingIQ = 35;
 
     public static int alcTol = 5;
+
+
+
+    public static void xFactor(){
+
+
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("obstacle");
+
+        int c = objs.Length;
+
+        for (int i = 0; i < c; i++)
+        {
+            Destroy(objs[i]);
+        }                
+
+    }
+
+
+
     
 }

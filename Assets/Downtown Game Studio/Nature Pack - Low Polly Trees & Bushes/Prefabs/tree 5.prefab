@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8241558117686612904}
   m_Layer: 0
   m_Name: tree 5
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeSound: {fileID: 4048564735678302459}
-  healthBar: {fileID: 8728098326979349356, guid: 8deedbbcb75b043f8883d37142dee702, type: 3}
 --- !u!1001 &8509987021239136345
 PrefabInstance:
   m_ObjectHideFlags: 0

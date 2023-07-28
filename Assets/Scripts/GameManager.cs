@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public HealthBar xFactorBar;
+
     public FloatBar oxygenBar;
 
     public FloatBar heatBar;
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour
     public string hillelian = HowToPlay.getCharacter();
 
     // Music Code
-    /*
+    
     private bool played1 = false;
     private bool played2 = false;
     private bool played3 = false;
@@ -38,15 +40,27 @@ public class GameManager : MonoBehaviour
     public AudioSource src2;
     public AudioSource src3;
 
+    public AudioSource xFactorsrc;
+
     // Abie_Safdie
     public AudioClip stellaBrown;
     public AudioClip danceNight;
     public AudioClip holdingHero;
-
-    public AudioClip escargotBlues;
+    public AudioClip niceBoy;
 
     public AudioClip missingYou;
-    */
+
+    // Lilah Silberman
+    public AudioClip escargotBlues;
+    public AudioClip the505;
+    public AudioClip cigaretteDaydreams;
+
+    // Jordan Zicklin
+    public AudioClip lisztomania;
+
+    // Rabbi Berel
+    public AudioClip lchaimFiddler;
+    
 
 
 
@@ -76,13 +90,14 @@ public class GameManager : MonoBehaviour
 
             case "Abie_Safdie":
                 healthBar.SetMaxHealth(5);
+                xFactorBar.SetMaxHealth(5);
+                xFactorBar.SetHealth(0);
                 oxygenBar.SetMaxHealth(baseOxygen * (Abie_Safdie.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Abie_Safdie.coolness / baseDivisor));
-
-
-
-                // Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                // Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                src1.clip = danceNight;
+                src2.clip = stellaBrown;
+                src3.clip = holdingHero;
+                xFactorsrc.clip = niceBoy;
                 break;
             case "Daniel_Moss":
                 healthBar.SetMaxHealth(5);
@@ -186,8 +201,9 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Lilah_Silberman.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Lilah_Silberman.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                src1.clip = escargotBlues;
+                src2.clip = the505;
+                src3.clip = cigaretteDaydreams;
                 break;
             case "Andy_Gitelson":
                 healthBar.SetMaxHealth(5);
@@ -275,6 +291,8 @@ public class GameManager : MonoBehaviour
         
         float currentOxygen = oxygenBar.GetCurrentHealth();
 
+        // Debug.Log("O2: " + currentOxygen);
+
         currentOxygen -= (59 * Time.deltaTime);
 
         oxygenBar.SetHealth(currentOxygen);
@@ -284,6 +302,8 @@ public class GameManager : MonoBehaviour
 			}
 
         float currentHeat = heatBar.GetCurrentHealth();
+
+        // Debug.Log("Heat: " + currentHeat);
 
         currentHeat -= (59 * Time.deltaTime);
 
@@ -301,25 +321,37 @@ public class GameManager : MonoBehaviour
 
         scoreText.text = "SCORE: " + score;
 
-        /*
-        if (!src1.isPlaying && played1 == false){
+
+        if (Input.GetKeyDown("space"))
+        {
+            int max = xFactorBar.getMaxValue();
+            int cur = xFactorBar.GetCurrentHealth();
+            if(cur == max){
+                xFactorsrc.Play();
+                Abie_Safdie.xFactor();
+                xFactorBar.SetHealth(0);
+            }
+            
+        }
+
+        
+        if (!src1.isPlaying && !played1 && !src3.isPlaying){
             src1.Play();
             played1 = true;
-        } else if (!src2.isPlaying && played2 == false){
+        } else if (!src1.isPlaying && !src2.isPlaying && played2 == false && played1){
             src2.Play();
             played2 = true;
-        } else {
+        } else if (!src1.isPlaying && !src2.isPlaying && !src3.isPlaying && played2 && played1){
             src3.Play();
-
+            played3 = true;
         }
 
         if (played1 && played2 && played3){
             played1 = false;
             played2 = false;
             played3 = false;
-
         }
-        */
+        
 
     }
 }

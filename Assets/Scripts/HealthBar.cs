@@ -33,6 +33,11 @@ public class HealthBar : MonoBehaviour
             return (int)slider.value;
     }
 
+    public int getMaxValue(){
+        return (int)slider.maxValue;
+    }
+
+
 
 
 }
