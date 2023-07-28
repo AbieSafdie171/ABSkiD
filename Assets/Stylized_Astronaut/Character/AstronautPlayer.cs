@@ -16,6 +16,9 @@ using UnityEngine.SceneManagement;
 		private Vector3 moveDirection = Vector3.zero;
 		public float gravity = 20.0f;
 
+		public static bool fran = false;
+		public AudioSource thicc;
+
 
 		public GameObject leftSki;
 
@@ -30,6 +33,7 @@ using UnityEngine.SceneManagement;
 		public HealthBar xFactorBar;
 
 		void Start () {
+			fran = false;
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
 			// Debug.Log(DanielMoss.coolness);
@@ -81,12 +85,18 @@ using UnityEngine.SceneManagement;
             if (other.gameObject.name == "tree 5(Clone)" || other.gameObject.name =="tree 6(Clone)"
 			|| other.gameObject.name == "tree 16(Clone)" || other.gameObject.name == "Tree Trunk 1(Clone)")
 			{
-				int cHealth = healthBar.GetCurrentHealth();
-				cHealth--;
-				healthBar.SetHealth(cHealth);
+				if (fran){
+					thicc.Play();
+					Destroy(other.gameObject);
+				} 
+				else{
+					int cHealth = healthBar.GetCurrentHealth();
+					cHealth--;
+					healthBar.SetHealth(cHealth);
 
 				if (healthBar.GetCurrentHealth() == 0){
 					SceneManager.LoadScene("TreeDeath");
+				}
 				}
 			}
 

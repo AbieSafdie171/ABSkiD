@@ -14,4 +14,22 @@ public class Hannah_Abikzer : MonoBehaviour
     public static int skiingIQ = 65;
 
     public static int alcTol = 90;
+
+    //public GameObject fran;
+
+    //public GameObject x;
+
+    public void start(){
+
+        //fran.SetActive(false);
+        
+    }
+
+
+    public void xFactor(){
+
+        //fran.SetActive(true);
+                 
+
+    }
 }

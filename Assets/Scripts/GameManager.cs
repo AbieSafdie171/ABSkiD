@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     public string hillelian = HowToPlay.getCharacter();
 
+    private float counter = 0.0f;
+
     // Music Code
     
     private bool played1 = false;
@@ -54,6 +56,13 @@ public class GameManager : MonoBehaviour
     public AudioClip escargotBlues;
     public AudioClip the505;
     public AudioClip cigaretteDaydreams;
+
+    // Hannah Abikzer
+    public AudioClip theLoneliest;
+    public AudioClip fearForNobody;
+    public AudioClip passengers;
+    public AudioClip Nobody;
+    public GameObject fran;
 
     // Jordan Zicklin
     public AudioClip lisztomania;
@@ -90,7 +99,7 @@ public class GameManager : MonoBehaviour
 
             case "Abie_Safdie":
                 healthBar.SetMaxHealth(5);
-                xFactorBar.SetMaxHealth(5);
+                xFactorBar.SetMaxHealth(7);
                 xFactorBar.SetHealth(0);
                 oxygenBar.SetMaxHealth(baseOxygen * (Abie_Safdie.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Abie_Safdie.coolness / baseDivisor));
@@ -192,10 +201,14 @@ public class GameManager : MonoBehaviour
                 break;
             case "Hannah_Abikzer":
                 healthBar.SetMaxHealth(5);
+                xFactorBar.SetMaxHealth(5);
+                xFactorBar.SetHealth(0);
                 oxygenBar.SetMaxHealth(baseOxygen * (Hannah_Abikzer.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Hannah_Abikzer.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                src1.clip = theLoneliest;
+                src2.clip = fearForNobody;
+                src3.clip = passengers;
+                xFactorsrc.clip = Nobody;
                 break;
             case "Lilah_Silberman":
                 healthBar.SetMaxHealth(5);
@@ -277,11 +290,101 @@ public class GameManager : MonoBehaviour
 
 
     }
+
+
+    public void getXFactor(){
+
+        hillelian = HowToPlay.getCharacter();
+        
+        switch(hillelian){
+
+            case "Abie_Safdie":
+                Abie_Safdie.xFactor();
+                break;
+            case "Daniel_Moss":
+                break;
+            case "Sasha_Kaplow":
+                break;
+            case "Jordan_Zicklin":
+                break;
+            case "Julia_Frank":
+                break;
+            case "Jonah_Kaplan":
+                break;
+            case "Romie_Avivi":
+                break;
+            case "Maddie_Studer":
+                break;
+            case "Mady_Barth":
+                break;
+            case "Alex_Malve":
+                break;
+            case "Jordan_Cooper":
+                break;
+            case "Kaya_Rubinstein":
+                break;
+            case "Lucie_Nortman":
+                break;
+            case "Jacque_Velasco":
+                break;
+            case "Hannah_Abikzer":
+                AstronautPlayer.fran = true;
+                fran.SetActive(true);
+                StartCoroutine(franOff());
+                break;
+            case "Lilah_Silberman":
+                break;
+            case "Andy_Gitelson":
+                break;
+            case "Ella_Diamond":
+                break;
+            case "Chloe_Gold":
+                break;
+            case "Rabbi_Berel":
+                break;
+            case "Bri_Tafoya":
+                break;
+            case "Roy_Wonder":
+                break;
+            case "Lucinda_Smith":
+                break;
+            case "Rabbi_Meir":
+                break;
+            case "Portia_Carney":
+                break;
+            default:
+                break;
+
+
+        }
+
+
+
+    }
     // Start is called before the first frame update
     void Start()
     {
+        fran.SetActive(false);
         setValues();
         score = 0;
+
+    }
+
+    public IEnumerator franOff(){
+
+        float elapsed = 0.0f;
+        float duration = 15.0f;
+
+          while (elapsed < duration){
+
+              elapsed += Time.deltaTime;
+            
+            yield return null;
+          }
+          
+          
+        fran.SetActive(false);
+        AstronautPlayer.fran = false;
 
     }
 
@@ -289,11 +392,13 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+        
+
         float currentOxygen = oxygenBar.GetCurrentHealth();
 
         // Debug.Log("O2: " + currentOxygen);
 
-        currentOxygen -= (59 * Time.deltaTime);
+        currentOxygen -= (57 * Time.deltaTime);
 
         oxygenBar.SetHealth(currentOxygen);
 
@@ -303,9 +408,7 @@ public class GameManager : MonoBehaviour
 
         float currentHeat = heatBar.GetCurrentHealth();
 
-        // Debug.Log("Heat: " + currentHeat);
-
-        currentHeat -= (59 * Time.deltaTime);
+        currentHeat -= (57 * Time.deltaTime);
 
         heatBar.SetHealth(currentHeat);
 
@@ -314,6 +417,8 @@ public class GameManager : MonoBehaviour
 			}
 
         time = (Time.deltaTime * 100);
+
+        counter += Time.deltaTime;
 
         score += time;
 
@@ -328,9 +433,11 @@ public class GameManager : MonoBehaviour
             int cur = xFactorBar.GetCurrentHealth();
             if(cur == max){
                 xFactorsrc.Play();
-                Abie_Safdie.xFactor();
+                getXFactor();
                 xFactorBar.SetHealth(0);
             }
+
+
             
         }
 
