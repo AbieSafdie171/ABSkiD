@@ -125,6 +125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lchaim
       objectReference: {fileID: 0}
+    - target: {fileID: 1558570929079620794, guid: d191c00bed274467480c703409b9886d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e8d4a6a2560f0493084bb849dc2d71b7, type: 3}
     - target: {fileID: 1558570929079620795, guid: d191c00bed274467480c703409b9886d, type: 3}
       propertyPath: m_RootOrder
       value: 0

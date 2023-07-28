@@ -154,7 +154,19 @@ using UnityEngine.SceneManagement;
 			if (other.gameObject.name == "Alcohol(Clone)")
 			{
 				GameManager.increaseScore(250);
-				StartCoroutine(shake.Shake(2f, 0.5f));
+
+				float tol = (float)GameManager.alcoholTolerance;
+
+				float d;
+				float m;
+
+				d = (Mathf.Abs(tol - 100f)) / 20f;
+
+				m = (Mathf.Abs(tol - 100f)) / 75f;
+
+				if (tol != 100)
+					StartCoroutine(shake.Shake(d, m));
+
 				int cHealth = healthBar.GetCurrentHealth();
 				cHealth--;
 				healthBar.SetHealth(cHealth);
