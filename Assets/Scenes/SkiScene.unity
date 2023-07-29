@@ -1896,7 +1896,6 @@ MonoBehaviour:
   missingYou: {fileID: 8300000, guid: 9c9faa2c86b464852af7465fec92c44f, type: 3}
   niceBoy: {fileID: 8300000, guid: 2bf6ac9cf519c4800b599939158bbbd1, type: 3}
   danceNight: {fileID: 8300000, guid: f28a9ef62d13440249ac7b1e29edf67f, type: 3}
-  ifWeWereVampires: {fileID: 0}
   escargotBlues: {fileID: 8300000, guid: ac6f0a4f3283148bd8f100536f89952d, type: 3}
   the505: {fileID: 8300000, guid: 5eb8cb4305b044ffc9c297eee83e7238, type: 3}
   cigaretteDaydreams: {fileID: 8300000, guid: c99bb0fc5498f4d39b5c36ad642c3cfb, type: 3}
@@ -1911,6 +1910,11 @@ MonoBehaviour:
   dontStopBelieving: {fileID: 8300000, guid: fdb91c11e70084655baf336f5ae56c49, type: 3}
   georgia: {fileID: 8300000, guid: a4a10df06c20e434db7745a38784d856, type: 3}
   judith: {fileID: 857935772}
+  telAviv: {fileID: 8300000, guid: 5046b012ed30d4cb6ae4a1649e315089, type: 3}
+  claySound: {fileID: 8300000, guid: 616041aafe8f2452ba39bfd581dc37fb, type: 3}
+  fireSound: {fileID: 8300000, guid: d405f7c059b19459a9367ed25a8774bd, type: 3}
+  science: {fileID: 8300000, guid: 98b71f79ab8c84f02aaee93d425a726b, type: 3}
+  fallingInLove: {fileID: 8300000, guid: 45373f9d49dcc4d79b7c496b927d0bc9, type: 3}
 --- !u!114 &1071445001
 MonoBehaviour:
   m_ObjectHideFlags: 0

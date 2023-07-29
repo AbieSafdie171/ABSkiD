@@ -14,4 +14,18 @@ public class Romie_Avivi : MonoBehaviour
     public static int skiingIQ = 80;
 
     public static int alcTol = 30;
+
+
+    public static void xFactor(){
+
+        
+        // Debug.Log(GameManager.healthBar.GetCurrentHealth());
+
+
+
+
+
+    }
+
+
 }

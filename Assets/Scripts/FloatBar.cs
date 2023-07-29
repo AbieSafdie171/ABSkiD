@@ -29,7 +29,11 @@ public class FloatBar : MonoBehaviour
     }
 
     public float GetCurrentHealth(){
-            return (int)slider.value;
+            return (float)slider.value;
+    }
+
+    public float getMaxValue(){
+        return (float)slider.maxValue;
     }
 
 
