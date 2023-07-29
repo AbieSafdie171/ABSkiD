@@ -533,7 +533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475332, guid: 812e3f763be51a143bb1d937f48c31f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 475332, guid: 812e3f763be51a143bb1d937f48c31f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1105,6 +1105,88 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &857935771
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2079349192}
+    m_Modifications:
+    - target: {fileID: 129146, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_Name
+      value: Car_3_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 129146, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 455904, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2375328, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b520eea5364484d50a51fa6cd2d528fc, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+--- !u!1 &857935772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129146, guid: 7179d797d92b9594482ec3e813202c51, type: 3}
+  m_PrefabInstance: {fileID: 857935771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &886054610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,21 +1891,26 @@ MonoBehaviour:
   src2: {fileID: 1511579028}
   src3: {fileID: 1882240293}
   xFactorsrc: {fileID: 1630294522}
-  stellaBrown: {fileID: 8300000, guid: 49d930ec084ee49b19448c6cab50f943, type: 3}
-  danceNight: {fileID: 8300000, guid: f28a9ef62d13440249ac7b1e29edf67f, type: 3}
   holdingHero: {fileID: 8300000, guid: 9991362b0ab3545c78184230684f5d3f, type: 3}
-  niceBoy: {fileID: 8300000, guid: 2bf6ac9cf519c4800b599939158bbbd1, type: 3}
+  stellaBrown: {fileID: 8300000, guid: 49d930ec084ee49b19448c6cab50f943, type: 3}
   missingYou: {fileID: 8300000, guid: 9c9faa2c86b464852af7465fec92c44f, type: 3}
+  niceBoy: {fileID: 8300000, guid: 2bf6ac9cf519c4800b599939158bbbd1, type: 3}
+  danceNight: {fileID: 8300000, guid: f28a9ef62d13440249ac7b1e29edf67f, type: 3}
+  ifWeWereVampires: {fileID: 0}
   escargotBlues: {fileID: 8300000, guid: ac6f0a4f3283148bd8f100536f89952d, type: 3}
   the505: {fileID: 8300000, guid: 5eb8cb4305b044ffc9c297eee83e7238, type: 3}
   cigaretteDaydreams: {fileID: 8300000, guid: c99bb0fc5498f4d39b5c36ad642c3cfb, type: 3}
   theLoneliest: {fileID: 8300000, guid: 349f386b11947463ba44a0b18fd59f07, type: 3}
   fearForNobody: {fileID: 8300000, guid: ed6052b9744f34816b1c5c854dafa3b8, type: 3}
   passengers: {fileID: 8300000, guid: 2d87b9e99fa1d4718841961206435c50, type: 3}
-  Nobody: {fileID: 8300000, guid: 9cf945d5b56b54bd5ad864bfd7a2cd01, type: 3}
+  lonely: {fileID: 8300000, guid: 04a9ddc608391451c8fe61c46fac4ada, type: 3}
   fran: {fileID: 536800309}
   lisztomania: {fileID: 8300000, guid: 3e76bb873c3a64b009ff5e6c04618727, type: 3}
   lchaimFiddler: {fileID: 8300000, guid: 7ebcb020385a848439cfedbd947898f5, type: 3}
+  tennesseeWhiskey: {fileID: 0}
+  dontStopBelieving: {fileID: 8300000, guid: fdb91c11e70084655baf336f5ae56c49, type: 3}
+  georgia: {fileID: 8300000, guid: a4a10df06c20e434db7745a38784d856, type: 3}
+  judith: {fileID: 857935772}
 --- !u!114 &1071445001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2751,7 +2838,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

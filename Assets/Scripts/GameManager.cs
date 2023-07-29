@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     public AudioClip theLoneliest;
     public AudioClip fearForNobody;
     public AudioClip passengers;
-    public AudioClip Nobody;
+    public AudioClip lonely;
     public GameObject fran;
 
     // Jordan Zicklin
@@ -71,6 +71,12 @@ public class GameManager : MonoBehaviour
 
     // Rabbi Berel
     public AudioClip lchaimFiddler;
+
+    // Jonah Kaplan
+    public AudioClip tennesseeWhiskey;
+    public AudioClip dontStopBelieving;
+    public AudioClip georgia;
+    public GameObject judith;
     
 
 
@@ -102,13 +108,13 @@ public class GameManager : MonoBehaviour
             case "Abie_Safdie":
                 alcoholTolerance = Abie_Safdie.alcTol;
                 healthBar.SetMaxHealth(5);
-                xFactorBar.SetMaxHealth(7);
+                xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
                 oxygenBar.SetMaxHealth(baseOxygen * (Abie_Safdie.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Abie_Safdie.coolness / baseDivisor));
-                src1.clip = holdingHero;
-                src2.clip = stellaBrown;
-                src3.clip = missingYou;
+                src1.clip = stellaBrown;
+                src2.clip = missingYou;
+                src3.clip = holdingHero;
                 xFactorsrc.clip = niceBoy;
                 break;
             case "Daniel_Moss":
@@ -145,11 +151,15 @@ public class GameManager : MonoBehaviour
                 break;
             case "Jonah_Kaplan":
                 alcoholTolerance = Jonah_Kaplan.alcTol;
+                xFactorBar.SetMaxHealth(5);
+                xFactorBar.SetHealth(0);
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Jonah_Kaplan.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jonah_Kaplan.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                src1.clip = dontStopBelieving;
+                src2.clip = tennesseeWhiskey;
+                src3.clip = escargotBlues;
+                xFactorsrc.clip = georgia;
                 break;
             case "Romie_Avivi":
                 alcoholTolerance = Romie_Avivi.alcTol;
@@ -225,7 +235,7 @@ public class GameManager : MonoBehaviour
                 src1.clip = passengers;
                 src2.clip = fearForNobody;
                 src3.clip = theLoneliest;
-                xFactorsrc.clip = Nobody;
+                xFactorsrc.clip = lonely;
                 break;
             case "Lilah_Silberman":
                 alcoholTolerance = Lilah_Silberman.alcTol;
@@ -338,6 +348,9 @@ public class GameManager : MonoBehaviour
             case "Julia_Frank":
                 break;
             case "Jonah_Kaplan":
+                AstronautPlayer.fran = true;
+                judith.SetActive(true);
+                StartCoroutine(franOff(true));
                 break;
             case "Romie_Avivi":
                 break;
@@ -358,7 +371,7 @@ public class GameManager : MonoBehaviour
             case "Hannah_Abikzer":
                 AstronautPlayer.fran = true;
                 fran.SetActive(true);
-                StartCoroutine(franOff());
+                StartCoroutine(franOff(false));
                 break;
             case "Lilah_Silberman":
                 break;
@@ -393,26 +406,33 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         fran.SetActive(false);
+        judith.SetActive(false);
         setValues();
         score = 0;
 
     }
 
-    public IEnumerator franOff(){
+    public IEnumerator franOff(bool j){
 
         float elapsed = 0.0f;
         float duration = 15.0f;
 
           while (elapsed < duration){
 
-              elapsed += Time.deltaTime;
+            elapsed += Time.deltaTime;
             
             yield return null;
           }
           
-          
+        if (!j){
         fran.SetActive(false);
+        
         AstronautPlayer.fran = false;
+        } else{
+
+            judith.SetActive(false);
+            AstronautPlayer.fran = false;
+        }
 
     }
 
@@ -422,7 +442,9 @@ public class GameManager : MonoBehaviour
         
         float currentOxygen = oxygenBar.GetCurrentHealth();
 
-        currentOxygen -= (57 * Time.deltaTime);
+        currentOxygen -= (59 * Time.deltaTime);
+
+        Debug.Log(currentOxygen);
 
         oxygenBar.SetHealth(currentOxygen);
 
@@ -432,7 +454,7 @@ public class GameManager : MonoBehaviour
 
         float currentHeat = heatBar.GetCurrentHealth();
 
-        currentHeat -= (57 * Time.deltaTime);
+        currentHeat -= (59 * Time.deltaTime);
 
         heatBar.SetHealth(currentHeat);
 
