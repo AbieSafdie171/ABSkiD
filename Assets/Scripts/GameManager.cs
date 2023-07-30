@@ -50,8 +50,10 @@ public class GameManager : MonoBehaviour
     public AudioClip missingYou;
     public AudioClip niceBoy;
 
+    // Up for Grabs!
     public AudioClip danceNight;
     public AudioClip holdingHero;
+    public AudioClip danceWithSomebody;
 
     // Lilah Silberman
     public AudioClip escargotBlues;
@@ -85,7 +87,9 @@ public class GameManager : MonoBehaviour
     public AudioClip fireSound;
 
     // Ella Diamond
-    public AudioClip danceWithSomebody;
+    public AudioClip umbrella;
+    public AudioClip imGood;
+    public AudioClip countOnMe;
     public AudioClip science;
 
     // Bri Tafoya
@@ -93,6 +97,9 @@ public class GameManager : MonoBehaviour
 
     // Daniel Moss
     public AudioClip hinneni;
+
+    // Jacque Velasco
+    public AudioClip wow;
     
 
 
@@ -135,11 +142,13 @@ public class GameManager : MonoBehaviour
                 break;
             case "Daniel_Moss":
                 alcoholTolerance = Daniel_Moss.alcTol;
-                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Daniel_Moss.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Daniel_Moss.coolness / baseDivisor));
+                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
+                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
                 src1.clip = endsOfTheEarth;
                 src2.clip = endsOfTheEarth;
                 src3.clip = endsOfTheEarth;
@@ -250,8 +259,12 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Jacque_Velasco.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jacque_Velasco.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(3);
+                xFactorBar.SetHealth(0);
+                src1.clip = endsOfTheEarth;
+                src2.clip = endsOfTheEarth;
+                src3.clip = endsOfTheEarth;
+                xFactorsrc.clip = wow;
                 break;
             case "Hannah_Abikzer":
                 alcoholTolerance = Hannah_Abikzer.alcTol;
@@ -289,9 +302,9 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Ella_Diamond.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Ella_Diamond.coolness / baseDivisor));
-                src1.clip = danceWithSomebody;
-                src2.clip = endsOfTheEarth;
-                src3.clip = endsOfTheEarth;
+                src1.clip = umbrella;
+                src2.clip = imGood;
+                src3.clip = countOnMe;
                 xFactorsrc.clip = science;
                 break;
             case "Chloe_Gold":
@@ -393,7 +406,7 @@ public class GameManager : MonoBehaviour
                 onSign.SetActive(true);
                 AstronautPlayer.fran = true;
                 judith.SetActive(true);
-                StartCoroutine(franOff(true));
+                StartCoroutine(timer("Jonah_Kaplan"));
                 break;
             case "Romie_Avivi":
                 float pOx = xOxygen / oxygenBar.getMaxValue();
@@ -421,12 +434,15 @@ public class GameManager : MonoBehaviour
             case "Lucie_Nortman":
                 break;
             case "Jacque_Velasco":
+                onSign.SetActive(true);
+                AstronautPlayer.jacquePickup = true;
+                StartCoroutine(timer("Jacque_Velasco"));
                 break;
             case "Hannah_Abikzer":
                 onSign.SetActive(true);
                 AstronautPlayer.fran = true;
                 fran.SetActive(true);
-                StartCoroutine(franOff(false));
+                StartCoroutine(timer("Hannah_Abikzer"));
                 break;
             case "Lilah_Silberman":
                 break;
@@ -471,35 +487,10 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public IEnumerator franOff(bool j){
-
-        float elapsed = 0.0f;
-        float duration = 15.0f;
-
-          while (elapsed < duration){
-
-            elapsed += Time.deltaTime;
-            
-            yield return null;
-          }
-          
-        if (!j){
-            fran.SetActive(false);
-            onSign.SetActive(false);
-        
-            AstronautPlayer.fran = false;
-        } else{
-            onSign.SetActive(false);
-            judith.SetActive(false);
-            AstronautPlayer.fran = false;
-        }
-
-    }
-
     public IEnumerator timer(string p){
 
         float elapsed = 0.0f;
-        float duration = 20.0f;
+        float duration = 15.0f;
 
           while (elapsed < duration){
 
@@ -512,6 +503,20 @@ public class GameManager : MonoBehaviour
 
             case "Daniel_Moss":
                     AstronautPlayer.danielAlcohol = false;
+                    onSign.SetActive(false);
+                    break;
+            case "Hannah_Abikzer":
+                    fran.SetActive(false);
+                    onSign.SetActive(false);
+                    AstronautPlayer.fran = false;
+                    break;
+            case "Jonah_Kaplan":
+                    onSign.SetActive(false);
+                    judith.SetActive(false);
+                    AstronautPlayer.fran = false;
+                    break;
+            case "Jacque_Velasco":
+                    AstronautPlayer.jacquePickup = false;
                     onSign.SetActive(false);
                     break;
             default:
@@ -534,6 +539,8 @@ public class GameManager : MonoBehaviour
         float currentOxygen = oxygenBar.GetCurrentHealth();
 
         currentOxygen -= (59 * Time.deltaTime);
+
+        Debug.Log(currentOxygen);
 
         oxygenBar.SetHealth(currentOxygen);
 
@@ -577,7 +584,7 @@ public class GameManager : MonoBehaviour
         if (!src1.isPlaying && !played1 && !src3.isPlaying){
             src1.Play();
             played1 = true;
-        } else if (!src1.isPlaying && !src2.isPlaying && played2 == false && played1){
+        } else if (!src1.isPlaying && !src2.isPlaying && !played2 && played1){
             src2.Play();
             played2 = true;
         } else if (!src1.isPlaying && !src2.isPlaying && !src3.isPlaying && played2 && played1){

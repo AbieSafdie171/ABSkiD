@@ -1899,6 +1899,7 @@ MonoBehaviour:
   niceBoy: {fileID: 8300000, guid: 2bf6ac9cf519c4800b599939158bbbd1, type: 3}
   danceNight: {fileID: 8300000, guid: f28a9ef62d13440249ac7b1e29edf67f, type: 3}
   holdingHero: {fileID: 8300000, guid: 9991362b0ab3545c78184230684f5d3f, type: 3}
+  danceWithSomebody: {fileID: 8300000, guid: d11059decac1347c8a2260f8052a4497, type: 3}
   escargotBlues: {fileID: 8300000, guid: ac6f0a4f3283148bd8f100536f89952d, type: 3}
   the505: {fileID: 8300000, guid: 5eb8cb4305b044ffc9c297eee83e7238, type: 3}
   cigaretteDaydreams: {fileID: 8300000, guid: c99bb0fc5498f4d39b5c36ad642c3cfb, type: 3}
@@ -1916,10 +1917,13 @@ MonoBehaviour:
   telAviv: {fileID: 8300000, guid: 5046b012ed30d4cb6ae4a1649e315089, type: 3}
   claySound: {fileID: 8300000, guid: 616041aafe8f2452ba39bfd581dc37fb, type: 3}
   fireSound: {fileID: 8300000, guid: d405f7c059b19459a9367ed25a8774bd, type: 3}
-  danceWithSomebody: {fileID: 8300000, guid: d11059decac1347c8a2260f8052a4497, type: 3}
-  science: {fileID: 8300000, guid: 98b71f79ab8c84f02aaee93d425a726b, type: 3}
+  umbrella: {fileID: 8300000, guid: f252e486f21f2490694b3e620426a6bb, type: 3}
+  imGood: {fileID: 8300000, guid: 697e91a7c59bb4d3bae5c7aba7b42f4f, type: 3}
+  countOnMe: {fileID: 8300000, guid: 6afdd88099eb742b093d2beeeaf71662, type: 3}
+  science: {fileID: 8300000, guid: 2352603aa8bf6450d910b2e69708b4d4, type: 3}
   fallingInLove: {fileID: 8300000, guid: 45373f9d49dcc4d79b7c496b927d0bc9, type: 3}
   hinneni: {fileID: 8300000, guid: 35efcedc4f9ff48559a230e37d099bf3, type: 3}
+  wow: {fileID: 8300000, guid: 4f3a4c05bc4ee43b7815b91c8361f40e, type: 3}
 --- !u!114 &1071445001
 MonoBehaviour:
   m_ObjectHideFlags: 0

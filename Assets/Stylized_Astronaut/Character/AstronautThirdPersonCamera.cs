@@ -14,9 +14,6 @@ using UnityEngine;
 
     private float currentX = 0.0f;
     private float currentY = 20.0f;
-    // private float sensitivityX = 20.0f;
-    // private float sensitivityY = 20.0f;
-
 
     private void Start()
     {
@@ -26,11 +23,7 @@ using UnityEngine;
 
     public IEnumerator Shake(float duration, float magnitude){
 
-          // Vector3 startPos = transform.localPosition;
-
           float elapsed = 0.0f;
-
-          
 
           while (elapsed < duration){
               float x = Random.Range(-1f, 1f) * magnitude;

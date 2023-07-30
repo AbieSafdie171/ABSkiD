@@ -1866,7 +1866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Stats: \nCoolness - 50\nSpeed - 75\nStamina - 60\nSkiing IQ - 5\nAlcohol
+  m_text: "Stats: \nCoolness - 35\nSpeed - 75\nStamina - 35\nSkiing IQ - 5\nAlcohol
     Tolerance - 10\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
@@ -2394,7 +2394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t- Doubles the positive effects\n\tof alcohol for 20 seconds\n\t- Don't
+  m_text: "\t- Doubles the positive effects\n\tof alcohol for 15 seconds\n\t- Don't
     get drunk effect\n\t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}

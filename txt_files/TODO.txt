@@ -10,7 +10,7 @@
 
 - X Factors
 	Easy: 
-		Jacque (double effect of pickups for 10 sec?)
+		
 	Meh:
 		Sasha (rainbow? pick positive stuff up arond you)
 		JZ (dad bod, immunity + increase size)
@@ -20,9 +20,9 @@
 		Lucinda (become transparent)
 
 	Long:
-		Mady (wildcard, wait until everyone is done?)
 		Chloe (move pickups to one spot)
 		Lilah (Americanize everything?)
+		Mady (wildcard, wait until everyone is done?)
 
 	?:
 		Kaya ()
@@ -39,10 +39,11 @@ Finished! :)
 	Jonah (missing 2 songs)
 	Hannah
 	Romie (missing 2 songs)
-	Ella (missing 3 songs)
+	Ella
 	Bri (missing 3 songs)
 	Alex (missing 3 songs)
 	D$ (missing 3 songs)
+	Jacque (missing 3 songs)
 
 
 Difficulty Rank:

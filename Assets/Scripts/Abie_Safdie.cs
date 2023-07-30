@@ -16,7 +16,6 @@ public class Abie_Safdie : MonoBehaviour
     public static int alcTol = 5;
 
 
-
     public static void xFactor(){
 
 

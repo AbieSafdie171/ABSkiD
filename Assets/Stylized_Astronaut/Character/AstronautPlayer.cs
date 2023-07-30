@@ -23,6 +23,9 @@ using UnityEngine.SceneManagement;
 		// Daniel Moss
 		public static bool danielAlcohol = false;
 
+		// Jacque Velasco
+		public static bool jacquePickup = false;
+
 
 		public GameObject leftSki;
 
@@ -41,6 +44,7 @@ using UnityEngine.SceneManagement;
 		void Start () {
 			fran = false;
 			danielAlcohol = false;
+			jacquePickup = false;
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
 			// Debug.Log(DanielMoss.coolness);
@@ -96,7 +100,7 @@ using UnityEngine.SceneManagement;
 					thicc.Play();
 					Destroy(other.gameObject);
 				} 
-				else{
+				else {
 					int cHealth = healthBar.GetCurrentHealth();
 					cHealth--;
 					healthBar.SetHealth(cHealth);
@@ -110,22 +114,34 @@ using UnityEngine.SceneManagement;
             if (other.gameObject.name == "Heart(Clone)")
 			{
 				int cHealth = healthBar.GetCurrentHealth();
-				cHealth++;
+				if (jacquePickup){
+					cHealth += 2;}
+				else {
+					cHealth++;
+					}
 				healthBar.SetHealth(cHealth);
 			}
 
 			if (other.gameObject.name == "Oxygen(Clone)")
 			{
+				int increase = 200;
+				if (jacquePickup)
+					increase *= 2;
 				float cHealth = oxygenBar.GetCurrentHealth();
-				cHealth += 200;
+
+				cHealth += increase;
 				oxygenBar.SetHealth(cHealth);
 				
 			}
 
 			if (other.gameObject.name == "Sun(Clone)")
 			{
+				int increase = 200;
 				float cHealth = heatBar.GetCurrentHealth();
-				cHealth += 200;
+				if (jacquePickup)
+					increase *= 2;
+
+				cHealth += increase;
 				heatBar.SetHealth(cHealth);
 				
 			}
@@ -138,20 +154,28 @@ using UnityEngine.SceneManagement;
 			}
 			if (other.gameObject.name == "watermelon(Clone)")
 			{
+				int increase = 200;
+				if (jacquePickup)
+					increase *= 2;
+
 				int cHealth = xFactorBar.GetCurrentHealth();
 				cHealth++;
 				xFactorBar.SetHealth(cHealth);
 
 				float cHealth2 = heatBar.GetCurrentHealth();
-				cHealth2 += 200;
+				cHealth2 += increase;
 				heatBar.SetHealth(cHealth2);
 
 				int cHealth3 = healthBar.GetCurrentHealth();
-				cHealth3++;
+				if (jacquePickup){
+					cHealth3 += 2;}
+				else {
+					cHealth3++;
+					}
 				healthBar.SetHealth(cHealth3);
 
 				float cHealth4 = oxygenBar.GetCurrentHealth();
-				cHealth4 += 200;
+				cHealth4 += increase;
 				oxygenBar.SetHealth(cHealth4);
 
 				GameManager.increaseScore(500);
@@ -172,7 +196,7 @@ using UnityEngine.SceneManagement;
 				m = (Mathf.Abs(tol - 100f)) / 75f;
 
 
-				if (tol != 100 && danielAlcohol == false)
+				if (danielAlcohol == false)
 					StartCoroutine(shake.Shake(d, m));
 
 				int cHealth = healthBar.GetCurrentHealth();
@@ -192,12 +216,10 @@ using UnityEngine.SceneManagement;
 
 				int alcIncrease = 200;
 
-				if (danielAlcohol)
+				if (danielAlcohol || jacquePickup)
 					alcIncrease *= 2;
 
 				if (oxHealth >= heatHealth){
-					// Debug.Log("Oxygen: "+ oxHealth);
-					// Debug.Log("Heat: "+ heatHealth);
 					heatHealth += alcIncrease;
 					heatBar.SetHealth(heatHealth);
 				} else{
