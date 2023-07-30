@@ -16,8 +16,12 @@ using UnityEngine.SceneManagement;
 		private Vector3 moveDirection = Vector3.zero;
 		public float gravity = 20.0f;
 
+		// Hannah Abikzer
 		public static bool fran = false;
 		public AudioSource thicc;
+
+		// Daniel Moss
+		public static bool danielAlcohol = false;
 
 
 		public GameObject leftSki;
@@ -32,8 +36,11 @@ using UnityEngine.SceneManagement;
 
 		public HealthBar xFactorBar;
 
+
+
 		void Start () {
 			fran = false;
+			danielAlcohol = false;
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
 			// Debug.Log(DanielMoss.coolness);
@@ -165,11 +172,14 @@ using UnityEngine.SceneManagement;
 				m = (Mathf.Abs(tol - 100f)) / 75f;
 
 
-				if (tol != 100)
+				if (tol != 100 && danielAlcohol == false)
 					StartCoroutine(shake.Shake(d, m));
 
 				int cHealth = healthBar.GetCurrentHealth();
-				cHealth--;
+
+				if (danielAlcohol == false)
+					cHealth--;
+
 				healthBar.SetHealth(cHealth);
 
 				if (cHealth == 0){
@@ -180,11 +190,18 @@ using UnityEngine.SceneManagement;
 
 				float heatHealth = heatBar.GetCurrentHealth();
 
+				int alcIncrease = 200;
+
+				if (danielAlcohol)
+					alcIncrease *= 2;
+
 				if (oxHealth >= heatHealth){
-					heatHealth += 200;
+					// Debug.Log("Oxygen: "+ oxHealth);
+					// Debug.Log("Heat: "+ heatHealth);
+					heatHealth += alcIncrease;
 					heatBar.SetHealth(heatHealth);
 				} else{
-					oxHealth += 200;
+					oxHealth += alcIncrease;
 					oxygenBar.SetHealth(oxHealth);
 				}
 

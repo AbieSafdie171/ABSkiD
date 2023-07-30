@@ -285,6 +285,7 @@ RectTransform:
   - {fileID: 1412188862}
   - {fileID: 1955455198}
   - {fileID: 1054621204}
+  - {fileID: 1761619835}
   m_Father: {fileID: 1071444999}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1589,7 +1590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -168, y: 0.3821}
+  m_AnchoredPosition: {x: -179, y: 0.3821}
   m_SizeDelta: {x: 91.7838, y: 47.0467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054621205
@@ -1882,6 +1883,7 @@ MonoBehaviour:
   xFactorBar: {fileID: 508135415}
   oxygenBar: {fileID: 735253456}
   heatBar: {fileID: 1310117844}
+  onSign: {fileID: 1761619834}
   currentHealth: 0
   time: 0
   scoreText: {fileID: 966636653}
@@ -1891,11 +1893,12 @@ MonoBehaviour:
   src2: {fileID: 1511579028}
   src3: {fileID: 1882240293}
   xFactorsrc: {fileID: 1630294522}
-  holdingHero: {fileID: 8300000, guid: 9991362b0ab3545c78184230684f5d3f, type: 3}
+  endsOfTheEarth: {fileID: 8300000, guid: 42ede397d071e4e9db8047724a5d3081, type: 3}
   stellaBrown: {fileID: 8300000, guid: 49d930ec084ee49b19448c6cab50f943, type: 3}
   missingYou: {fileID: 8300000, guid: 9c9faa2c86b464852af7465fec92c44f, type: 3}
   niceBoy: {fileID: 8300000, guid: 2bf6ac9cf519c4800b599939158bbbd1, type: 3}
   danceNight: {fileID: 8300000, guid: f28a9ef62d13440249ac7b1e29edf67f, type: 3}
+  holdingHero: {fileID: 8300000, guid: 9991362b0ab3545c78184230684f5d3f, type: 3}
   escargotBlues: {fileID: 8300000, guid: ac6f0a4f3283148bd8f100536f89952d, type: 3}
   the505: {fileID: 8300000, guid: 5eb8cb4305b044ffc9c297eee83e7238, type: 3}
   cigaretteDaydreams: {fileID: 8300000, guid: c99bb0fc5498f4d39b5c36ad642c3cfb, type: 3}
@@ -1913,8 +1916,10 @@ MonoBehaviour:
   telAviv: {fileID: 8300000, guid: 5046b012ed30d4cb6ae4a1649e315089, type: 3}
   claySound: {fileID: 8300000, guid: 616041aafe8f2452ba39bfd581dc37fb, type: 3}
   fireSound: {fileID: 8300000, guid: d405f7c059b19459a9367ed25a8774bd, type: 3}
+  danceWithSomebody: {fileID: 8300000, guid: d11059decac1347c8a2260f8052a4497, type: 3}
   science: {fileID: 8300000, guid: 98b71f79ab8c84f02aaee93d425a726b, type: 3}
   fallingInLove: {fileID: 8300000, guid: 45373f9d49dcc4d79b7c496b927d0bc9, type: 3}
+  hinneni: {fileID: 8300000, guid: 35efcedc4f9ff48559a230e37d099bf3, type: 3}
 --- !u!114 &1071445001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3393,6 +3398,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1761619834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761619835}
+  - component: {fileID: 1761619837}
+  - component: {fileID: 1761619836}
+  m_Layer: 5
+  m_Name: onSign
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1761619835
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761619834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 508135414}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 177, y: 1.6}
+  m_SizeDelta: {x: 91.7838, y: 47.0467}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1761619836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761619834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4292ad9900092469b9d500dd6c7266cc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1761619837
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761619834}
+  m_CullTransparentMesh: 1
 --- !u!1 &1882240292
 GameObject:
   m_ObjectHideFlags: 0

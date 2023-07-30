@@ -4,12 +4,14 @@
 - Char Bios
 	Lucie
 
+- Timer for X Factors
+
 
 
 - X Factors
-	Meh:
+	Easy: 
 		Jacque (double effect of pickups for 10 sec?)
-		D$ (doubles alc and removes alc effect and give health)
+	Meh:
 		Sasha (rainbow? pick positive stuff up arond you)
 		JZ (dad bod, immunity + increase size)
 		Julia (JUUUULLIIIAAAAA)
@@ -40,6 +42,7 @@ Finished! :)
 	Ella (missing 3 songs)
 	Bri (missing 3 songs)
 	Alex (missing 3 songs)
+	D$ (missing 3 songs)
 
 
 Difficulty Rank:
@@ -55,7 +58,7 @@ Difficulty Rank:
 - Billboards
 
 
-// My High Score as me: 42711
+// My High Score as me: 111111 (killed myself though, made it to end of the music)
 
 
 // My Highest Score: 124852
