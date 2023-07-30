@@ -1,23 +1,25 @@
-- Char Sheets
-	More if i want
+TODO:
 
-- Char Bios
-	Lucie
+- Finish Char Sheets
 
-- Timer for X Factors
+- New Char Sheets
+	Ollie
+	Analise
 
+- Billboards
 
+- Timer for X Factors?
+
+- Fix the inconsistencies with the slider degradation
 
 - X Factors
 	Easy: 
-		
+
 	Meh:
 		Sasha (rainbow? pick positive stuff up arond you)
-		JZ (dad bod, immunity + increase size)
 		Julia (JUUUULLIIIAAAAA)
 		Rabbi Berel (lchaim?)
 		Roy (drop pickups around you?)
-		Lucinda (become transparent)
 
 	Long:
 		Chloe (move pickups to one spot)
@@ -25,13 +27,12 @@
 		Mady (wildcard, wait until everyone is done?)
 
 	?:
-		Kaya ()
-		Andy ()
-		Kaya ()
-		Lucie ()
+		Kaya (tel aviv/florida?)
+		Andy (something alchol related?)
+		Lucie (something cat related?)
 		Coop ()
-		Meir ()
-		Portia ()
+		Meir (something jewish)
+		Portia (boobalicious?)
 
 
 Finished! :)
@@ -44,19 +45,17 @@ Finished! :)
 	Alex (missing 3 songs)
 	D$ (missing 3 songs)
 	Jacque (missing 3 songs)
+	Jordan (missing 2 songs)
+	Lucinda (missing 3 songs)
 
 
 Difficulty Rank:
 	1) Abie
 	2) Alex
-	3) Romie
-	4) Hannah
-	5) Jonah
-	6) Ella
-	7) Bri
+	...
 
 
-- Billboards
+
 
 
 // My High Score as me: 111111 (killed myself though, made it to end of the music)

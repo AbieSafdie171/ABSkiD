@@ -14,4 +14,11 @@ public class Jordan_Zicklin : MonoBehaviour
     public static int skiingIQ = 99;
 
     public static int alcTol = 85;
+
+    public static void xFactor(){
+
+
+        // Debug.Log(astr.transform.position);
+
+    }
 }

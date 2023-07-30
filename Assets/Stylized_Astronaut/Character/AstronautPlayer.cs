@@ -26,6 +26,13 @@ using UnityEngine.SceneManagement;
 		// Jacque Velasco
 		public static bool jacquePickup = false;
 
+		// Jordan Zicklin
+		public static bool dadBod = false;
+		public AudioSource shakeDadBod;
+
+		// Lucinda Smith
+		public static bool ghoster = false;
+
 
 		public GameObject leftSki;
 
@@ -39,15 +46,13 @@ using UnityEngine.SceneManagement;
 
 		public HealthBar xFactorBar;
 
-
-
 		void Start () {
 			fran = false;
 			danielAlcohol = false;
 			jacquePickup = false;
+			ghoster = false;
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
-			// Debug.Log(DanielMoss.coolness);
 		}
 
 		void Update (){
@@ -96,9 +101,20 @@ using UnityEngine.SceneManagement;
             if (other.gameObject.name == "tree 5(Clone)" || other.gameObject.name =="tree 6(Clone)"
 			|| other.gameObject.name == "tree 16(Clone)" || other.gameObject.name == "Tree Trunk 1(Clone)")
 			{
-				if (fran){
-					thicc.Play();
-					Destroy(other.gameObject);
+				if (fran || dadBod || ghoster){
+					if (fran){
+						thicc.Play();
+						Destroy(other.gameObject);
+					}
+					else if (dadBod){
+						shakeDadBod.Play();
+						Destroy(other.gameObject);
+					}
+					/*
+					else if (ghoster){
+
+					}
+					*/
 				} 
 				else {
 					int cHealth = healthBar.GetCurrentHealth();
@@ -232,7 +248,5 @@ using UnityEngine.SceneManagement;
 			
 
     }
-
-
 
 	}

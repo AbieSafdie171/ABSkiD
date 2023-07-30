@@ -19,8 +19,10 @@ public class Obstacles : MonoBehaviour
     private void OnTriggerEnter(Collider other){
 
             // Debug.Log(gameObject.name);
-            if (gameObject != null)
+            if (gameObject != null && !AstronautPlayer.ghoster){
                 treeSound.Play();
+            }
+                
 
     }
 

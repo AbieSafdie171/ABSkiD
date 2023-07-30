@@ -32,6 +32,12 @@ public class GameManager : MonoBehaviour
 
     public static int alcoholTolerance = 0;
 
+    public GameObject astr;
+
+    public Vector3 baseSize = new Vector3 (1f, 1f, 1f);
+
+    // public static Vector3 scale = astr.transform.localScale;
+
     // Music Code
     
     private bool played1 = false;
@@ -69,6 +75,7 @@ public class GameManager : MonoBehaviour
 
     // Jordan Zicklin
     public AudioClip lisztomania;
+    public AudioClip dadBod;
 
     // Rabbi Berel
     public AudioClip lchaimFiddler;
@@ -81,6 +88,7 @@ public class GameManager : MonoBehaviour
 
     // Romie Avivi
     public AudioClip telAviv;
+    public AudioClip dancingQueen;
     public AudioClip claySound;
 
     // Alex Malve
@@ -100,7 +108,10 @@ public class GameManager : MonoBehaviour
 
     // Jacque Velasco
     public AudioClip wow;
-    
+
+    // Lucinda Smith
+    public AudioClip ghostSfx;
+    public GameObject astrBody;
 
 
 
@@ -131,10 +142,10 @@ public class GameManager : MonoBehaviour
             case "Abie_Safdie":
                 alcoholTolerance = Abie_Safdie.alcTol;
                 healthBar.SetMaxHealth(5);
-                xFactorBar.SetMaxHealth(4);
-                xFactorBar.SetHealth(0);
                 oxygenBar.SetMaxHealth(baseOxygen * (Abie_Safdie.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Abie_Safdie.coolness / baseDivisor));
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
                 src1.clip = stellaBrown;
                 src2.clip = endsOfTheEarth;
                 src3.clip = missingYou;
@@ -167,8 +178,12 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Jordan_Zicklin.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jordan_Zicklin.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
+                src1.clip = lisztomania;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
+                xFactorsrc.clip = dadBod;
                 break;
             case "Julia_Frank":
                 alcoholTolerance = Julia_Frank.alcTol;
@@ -198,7 +213,7 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
                 src1.clip = telAviv;
-                src2.clip = telAviv;
+                src2.clip = dancingQueen;
                 src3.clip = telAviv;
                 xFactorsrc.clip = claySound;
                 break;
@@ -349,8 +364,12 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Lucinda_Smith.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Lucinda_Smith.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetHealth(0);
+                src1.clip = endsOfTheEarth;
+                src2.clip = endsOfTheEarth;
+                src3.clip = endsOfTheEarth;
+                xFactorsrc.clip = ghostSfx;
                 break;
             case "Rabbi_Meir":
                 alcoholTolerance = Rabbi_Meir.alcTol;
@@ -399,6 +418,10 @@ public class GameManager : MonoBehaviour
             case "Sasha_Kaplow":
                 break;
             case "Jordan_Zicklin":
+                astr.transform.localScale += baseSize;
+                onSign.SetActive(true);
+                AstronautPlayer.dadBod = true;
+                StartCoroutine(timer("Jordan_Zicklin"));
                 break;
             case "Julia_Frank":
                 break;
@@ -462,6 +485,10 @@ public class GameManager : MonoBehaviour
             case "Roy_Wonder":
                 break;
             case "Lucinda_Smith":
+                onSign.SetActive(true);
+                astrBody.SetActive(false);
+                AstronautPlayer.ghoster = true;
+                StartCoroutine(timer("Lucinda_Smith"));
                 break;
             case "Rabbi_Meir":
                 break;
@@ -519,6 +546,16 @@ public class GameManager : MonoBehaviour
                     AstronautPlayer.jacquePickup = false;
                     onSign.SetActive(false);
                     break;
+            case "Jordan_Zicklin":
+                    AstronautPlayer.dadBod = false;
+                    astr.transform.localScale = baseSize;
+                    onSign.SetActive(false);
+                    break;
+            case "Lucinda_Smith":
+                    onSign.SetActive(false);
+                    astrBody.SetActive(true);
+                    AstronautPlayer.ghoster = false;
+                    break;
             default:
                 break;
 
@@ -540,7 +577,7 @@ public class GameManager : MonoBehaviour
 
         currentOxygen -= (59 * Time.deltaTime);
 
-        Debug.Log(currentOxygen);
+        // Debug.Log(currentOxygen);
 
         oxygenBar.SetHealth(currentOxygen);
 

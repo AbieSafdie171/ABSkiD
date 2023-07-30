@@ -1655,8 +1655,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "How to Play: A - Move Left\n                  D - Move Right\t\n                 
-    Space - Use X Factor\t\t     "
+  m_text: "How to Play: Left arrow - Move Left\n                  Right arrow - Move
+    Right\t\n                  Space - Use X Factor\t\t     "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
