@@ -2057,6 +2057,7 @@ MonoBehaviour:
   wow: {fileID: 8300000, guid: 4f3a4c05bc4ee43b7815b91c8361f40e, type: 3}
   ghostSfx: {fileID: 8300000, guid: 7b8ab0e701c5143d18672dda52ddd7a9, type: 3}
   astrBody: {fileID: 2079349194}
+  tieSound: {fileID: 8300000, guid: c53dc5bb55adc4398b240f37904fc2f1, type: 3}
 --- !u!1 &1072239085
 GameObject:
   m_ObjectHideFlags: 0

@@ -173,11 +173,11 @@ using UnityEngine.SceneManagement;
 				int increase = 200;
 				if (jacquePickup)
 					increase *= 2;
-
+				/*
 				int cHealth = xFactorBar.GetCurrentHealth();
 				cHealth++;
 				xFactorBar.SetHealth(cHealth);
-
+				*/
 				float cHealth2 = heatBar.GetCurrentHealth();
 				cHealth2 += increase;
 				heatBar.SetHealth(cHealth2);

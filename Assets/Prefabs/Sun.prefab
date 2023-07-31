@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2260050317001304535}
   m_Layer: 0
   m_Name: Sun
-  m_TagString: Untagged
+  m_TagString: pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupsfx: {fileID: 840438514626188964}
+  rend: {fileID: 0}
+  rend2: {fileID: 0}
 --- !u!1001 &5016797051749019142
 PrefabInstance:
   m_ObjectHideFlags: 0
