@@ -6,6 +6,10 @@ public class GroundTile : MonoBehaviour
     GroundSpawn groundSpawn;
 
 
+    // Roy Wonder
+    public static bool roy = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +42,6 @@ public class GroundTile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public GameObject treePrefab;
@@ -113,10 +116,10 @@ public class GroundTile : MonoBehaviour
 
         if (rand == 2){
 
-        int index = Random.Range(38, 41);
-        Transform spawnPoint = transform.GetChild(index).transform;
+            int index = Random.Range(38, 41);
+            Transform spawnPoint = transform.GetChild(index).transform;
 
-        Instantiate(branch, spawnPoint.position, Quaternion.identity, transform);
+            Instantiate(branch, spawnPoint.position, Quaternion.identity, transform);
         }
     }
 
@@ -125,62 +128,62 @@ public class GroundTile : MonoBehaviour
     void SpawnXFactor(){
         int rand = Random.Range(1, 11);
         if (rand == 3){
-        GameObject temp = Instantiate(xFactor, transform);
-        temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+            GameObject temp = Instantiate(xFactor, transform);
+            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
     }
 
     public GameObject heart;
 
-    void SpawnHeart(){
+    public void SpawnHeart(){
         int rand = Random.Range(1, 11);
         if (rand == 4){
-        GameObject temp = Instantiate(heart, transform);
-        temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+            GameObject temp = Instantiate(heart, transform);
+            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
     }
 
     public GameObject stawberry;
 
-    void SpawnBerry(){
+    public void SpawnBerry(){
         int rand = Random.Range(1, 25);
         if (rand == 5){
-        GameObject temp = Instantiate(stawberry, transform);
-        temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+            GameObject temp = Instantiate(stawberry, transform);
+            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
     }
 
     public GameObject sun;
 
-    void SpawnSun(){
+    public void SpawnSun(){
         int rand = Random.Range(1, 11);
         if (rand == 6){
-        GameObject temp = Instantiate(sun, transform);
-        temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+            GameObject temp = Instantiate(sun, transform);
+            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
     }
 
     public GameObject alcohol;
 
-    void SpawnAlcohol(){
+    public void SpawnAlcohol(){
         int rand = Random.Range(1, 11);
         if (rand == 7){
-        GameObject temp = Instantiate(alcohol, transform);
-        temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+            GameObject temp = Instantiate(alcohol, transform);
+            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
     }
 
     public GameObject oxygen;
 
-    void SpawnOxygen(){
+    public void SpawnOxygen(){
         int rand = Random.Range(1, 11);
         if (rand == 8){
-        GameObject temp = Instantiate(oxygen, transform);
-        temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+            GameObject temp = Instantiate(oxygen, transform);
+            temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }
     }
 
-    Vector3 GetRandomPointInCollider(Collider collider){
+    public Vector3 GetRandomPointInCollider(Collider collider){
 
             Vector3 point = new Vector3(
                 Random.Range(collider.bounds.min.x, collider.bounds.max.x),

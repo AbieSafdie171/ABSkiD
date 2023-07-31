@@ -2058,6 +2058,9 @@ MonoBehaviour:
   ghostSfx: {fileID: 8300000, guid: 7b8ab0e701c5143d18672dda52ddd7a9, type: 3}
   astrBody: {fileID: 2079349194}
   tieSound: {fileID: 8300000, guid: c53dc5bb55adc4398b240f37904fc2f1, type: 3}
+  wildCard: 0
+  tempName: 
+  ktichenNoises: {fileID: 8300000, guid: 10bcfd24acfae445ab7f0758a0b9a088, type: 3}
 --- !u!1 &1072239085
 GameObject:
   m_ObjectHideFlags: 0

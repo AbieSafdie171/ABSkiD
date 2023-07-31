@@ -18,7 +18,6 @@ TODO:
 	Meh:
 		Julia (JUUUULLIIIAAAAA)
 		Rabbi Berel (lchaim?)
-		Roy (drop pickups around you?)
 
 	Long:
 		Sasha (rainbow? pick positive stuff up arond you)
@@ -47,6 +46,7 @@ Finished! :)
 	Lucinda (missing 3 songs)
 	Chloe (missing 3 songs)
 	Mady (missing 3 songs)
+	Roy (missing 3 songs) {could improve functionality if i want -- stacking, cloning a clone of a clone causes issues (name changes, height, etc)}
 
 
 Difficulty Rank:

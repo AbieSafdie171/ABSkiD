@@ -119,7 +119,9 @@ public class GameManager : MonoBehaviour
     // Mady Barth
     public bool wildCard = false;
     public string tempName;
-    public AudioClip chaos;
+
+    // Roy Wonder
+    public AudioClip ktichenNoises;
 
 
 
@@ -231,7 +233,7 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Mady_Barth.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Mady_Barth.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
                 src1.clip = lisztomania;
                 src2.clip = endsOfTheEarth;
@@ -358,8 +360,11 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Roy_Wonder.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Roy_Wonder.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
+                src1.clip = lisztomania;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
                 break;
             case "Lucinda_Smith":
                 alcoholTolerance = Lucinda_Smith.alcTol;
@@ -513,7 +518,8 @@ public class GameManager : MonoBehaviour
                 healthBar.SetHealth(healthBar.getMaxValue());
                 break;
             case "Roy_Wonder":
-                Debug.Log("Roy");
+                xFactorsrc.clip = ktichenNoises;
+                Roy_Wonder.xFactor(astr.transform.position);
                 break;
             case "Lucinda_Smith":
                 xFactorsrc.clip = ghostSfx;

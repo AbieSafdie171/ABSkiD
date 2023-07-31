@@ -13,7 +13,7 @@ public class Pickups : MonoBehaviour
 
     void Start()
     {
-        if (gameObject.name != "X-Factor" && gameObject.name != "X-Factor(Clone)"){
+        if (gameObject.name != "X-Factor" && gameObject.name != "X-Factor(Clone)" && gameObject.name != "X-Factor(Clone)(Clone)"){
         rend = GetComponent<Renderer>();
         rend.enabled = true;
         }
@@ -27,7 +27,7 @@ public class Pickups : MonoBehaviour
             return;
         }
         pickupsfx.Play();
-        if (gameObject.name != "X-Factor" && gameObject.name != "X-Factor(Clone)"){
+        if (gameObject.name != "X-Factor" && gameObject.name != "X-Factor(Clone)" && gameObject.name != "X-Factor(Clone)(Clone)"){
             rend.enabled = false;}
         else {
             rend.enabled = false;

@@ -127,7 +127,7 @@ using UnityEngine.SceneManagement;
 				}
 			}
 
-            if (other.gameObject.name == "Heart(Clone)")
+            if (other.gameObject.name == "Heart(Clone)" || other.gameObject.name == "Heart(Clone)(Clone)")
 			{
 				int cHealth = healthBar.GetCurrentHealth();
 				if (jacquePickup){
@@ -138,7 +138,7 @@ using UnityEngine.SceneManagement;
 				healthBar.SetHealth(cHealth);
 			}
 
-			if (other.gameObject.name == "Oxygen(Clone)")
+			if (other.gameObject.name == "Oxygen(Clone)" || other.gameObject.name == "Oxygen(Clone)(Clone)")
 			{
 				int increase = 200;
 				if (jacquePickup)
@@ -150,7 +150,7 @@ using UnityEngine.SceneManagement;
 				
 			}
 
-			if (other.gameObject.name == "Sun(Clone)")
+			if (other.gameObject.name == "Sun(Clone)" || other.gameObject.name == "Sun(Clone)(Clone)")
 			{
 				int increase = 200;
 				float cHealth = heatBar.GetCurrentHealth();
@@ -162,13 +162,13 @@ using UnityEngine.SceneManagement;
 				
 			}
 
-			if (other.gameObject.name == "X-Factor(Clone)")
+			if (other.gameObject.name == "X-Factor(Clone)" || other.gameObject.name == "X-Factor(Clone)(Clone)")
 			{
 				int cHealth = xFactorBar.GetCurrentHealth();
 				cHealth++;
 				xFactorBar.SetHealth(cHealth);
 			}
-			if (other.gameObject.name == "watermelon(Clone)")
+			if (other.gameObject.name == "watermelon(Clone)" || other.gameObject.name == "watermelon(Clone)(Clone)")
 			{
 				int increase = 200;
 				if (jacquePickup)
@@ -198,7 +198,7 @@ using UnityEngine.SceneManagement;
 
 			}
 
-			if (other.gameObject.name == "Alcohol(Clone)")
+			if (other.gameObject.name == "Alcohol(Clone)" || other.gameObject.name == "Alcohol(Clone)(Clone)")
 			{
 				GameManager.increaseScore(250);
 
