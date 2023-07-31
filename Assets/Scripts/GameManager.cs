@@ -123,6 +123,10 @@ public class GameManager : MonoBehaviour
     // Roy Wonder
     public AudioClip ktichenNoises;
 
+    // Sasha Kaplow
+    public AudioClip rainbow;
+    public GameObject rainbowObject;
+
 
 
     private void Awake(){
@@ -176,8 +180,11 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Sasha_Kaplow.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Sasha_Kaplow.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
+                src1.clip = telAviv;
+                src2.clip = dancingQueen;
+                src3.clip = telAviv;
                 break;
             case "Jordan_Zicklin":
                 alcoholTolerance = Jordan_Zicklin.alcTol;
@@ -429,7 +436,10 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(timer("Daniel_Moss"));
                 break;
             case "Sasha_Kaplow":
-                Debug.Log("Rainbows");
+                xFactorsrc.clip = rainbow;
+                rainbowObject.SetActive(true);
+                Sasha_Kaplow.xFactor(astr.transform.position);
+                StartCoroutine(timer("Sasha_Kaplow"));
                 break;
             case "Jordan_Zicklin":
                 xFactorsrc.clip = dadBod;
@@ -549,6 +559,7 @@ public class GameManager : MonoBehaviour
         fran.SetActive(false);
         judith.SetActive(false);
         onSign.SetActive(false);
+        rainbowObject.SetActive(false);
         setValues();
         score = 0;
 
@@ -595,6 +606,9 @@ public class GameManager : MonoBehaviour
                     onSign.SetActive(false);
                     astrBody.SetActive(true);
                     AstronautPlayer.ghoster = false;
+                    break;
+            case "Sasha_Kaplow":
+                    rainbowObject.SetActive(false);
                     break;
             default:
                 break;
