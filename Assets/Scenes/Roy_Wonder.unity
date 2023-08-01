@@ -942,7 +942,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Strengths: Making Abie Tofu, cooking, bowling, Hawaii'
+  m_text: 'Strengths: Making Abie Tofu, cooking, bowling, Hawaii, Fooling Abie and
+    D$ to eat raw garlic'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}
   m_sharedMaterial: {fileID: -6535256115938310083, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}

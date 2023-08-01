@@ -20,15 +20,13 @@ TODO:
 		Rabbi Berel (lchaim?)
 
 	Long:
-		Sasha (rainbow? pick positive stuff up arond you)
-		Lilah (Israeli-fy everything?)
+		
 
 	?:
 		Kaya (tel aviv/florida?)
 		Andy (something alchol related?)
 		Lucie (something cat related?)
 		Coop ()
-		Meir (something jewish)
 		Portia (boobalicious?)
 
 
@@ -47,6 +45,9 @@ Finished! :)
 	Chloe (missing 3 songs)
 	Mady (missing 3 songs)
 	Roy (missing 3 songs) {could improve functionality if i want -- stacking, cloning a clone of a clone causes issues (name changes, height, etc)}
+	Sasha (missing 3 songs)
+	Lilah
+	Rabbi Meir (missing 2 songs)
 
 
 Difficulty Rank:
@@ -56,12 +57,7 @@ Difficulty Rank:
 
 
 
-
-
-// My High Score as me: 111111 (killed myself though, made it to end of the music)
-
-
-// My Highest Score: 124852
+// My Highest Score: 130397
 
 
 

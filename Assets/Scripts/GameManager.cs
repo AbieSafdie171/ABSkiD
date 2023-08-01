@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public Vector3 baseSize = new Vector3 (1f, 1f, 1f);
 
+    public Vector3 smallSize = new Vector3(0.2f, 0.2f, 0.2f);
+
     // public static Vector3 scale = astr.transform.localScale;
 
     // Music Code
@@ -126,6 +128,14 @@ public class GameManager : MonoBehaviour
     // Sasha Kaplow
     public AudioClip rainbow;
     public GameObject rainbowObject;
+
+    // Lilah Silberman
+    public GameObject israelFlag;
+    public AudioClip hatikvah;
+
+    // Rabbi Meir
+    public AudioClip shofar;
+    public AudioClip yisraelHatikvah;
 
 
 
@@ -308,6 +318,8 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Lilah_Silberman.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Lilah_Silberman.coolness / baseDivisor));
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
                 src1.clip = escargotBlues;
                 src2.clip = the505;
                 src3.clip = cigaretteDaydreams;
@@ -389,16 +401,22 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Rabbi_Meir.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Rabbi_Meir.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
                 break;
             case "Portia_Carney":
                 alcoholTolerance = Portia_Carney.alcTol;
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Portia_Carney.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Portia_Carney.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetHealth(0);
+                src1.clip = hatikvah;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
                 break;
             default:
                 break;
@@ -506,7 +524,10 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(timer("Hannah_Abikzer"));
                 break;
             case "Lilah_Silberman":
-                Debug.Log("Lilah");
+                israelFlag.SetActive(true);
+                xFactorsrc.clip = hatikvah;
+                Abie_Safdie.xFactor();
+                StartCoroutine(timer("Lilah_Silberman"));
                 break;
             case "Andy_Gitelson":
                 Debug.Log("Andy");
@@ -539,7 +560,10 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(timer("Lucinda_Smith"));
                 break;
             case "Rabbi_Meir":
-                Debug.Log("RabbiMeir");
+                xFactorsrc.clip = shofar;
+                astr.transform.localScale = smallSize;
+                onSign.SetActive(true);
+                StartCoroutine(timer("Rabbi_Meir"));
                 break;
             case "Portia_Carney":
                 Debug.Log("Portia!");
@@ -560,6 +584,7 @@ public class GameManager : MonoBehaviour
         judith.SetActive(false);
         onSign.SetActive(false);
         rainbowObject.SetActive(false);
+        israelFlag.SetActive(false);
         setValues();
         score = 0;
 
@@ -573,6 +598,9 @@ public class GameManager : MonoBehaviour
           while (elapsed < duration){
 
             elapsed += Time.deltaTime;
+
+            if (elapsed > 13f)
+                onSign.SetActive(false);
             
             yield return null;
           }
@@ -581,34 +609,34 @@ public class GameManager : MonoBehaviour
 
             case "Daniel_Moss":
                     AstronautPlayer.danielAlcohol = false;
-                    onSign.SetActive(false);
                     break;
             case "Hannah_Abikzer":
                     fran.SetActive(false);
-                    onSign.SetActive(false);
                     AstronautPlayer.fran = false;
                     break;
             case "Jonah_Kaplan":
-                    onSign.SetActive(false);
                     judith.SetActive(false);
                     AstronautPlayer.fran = false;
                     break;
             case "Jacque_Velasco":
                     AstronautPlayer.jacquePickup = false;
-                    onSign.SetActive(false);
                     break;
             case "Jordan_Zicklin":
                     AstronautPlayer.dadBod = false;
                     astr.transform.localScale = baseSize;
-                    onSign.SetActive(false);
                     break;
             case "Lucinda_Smith":
-                    onSign.SetActive(false);
                     astrBody.SetActive(true);
                     AstronautPlayer.ghoster = false;
                     break;
             case "Sasha_Kaplow":
                     rainbowObject.SetActive(false);
+                    break;
+            case "Lilah_Silberman":
+                    israelFlag.SetActive(false);
+                    break;
+            case "Rabbi_Meir":
+                    astr.transform.localScale = baseSize;
                     break;
             default:
                 break;
