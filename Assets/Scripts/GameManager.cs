@@ -15,30 +15,18 @@ public class GameManager : MonoBehaviour
     public GameObject onSign;
 
     public int currentHealth;
-
     public static float score;
-
+    public float scoreLevel = 5000f;
     public float time;
-
     public static GameManager inst;
-
     public TMP_Text scoreText;
-
     public TMP_Text chosenPlayer;
-
     public string hillelian = HowToPlay.getCharacter();
-
     private float counter = 0.0f;
-
     public static int alcoholTolerance = 0;
-
     public GameObject astr;
-
     public Vector3 baseSize = new Vector3 (1f, 1f, 1f);
-
     public Vector3 smallSize = new Vector3(0.2f, 0.2f, 0.2f);
-
-    // public static Vector3 scale = astr.transform.localScale;
 
     // Music Code
     
@@ -137,6 +125,23 @@ public class GameManager : MonoBehaviour
     public AudioClip shofar;
     public AudioClip yisraelHatikvah;
 
+    // Kaya Rubinstein
+    public AudioClip tickTock;
+
+    // Jordan Cooper
+    public AudioClip myLeg;
+
+    // Andy Gitelson
+    public AudioClip holdMyBeer;
+
+    // Lucie Nortman
+    public GameObject cat;
+    public GameObject cuteCat;
+    public GameObject cutestCat;
+    public GameObject cat4;
+    public GameObject cat5;
+    public AudioClip aww;
+
 
 
     private void Awake(){
@@ -190,7 +195,7 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Sasha_Kaplow.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Sasha_Kaplow.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetMaxHealth(5);
                 xFactorBar.SetHealth(0);
                 src1.clip = telAviv;
                 src2.clip = dancingQueen;
@@ -272,24 +277,33 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Jordan_Cooper.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jordan_Cooper.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = endsOfTheEarth;
+                src3.clip = endsOfTheEarth;
                 break;
             case "Kaya_Rubinstein":
                 alcoholTolerance = Kaya_Rubinstein.alcTol;
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Kaya_Rubinstein.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Kaya_Rubinstein.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = endsOfTheEarth;
+                src3.clip = endsOfTheEarth;
                 break;
             case "Lucie_Nortman":
                 alcoholTolerance = Lucie_Nortman.alcTol;
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Lucie_Nortman.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Lucie_Nortman.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(5);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = endsOfTheEarth;
+                src3.clip = endsOfTheEarth;
                 break;
             case "Jacque_Velasco":
                 alcoholTolerance = Jacque_Velasco.alcTol;
@@ -329,8 +343,11 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Andy_Gitelson.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Andy_Gitelson.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(3);
+                xFactorBar.SetHealth(0);
+                src1.clip = umbrella;
+                src2.clip = imGood;
+                src3.clip = countOnMe;
                 break;
             case "Ella_Diamond":
                 alcoholTolerance = Ella_Diamond.alcTol;
@@ -348,7 +365,7 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Chloe_Gold.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Chloe_Gold.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(6);
+                xFactorBar.SetMaxHealth(5);
                 xFactorBar.SetHealth(0);
                 src1.clip = endsOfTheEarth;
                 src2.clip = endsOfTheEarth;
@@ -359,6 +376,9 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Rabbi_Berel.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Rabbi_Berel.coolness / baseDivisor));
+                xFactorBar.SetMaxHealth(2);
+                xFactorBar.SetHealth(0);
+                GroundTile.berel = true;
                 src1.clip = lchaimFiddler;
                 src2.clip = lchaimFiddler;
                 src3.clip = lchaimFiddler;
@@ -414,7 +434,7 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Portia_Carney.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(1);
                 xFactorBar.SetHealth(0);
-                src1.clip = hatikvah;
+                src1.clip = yisraelHatikvah;
                 src2.clip = endsOfTheEarth;
                 src3.clip = missingYou;
                 break;
@@ -502,13 +522,33 @@ public class GameManager : MonoBehaviour
                 heatBar.SetHealth(heatBar.getMaxValue());
                 break;
             case "Jordan_Cooper":
-                Debug.Log("Coop");
+                xFactorsrc.clip = myLeg;
+                AstronautPlayer.speed -= 1f;
                 break;
             case "Kaya_Rubinstein":
-                Debug.Log("Kaya");
+                xFactorsrc.clip = tickTock;
+                AstronautPlayer.speed -= 1f;
                 break;
             case "Lucie_Nortman":
-                Debug.Log("Lucie");
+                xFactorsrc.clip = aww;
+                int rand = Random.Range(0, 5);
+
+                switch (rand){
+                    case 0: cat.SetActive(true);
+                            break;
+                    case 1: cuteCat.SetActive(true);
+                            break;
+                    case 2: cutestCat.SetActive(true);
+                            break;
+                    case 3: cat4.SetActive(true);
+                            break;
+                    case 4: cat5.SetActive(true);
+                            break;
+                }
+                healthBar.SetHealth(healthBar.getMaxValue());
+                heatBar.SetHealth(heatBar.getMaxValue());
+                oxygenBar.SetHealth(oxygenBar.getMaxValue());
+                StartCoroutine(timer("Lucie_Nortman"));
                 break;
             case "Jacque_Velasco":
                 xFactorsrc.clip = wow;
@@ -530,7 +570,8 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(timer("Lilah_Silberman"));
                 break;
             case "Andy_Gitelson":
-                Debug.Log("Andy");
+                xFactorsrc.clip = holdMyBeer;
+                Andy_Gitelson.xFactor();
                 break;
             case "Ella_Diamond":
                 xFactorsrc.clip = science;
@@ -541,7 +582,11 @@ public class GameManager : MonoBehaviour
                 Chloe_Gold.xFactor(astr.transform.position);
                 break;
             case "Rabbi_Berel":
-                Debug.Log("Lchaim");
+                xFactorsrc.clip = hinneni;
+                healthBar.SetHealth(healthBar.getMaxValue());
+                onSign.SetActive(true);
+                AstronautPlayer.danielAlcohol = true;
+                StartCoroutine(timer("Daniel_Moss"));
                 break;
             case "Bri_Tafoya":
                 xFactorsrc.clip = fallingInLove;
@@ -581,10 +626,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         fran.SetActive(false);
+        cat.SetActive(false);
+        cuteCat.SetActive(false);
+        cutestCat.SetActive(false);
+        cat4.SetActive(false);
+        cat5.SetActive(false);
         judith.SetActive(false);
         onSign.SetActive(false);
         rainbowObject.SetActive(false);
         israelFlag.SetActive(false);
+        GroundTile.berel = false;
         setValues();
         score = 0;
 
@@ -638,18 +689,19 @@ public class GameManager : MonoBehaviour
             case "Rabbi_Meir":
                     astr.transform.localScale = baseSize;
                     break;
+            case "Lucie_Nortman":
+                    cuteCat.SetActive(false);
+                    cutestCat.SetActive(false);
+                    cat.SetActive(false);
+                    cat4.SetActive(false);
+                    cat5.SetActive(false);
+                    break;
             default:
                 break;
 
         }
 
     }
-
-
-
-
-
-
 
     // Update is called once per frame
     void Update()
@@ -684,6 +736,12 @@ public class GameManager : MonoBehaviour
         score += time;
 
         score = Mathf.Round(score);
+
+        if (score >= scoreLevel){
+            AstronautPlayer.speed += 2;
+            Debug.Log(AstronautPlayer.speed);
+            scoreLevel += 5000f;
+        }
 
         scoreText.text = "SCORE: " + score;
 

@@ -5,10 +5,11 @@ TODO:
 - New Char Sheets
 	Ollie
 	Analise
+	Adeline
 
 - Billboards
 
-- Timer for X Factors?
+- fix car colliders
 
 - Fix the inconsistencies with the slider degradation
 
@@ -17,25 +18,23 @@ TODO:
 
 	Meh:
 		Julia (JUUUULLIIIAAAAA)
-		Rabbi Berel (lchaim?)
+		
 
 	Long:
 		
 
 	?:
-		Kaya (tel aviv/florida?)
-		Andy (something alchol related?)
-		Lucie (something cat related?)
-		Coop ()
 		Portia (boobalicious?)
 
 
 Finished! :)
 	Abie
-	Jonah (missing 2 songs)
-	Hannah
-	Romie (missing 2 songs)
+	Rabbi Berel
+	Lilah
 	Ella
+	Hannah
+	Jonah (missing 2 songs)
+	Romie (missing 2 songs)
 	Bri (missing 3 songs)
 	Alex (missing 3 songs)
 	D$ (missing 3 songs)
@@ -46,8 +45,11 @@ Finished! :)
 	Mady (missing 3 songs)
 	Roy (missing 3 songs) {could improve functionality if i want -- stacking, cloning a clone of a clone causes issues (name changes, height, etc)}
 	Sasha (missing 3 songs)
-	Lilah
 	Rabbi Meir (missing 2 songs)
+	Kaya (missing 3 songs)
+	Coop (missing 3 songs)
+	Andy (missing 3 songs)
+	Lucie (missing 3 songs)
 
 
 Difficulty Rank:
@@ -57,7 +59,7 @@ Difficulty Rank:
 
 
 
-// My Highest Score: 130397
+// My Highest Score: x
 
 
 

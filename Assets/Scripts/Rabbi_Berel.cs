@@ -13,7 +13,7 @@ public class Rabbi_Berel : MonoBehaviour
 
     public static int skiingIQ = 70;
 
-    public static int alcTol = 1;
+    public static int alcTol = 60;
 
     
 }

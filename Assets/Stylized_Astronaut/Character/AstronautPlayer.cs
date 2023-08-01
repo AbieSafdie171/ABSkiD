@@ -11,8 +11,8 @@ using UnityEngine.SceneManagement;
 
 		public AstronautThirdPersonCamera shake;
 
-		public float speed = 600.0f;
-		public float turnSpeed = 400.0f;
+		public static float speed = 25f;
+		public float turnSpeed;
 		private Vector3 moveDirection = Vector3.zero;
 		public float gravity = 20.0f;
 

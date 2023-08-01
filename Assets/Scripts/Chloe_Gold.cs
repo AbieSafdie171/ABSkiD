@@ -31,17 +31,24 @@ public class Chloe_Gold : MonoBehaviour
         newPos.x += randX;
         newPos.z += randZ;
 
-        int counter = 0;
+        int alcCounter = 0;
+        int xCounter = 0;
 
         for (int i = 0; i < c; i++)
         {
             if (objs[i].name == "Alcohol(Clone)")
-                counter++;
+                alcCounter++;
 
-            if (objs[i].name != "Alcohol(Clone)"){
+            if (objs[i].name == "X-Factor(Clone)")
+                xCounter++;
+                
+
+            if (objs[i].name != "Alcohol(Clone)" && objs[i].name != "X-Factor(Clone)"){
                 objs[i].transform.position = newPos;
             } else {
-                if (counter < 2)
+                if (alcCounter < 2 && objs[i].name == "Alcohol(Clone)")
+                    objs[i].transform.position = newPos;
+                if (xCounter < 3 && objs[i].name == "X-Factor(Clone)")
                     objs[i].transform.position = newPos;
             }
         }              

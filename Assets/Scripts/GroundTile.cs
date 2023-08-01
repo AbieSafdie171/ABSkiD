@@ -9,25 +9,41 @@ public class GroundTile : MonoBehaviour
     // Roy Wonder
     public static bool roy = false;
 
+    // Rabbi Berel
+    public static bool berel = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
         groundSpawn = GameObject.FindObjectOfType<GroundSpawn>();
-        SpawnTree();
-        SpawnTrunk();
-        SpawnLeftRocks();
-        SpawnRightRocks();
-        SpawnLeftBillboardRocks();
-        SpawnRightBillboardRocks();
-        SpawnTree2();
-        SpawnBranch();
-        SpawnXFactor();
-        SpawnHeart();
-        SpawnBerry();
-        SpawnSun();
-        SpawnAlcohol();
-        SpawnOxygen();
+        if (!berel){
+            SpawnTree();
+            SpawnTrunk();
+            SpawnLeftRocks();
+            SpawnRightRocks();
+            SpawnLeftBillboardRocks();
+            SpawnRightBillboardRocks();
+            SpawnTree2();
+            SpawnBranch();
+            SpawnXFactor();
+            SpawnHeart();
+            SpawnBerry();
+            SpawnSun();
+            SpawnAlcohol(false);
+            SpawnOxygen();
+        } else {
+            SpawnTree();
+            SpawnXFactor();
+            SpawnTrunk();
+            SpawnLeftRocks();
+            SpawnRightRocks();
+            SpawnLeftBillboardRocks();
+            SpawnRightBillboardRocks();
+            SpawnTree2();
+            SpawnBranch();
+            SpawnAlcohol(true);
+        }
         
     }
 
@@ -165,9 +181,9 @@ public class GroundTile : MonoBehaviour
 
     public GameObject alcohol;
 
-    public void SpawnAlcohol(){
+    public void SpawnAlcohol(bool t){
         int rand = Random.Range(1, 11);
-        if (rand == 7){
+        if (rand == 7 || t){
             GameObject temp = Instantiate(alcohol, transform);
             temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
         }

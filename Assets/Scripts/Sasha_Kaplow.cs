@@ -28,10 +28,21 @@ public class Sasha_Kaplow : MonoBehaviour
         newPos.x += 0f;
         newPos.z += 0.2f;
 
+        int counter = 0;
+
         for (int i = 0; i < c; i++)
         {
-            if (objs[i].name != "Alcohol(Clone)")
-                objs[i].transform.position = newPos;
+            if (objs[i].name == "X-Factor(Clone)")
+                counter++;
+
+            if (objs[i].name != "X-Factor(Clone)" && objs[i].name != "Alcohol(Clone)"){
+                objs[i].transform.position = newPos;}
+            else {
+                if (counter < 3 && objs[i].name != "Alcohol(Clone)")
+                    objs[i].transform.position = newPos;
+            }
+
+
         }              
 
     }
