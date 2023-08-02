@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     private float counter = 0.0f;
     public static int alcoholTolerance = 0;
     public GameObject astr;
+    public BoxCollider person;
+    public Vector3 personBaseSize = new Vector3(0.7f, 2f, 2f);
+    public Vector3 carSize = new Vector3(4f, 2f, 2f);
     public Vector3 baseSize = new Vector3 (1f, 1f, 1f);
     public Vector3 smallSize = new Vector3(0.2f, 0.2f, 0.2f);
 
@@ -142,6 +145,10 @@ public class GameManager : MonoBehaviour
     public GameObject cat5;
     public AudioClip aww;
 
+    // Portia Carney
+    public GameObject rack;
+    public AudioClip niceRack;
+
 
 
     private void Awake(){
@@ -161,6 +168,7 @@ public class GameManager : MonoBehaviour
         float baseOxygen = 1000;
         float baseHeat = 1000;
         float baseDivisor = 50;
+        
 
         chosenPlayer.text = HowToPlay.getCharacter();
 
@@ -175,8 +183,8 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Abie_Safdie.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
-                src1.clip = stellaBrown;
-                src2.clip = endsOfTheEarth;
+                src1.clip = endsOfTheEarth;
+                src2.clip = stellaBrown;
                 src3.clip = missingYou;
                 break;
             case "Daniel_Moss":
@@ -238,8 +246,8 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Romie_Avivi.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
-                src1.clip = telAviv;
-                src2.clip = dancingQueen;
+                src1.clip = dancingQueen;
+                src2.clip = telAviv;
                 src3.clip = telAviv;
                 break;
             case "Maddie_Studer":
@@ -432,7 +440,7 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(5);
                 oxygenBar.SetMaxHealth(baseOxygen * (Portia_Carney.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Portia_Carney.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetMaxHealth(2);
                 xFactorBar.SetHealth(0);
                 src1.clip = yisraelHatikvah;
                 src2.clip = endsOfTheEarth;
@@ -493,6 +501,7 @@ public class GameManager : MonoBehaviour
                 xFactorsrc.clip = georgia;
                 onSign.SetActive(true);
                 AstronautPlayer.fran = true;
+                person.size = carSize;
                 judith.SetActive(true);
                 StartCoroutine(timer("Jonah_Kaplan"));
                 break;
@@ -560,6 +569,8 @@ public class GameManager : MonoBehaviour
                 xFactorsrc.clip = lonely;
                 onSign.SetActive(true);
                 AstronautPlayer.fran = true;
+                person.size = carSize;
+                Debug.Log(person.size);
                 fran.SetActive(true);
                 StartCoroutine(timer("Hannah_Abikzer"));
                 break;
@@ -611,7 +622,10 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(timer("Rabbi_Meir"));
                 break;
             case "Portia_Carney":
-                Debug.Log("Portia!");
+                rack.SetActive(true);
+                xFactorsrc.clip = niceRack;
+                healthBar.SetHealth(healthBar.getMaxValue());
+                StartCoroutine(timer("Portia_Carney"));
                 break;
             default:
                 break;
@@ -625,6 +639,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rack.SetActive(false);
         fran.SetActive(false);
         cat.SetActive(false);
         cuteCat.SetActive(false);
@@ -636,6 +651,7 @@ public class GameManager : MonoBehaviour
         rainbowObject.SetActive(false);
         israelFlag.SetActive(false);
         GroundTile.berel = false;
+        AstronautPlayer.speed = 25f;
         setValues();
         score = 0;
 
@@ -663,10 +679,12 @@ public class GameManager : MonoBehaviour
                     break;
             case "Hannah_Abikzer":
                     fran.SetActive(false);
+                    person.size = personBaseSize;
                     AstronautPlayer.fran = false;
                     break;
             case "Jonah_Kaplan":
                     judith.SetActive(false);
+                    person.size = personBaseSize;
                     AstronautPlayer.fran = false;
                     break;
             case "Jacque_Velasco":
@@ -696,6 +714,9 @@ public class GameManager : MonoBehaviour
                     cat4.SetActive(false);
                     cat5.SetActive(false);
                     break;
+            case "Portia_Carney":
+                    rack.SetActive(false);
+                    break;
             default:
                 break;
 
@@ -710,8 +731,6 @@ public class GameManager : MonoBehaviour
         float currentOxygen = oxygenBar.GetCurrentHealth();
 
         currentOxygen -= (59 * Time.deltaTime);
-
-        // Debug.Log(Mady_Barth.names.Length);
 
         oxygenBar.SetHealth(currentOxygen);
 
@@ -739,7 +758,7 @@ public class GameManager : MonoBehaviour
 
         if (score >= scoreLevel){
             AstronautPlayer.speed += 2;
-            Debug.Log(AstronautPlayer.speed);
+            // Debug.Log(AstronautPlayer.speed);
             scoreLevel += 5000f;
         }
 

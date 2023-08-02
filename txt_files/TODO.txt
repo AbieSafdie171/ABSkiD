@@ -9,7 +9,7 @@ TODO:
 
 - Billboards
 
-- fix car colliders
+- fix phasing out of borders if run into side
 
 - Fix the inconsistencies with the slider degradation
 
@@ -24,7 +24,7 @@ TODO:
 		
 
 	?:
-		Portia (boobalicious?)
+		Studer ()
 
 
 Finished! :)
@@ -50,6 +50,7 @@ Finished! :)
 	Coop (missing 3 songs)
 	Andy (missing 3 songs)
 	Lucie (missing 3 songs)
+	Portia (missing 3 songs)
 
 
 Difficulty Rank:
