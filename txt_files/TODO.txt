@@ -13,6 +13,8 @@ TODO:
 
 - Fix the inconsistencies with the slider degradation
 
+- add speed stat (20 to 25)
+
 - X Factors
 	Easy: 
 
@@ -24,7 +26,7 @@ TODO:
 		
 
 	?:
-		Studer ()
+		
 
 
 Finished! :)
@@ -51,6 +53,7 @@ Finished! :)
 	Andy (missing 3 songs)
 	Lucie (missing 3 songs)
 	Portia (missing 3 songs)
+	Studer (missing 3 songs)
 
 
 Difficulty Rank:
@@ -60,7 +63,7 @@ Difficulty Rank:
 
 
 
-// My Highest Score: x
+// My Highest Score: 141368 as Kaya
 
 
 

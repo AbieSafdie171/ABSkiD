@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public Vector3 carSize = new Vector3(4f, 2f, 2f);
     public Vector3 baseSize = new Vector3 (1f, 1f, 1f);
     public Vector3 smallSize = new Vector3(0.2f, 0.2f, 0.2f);
+    public Vector3 skiSize = new Vector3(0.3f, 0.1f, 2f);
+    public Vector3 largeSkiSize = new Vector3(0.3f, 0.1f, 4f);
 
     // Music Code
     
@@ -149,6 +151,11 @@ public class GameManager : MonoBehaviour
     public GameObject rack;
     public AudioClip niceRack;
 
+    // Maddie Studer
+    public AudioClip bubbles;
+    public GameObject leftSki;
+    public GameObject rightSki;
+
 
 
     private void Awake(){
@@ -167,6 +174,7 @@ public class GameManager : MonoBehaviour
 
         float baseOxygen = 1000;
         float baseHeat = 1000;
+        int baseHealth = 3;
         float baseDivisor = 50;
         
 
@@ -178,7 +186,7 @@ public class GameManager : MonoBehaviour
 
             case "Abie_Safdie":
                 alcoholTolerance = Abie_Safdie.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Abie_Safdie.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Abie_Safdie.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Abie_Safdie.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
@@ -191,7 +199,7 @@ public class GameManager : MonoBehaviour
                 alcoholTolerance = Daniel_Moss.alcTol;
                 xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Daniel_Moss.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Daniel_Moss.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Daniel_Moss.coolness / baseDivisor));
                 src1.clip = endsOfTheEarth;
@@ -200,7 +208,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Sasha_Kaplow":
                 alcoholTolerance = Sasha_Kaplow.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Sasha_Kaplow.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Sasha_Kaplow.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Sasha_Kaplow.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(5);
@@ -211,7 +219,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Jordan_Zicklin":
                 alcoholTolerance = Jordan_Zicklin.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Jordan_Zicklin.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Jordan_Zicklin.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jordan_Zicklin.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
@@ -222,17 +230,20 @@ public class GameManager : MonoBehaviour
                 break;
             case "Julia_Frank":
                 alcoholTolerance = Julia_Frank.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Julia_Frank.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Julia_Frank.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Julia_Frank.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
+                src1.clip = lisztomania;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
                 break;
             case "Jonah_Kaplan":
                 alcoholTolerance = Jonah_Kaplan.alcTol;
                 xFactorBar.SetMaxHealth(5);
                 xFactorBar.SetHealth(0);
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Jonah_Kaplan.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Jonah_Kaplan.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jonah_Kaplan.coolness / baseDivisor));
                 src1.clip = dontStopBelieving;
@@ -241,7 +252,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Romie_Avivi":
                 alcoholTolerance = Romie_Avivi.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Romie_Avivi.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Romie_Avivi.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Romie_Avivi.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(3);
@@ -252,15 +263,18 @@ public class GameManager : MonoBehaviour
                 break;
             case "Maddie_Studer":
                 alcoholTolerance = Maddie_Studer.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Maddie_Studer.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Maddie_Studer.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Maddie_Studer.coolness / baseDivisor));
-                Debug.Log("Oxygen: " + oxygenBar.GetCurrentHealth());
-                Debug.Log("Heat: " + heatBar.GetCurrentHealth());
+                xFactorBar.SetMaxHealth(2);
+                xFactorBar.SetHealth(0);
+                src1.clip = dancingQueen;
+                src2.clip = telAviv;
+                src3.clip = telAviv;
                 break;
             case "Mady_Barth":
                 alcoholTolerance = Mady_Barth.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Mady_Barth.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Mady_Barth.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Mady_Barth.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
@@ -271,7 +285,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Alex_Malve":
                 alcoholTolerance = Alex_Malve.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Alex_Malve.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Alex_Malve.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Alex_Malve.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(2);
@@ -282,7 +296,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Jordan_Cooper":
                 alcoholTolerance = Jordan_Cooper.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Jordan_Cooper.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Jordan_Cooper.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jordan_Cooper.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
@@ -293,7 +307,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Kaya_Rubinstein":
                 alcoholTolerance = Kaya_Rubinstein.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Kaya_Rubinstein.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Kaya_Rubinstein.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Kaya_Rubinstein.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
@@ -304,7 +318,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Lucie_Nortman":
                 alcoholTolerance = Lucie_Nortman.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Lucie_Nortman.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Lucie_Nortman.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Lucie_Nortman.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(5);
@@ -315,7 +329,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Jacque_Velasco":
                 alcoholTolerance = Jacque_Velasco.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Jacque_Velasco.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Jacque_Velasco.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jacque_Velasco.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(3);
@@ -326,7 +340,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Hannah_Abikzer":
                 alcoholTolerance = Hannah_Abikzer.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Hannah_Abikzer.skiingIQ / 10));
                 xFactorBar.SetMaxHealth(5);
                 xFactorBar.SetHealth(0);
                 oxygenBar.SetMaxHealth(baseOxygen * (Hannah_Abikzer.stamina / baseDivisor));
@@ -337,7 +351,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Lilah_Silberman":
                 alcoholTolerance = Lilah_Silberman.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Lilah_Silberman.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Lilah_Silberman.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Lilah_Silberman.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
@@ -348,7 +362,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Andy_Gitelson":
                 alcoholTolerance = Andy_Gitelson.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Andy_Gitelson.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Andy_Gitelson.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Andy_Gitelson.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(3);
@@ -361,7 +375,7 @@ public class GameManager : MonoBehaviour
                 alcoholTolerance = Ella_Diamond.alcTol;
                 xFactorBar.SetMaxHealth(2);
                 xFactorBar.SetHealth(0);
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Ella_Diamond.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Ella_Diamond.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Ella_Diamond.coolness / baseDivisor));
                 src1.clip = umbrella;
@@ -370,7 +384,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Chloe_Gold":
                 alcoholTolerance = Chloe_Gold.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Chloe_Gold.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Chloe_Gold.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Chloe_Gold.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(5);
@@ -381,7 +395,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Rabbi_Berel":
                 alcoholTolerance = Rabbi_Berel.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Rabbi_Berel.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Rabbi_Berel.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Rabbi_Berel.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(2);
@@ -395,7 +409,7 @@ public class GameManager : MonoBehaviour
                 alcoholTolerance = Bri_Tafoya.alcTol;
                 xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Bri_Tafoya.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Bri_Tafoya.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Bri_Tafoya.coolness / baseDivisor));
                 src1.clip = endsOfTheEarth;
@@ -404,7 +418,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Roy_Wonder":
                 alcoholTolerance = Roy_Wonder.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Roy_Wonder.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Roy_Wonder.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Roy_Wonder.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
@@ -415,7 +429,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Lucinda_Smith":
                 alcoholTolerance = Lucinda_Smith.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Lucinda_Smith.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Lucinda_Smith.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Lucinda_Smith.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
@@ -426,7 +440,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Rabbi_Meir":
                 alcoholTolerance = Rabbi_Meir.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Rabbi_Meir.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Rabbi_Meir.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Rabbi_Meir.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
@@ -437,7 +451,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Portia_Carney":
                 alcoholTolerance = Portia_Carney.alcTol;
-                healthBar.SetMaxHealth(5);
+                healthBar.SetMaxHealth(baseHealth + (Portia_Carney.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Portia_Carney.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Portia_Carney.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(2);
@@ -519,7 +533,12 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case "Maddie_Studer":
-                Debug.Log("Studer");
+                xFactorsrc.clip = bubbles;
+                leftSki.transform.localScale = largeSkiSize;
+                rightSki.transform.localScale = largeSkiSize;
+                StartCoroutine(timer("Maddie_Studer"));
+                oxygenBar.SetHealth(oxygenBar.getMaxValue());
+                heatBar.SetHealth(heatBar.getMaxValue());
                 break;
             case "Mady_Barth":
                 tempName = Mady_Barth.xFactor();
@@ -570,7 +589,6 @@ public class GameManager : MonoBehaviour
                 onSign.SetActive(true);
                 AstronautPlayer.fran = true;
                 person.size = carSize;
-                Debug.Log(person.size);
                 fran.SetActive(true);
                 StartCoroutine(timer("Hannah_Abikzer"));
                 break;
@@ -716,6 +734,10 @@ public class GameManager : MonoBehaviour
                     break;
             case "Portia_Carney":
                     rack.SetActive(false);
+                    break;
+            case "Maddie_Studer":
+                    leftSki.transform.localScale = skiSize;
+                    rightSki.transform.localScale = skiSize;
                     break;
             default:
                 break;

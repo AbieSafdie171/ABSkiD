@@ -2935,6 +2935,8 @@ MonoBehaviour:
   carSize: {x: 4, y: 2, z: 2}
   baseSize: {x: 1, y: 1, z: 1}
   smallSize: {x: 0.5, y: 0.5, z: 0.5}
+  skiSize: {x: 0.3, y: 0.1, z: 2}
+  largeSkiSize: {x: 0.3, y: 0.1, z: 4}
   src1: {fileID: 729937731}
   src2: {fileID: 1511579028}
   src3: {fileID: 1882240293}
@@ -2995,6 +2997,9 @@ MonoBehaviour:
   aww: {fileID: 8300000, guid: d0efb5e127e6b4c8bbbad02e0b255f7d, type: 3}
   rack: {fileID: 766207074}
   niceRack: {fileID: 8300000, guid: 45b9d0a84de664729b9129f2ec0715e1, type: 3}
+  bubbles: {fileID: 8300000, guid: 414631e8ddd29441ab06f44f78a913cc, type: 3}
+  leftSki: {fileID: 472015238}
+  rightSki: {fileID: 1969956217}
 --- !u!1 &1072239085
 GameObject:
   m_ObjectHideFlags: 0

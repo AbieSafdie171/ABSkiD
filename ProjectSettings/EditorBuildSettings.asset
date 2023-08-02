@@ -15,17 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Abie_Safdie.unity
     guid: a3affdd706a734c43b8a7e4fdfc4af50
   - enabled: 1
-    path: Assets/Scenes/Daniel_Moss.unity
-    guid: cd41016d308224e049f6ce8f54ba9c45
-  - enabled: 1
     path: Assets/Scenes/Sasha_Kaplow.unity
     guid: 487b126bc08f443ae8e5e1f4d9e48072
   - enabled: 1
-    path: Assets/Scenes/Jordan_Zicklin.unity
-    guid: e30bc613c38c845e28d2b0f4cd211c89
-  - enabled: 1
     path: Assets/Scenes/Julia_Frank.unity
     guid: e50a73dfb394140e091c36586d02a464
+  - enabled: 1
+    path: Assets/Scenes/Daniel_Moss.unity
+    guid: cd41016d308224e049f6ce8f54ba9c45
+  - enabled: 1
+    path: Assets/Scenes/Jordan_Zicklin.unity
+    guid: e30bc613c38c845e28d2b0f4cd211c89
   - enabled: 1
     path: Assets/Scenes/Jonah_Kaplan.unity
     guid: e658501cf2c44419abe7108dc4bd9283
