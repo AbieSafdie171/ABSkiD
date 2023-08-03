@@ -15,13 +15,6 @@ public class Sasha_Kaplow : MonoBehaviour
 
     public static int alcTol = 90;
 
-    public static GameObject palmTree;
-
-    public GameObject temp;
-
-    public void start(){
-        palmTree = temp;
-    }
 
     public static void xFactor(Vector3 pos){
 
@@ -54,24 +47,5 @@ public class Sasha_Kaplow : MonoBehaviour
         }              
 
     }
-
-    public static void israeliXFactor(Vector3 pos){
-
-        Vector3 newPos = new Vector3(pos.x, pos.y, pos.z);
-
-
-
-        for (int i = 0; i < 1; i++){
-
-            newPos.y += 0.1f;
-            newPos.x += 10f;
-            newPos.z += 10f;
-            
-            Instantiate(palmTree, new Vector3(newPos.x, newPos.y, newPos.z), Quaternion.identity);
-
-        }     
-    }
-
-
 
 }

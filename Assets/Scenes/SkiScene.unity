@@ -2909,7 +2909,6 @@ GameObject:
   - component: {fileID: 1071444997}
   - component: {fileID: 1071444996}
   - component: {fileID: 1071445000}
-  - component: {fileID: 1071445001}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3110,19 +3109,6 @@ MonoBehaviour:
   mammaMia: {fileID: 8300000, guid: 67a8d3eb8dde54e57b7163f320c5b156, type: 3}
   slay: {fileID: 8300000, guid: 777edaf7ce7b34fd19f534461a3ed78b, type: 3}
   sword: {fileID: 1112169468}
---- !u!114 &1071445001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071444995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20653ad5b2bac47aaa1196ffbd7d0621, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  temp: {fileID: 100000, guid: 350321c747d89b9499c4b78b87a78378, type: 3}
 --- !u!1 &1072239085
 GameObject:
   m_ObjectHideFlags: 0
