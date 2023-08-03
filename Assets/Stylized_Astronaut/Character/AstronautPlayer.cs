@@ -33,6 +33,9 @@ using UnityEngine.SceneManagement;
 		// Lucinda Smith
 		public static bool ghoster = false;
 
+		// Ido Katz
+		public static bool slaySword = false;
+
 
 		public GameObject leftSki;
 
@@ -101,7 +104,7 @@ using UnityEngine.SceneManagement;
             if (other.gameObject.name == "tree 5(Clone)" || other.gameObject.name =="tree 6(Clone)"
 			|| other.gameObject.name == "tree 16(Clone)" || other.gameObject.name == "Tree Trunk 1(Clone)")
 			{
-				if (fran || dadBod || ghoster){
+				if (fran || dadBod || ghoster || slaySword){
 					if (fran){
 						thicc.Play();
 						Destroy(other.gameObject);
@@ -110,11 +113,11 @@ using UnityEngine.SceneManagement;
 						shakeDadBod.Play();
 						Destroy(other.gameObject);
 					}
-					/*
-					else if (ghoster){
-
+					
+					else if (slaySword){
+						Destroy(other.gameObject);
 					}
-					*/
+					
 				} 
 				else {
 					int cHealth = healthBar.GetCurrentHealth();

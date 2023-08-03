@@ -168,8 +168,18 @@ public class GameManager : MonoBehaviour
     public GameObject kermitFrog;
 
     // Israeli Sasha
-    public Material lSki;
-    public Material rSki;
+    public AudioClip smallTelAviv;
+
+    // Ollie Goldstein
+
+    // Analise Levy
+
+    // Adeline Ellison
+    public AudioClip mammaMia;
+
+    // Ido Katz
+    public AudioClip slay;
+    public GameObject sword;
 
 
 
@@ -508,11 +518,59 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (100 / baseDivisor));
                 xFactorBar.SetMaxHealth(1);
                 xFactorBar.SetHealth(0);
-                myMaterials[0].color = Color.red;
+                myMaterials[0].color = Color.black;
                 myMaterials[1].color = Color.red;
                 src1.clip = telAviv;
                 src2.clip = yisraelHatikvah;
                 src3.clip = telAviv;
+                break;
+            case "Ollie_Goldstein":
+                AstronautPlayer.speed = 23f;
+                alcoholTolerance = Ollie_Goldstein.alcTol;
+                healthBar.SetMaxHealth(baseHealth + (Ollie_Goldstein.skiingIQ / 10));
+                oxygenBar.SetMaxHealth(baseOxygen * (Ollie_Goldstein.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Ollie_Goldstein.coolness / baseDivisor));
+                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
+                break;
+            case "Analise_Levy":
+                AstronautPlayer.speed = 23f;
+                alcoholTolerance = Analise_Levy.alcTol;
+                healthBar.SetMaxHealth(baseHealth + (Analise_Levy.skiingIQ / 10));
+                oxygenBar.SetMaxHealth(baseOxygen * (Analise_Levy.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Analise_Levy.coolness / baseDivisor));
+                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
+                break;
+            case "Adeline_Ellison":
+                AstronautPlayer.speed = 23f;
+                alcoholTolerance = Adeline_Ellison.alcTol;
+                healthBar.SetMaxHealth(baseHealth + (Adeline_Ellison.skiingIQ / 10));
+                oxygenBar.SetMaxHealth(baseOxygen * (Adeline_Ellison.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Adeline_Ellison.coolness / baseDivisor));
+                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
+                break;
+            case "Ido_Katz":
+                AstronautPlayer.speed = 23f;
+                alcoholTolerance = Ido_Katz.alcTol;
+                healthBar.SetMaxHealth(baseHealth + (Ido_Katz.skiingIQ / 10));
+                oxygenBar.SetMaxHealth(baseOxygen * (Ido_Katz.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Ido_Katz.coolness / baseDivisor));
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
                 break;
             case "Portia_Carney":
                 AstronautPlayer.speed = 23f;
@@ -711,6 +769,24 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(timer("Danielle_Richard"));
                 break;
             case "Israeli_Sasha":
+                xFactorsrc.clip = smallTelAviv;
+                Abie_Safdie.xFactor();
+                break;
+            case "Ollie_Goldstein":
+                Debug.Log("Ollie");
+                break;
+            case "Analise_Levy":
+                Debug.Log("Analise");
+                break;
+            case "Adeline_Ellison":
+                xFactorsrc.clip = mammaMia;
+                break;
+            case "Ido_Katz":
+                xFactorsrc.clip = slay;
+                onSign.SetActive(true);
+                sword.SetActive(true);
+                AstronautPlayer.slaySword = true;
+                StartCoroutine(timer("Ido_Katz"));
                 break;
             case "Portia_Carney":
                 rack.SetActive(true);
@@ -746,6 +822,7 @@ public class GameManager : MonoBehaviour
         onSign.SetActive(false);
         rainbowObject.SetActive(false);
         israelFlag.SetActive(false);
+        sword.SetActive(false);
         GroundTile.berel = false;
         AstronautPlayer.speed = 25f;
         setValues();
@@ -825,6 +902,10 @@ public class GameManager : MonoBehaviour
                     kermitFrog.SetActive(false);
                     break;
             case "Israeli_Sasha":
+                    break;
+            case "Ido_Katz":
+                    sword.SetActive(false);
+                    AstronautPlayer.slaySword = false;
                     break;
             default:
                 break;
