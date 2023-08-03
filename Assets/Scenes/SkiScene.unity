@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &68753475
 Transform:
   m_ObjectHideFlags: 0
@@ -3106,6 +3106,8 @@ MonoBehaviour:
   missPiggy: {fileID: 68753474}
   kermitFrog: {fileID: 1114783228}
   smallTelAviv: {fileID: 8300000, guid: 91983721ca91743eca376f63c41d45f8, type: 3}
+  palmTree: {fileID: 100000, guid: 90e0a669636106948826136f04acabb8, type: 3}
+  r: {x: 0, y: 0, z: 0, w: 1}
   mammaMia: {fileID: 8300000, guid: 67a8d3eb8dde54e57b7163f320c5b156, type: 3}
   slay: {fileID: 8300000, guid: 777edaf7ce7b34fd19f534461a3ed78b, type: 3}
   sword: {fileID: 1112169468}
@@ -3276,7 +3278,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4334314812708720166, guid: edccbf15fadd9704cb7a2020a492b120, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4334314812708720166, guid: edccbf15fadd9704cb7a2020a492b120, type: 3}
       propertyPath: m_LocalScale.x
@@ -3334,6 +3336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongSword
       objectReference: {fileID: 0}
+    - target: {fileID: 4334314812708720168, guid: edccbf15fadd9704cb7a2020a492b120, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edccbf15fadd9704cb7a2020a492b120, type: 3}
 --- !u!1 &1112169468 stripped
@@ -3359,7 +3365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1114783229
 Transform:
   m_ObjectHideFlags: 0
@@ -5816,7 +5822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2029630832
 Transform:
   m_ObjectHideFlags: 0

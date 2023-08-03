@@ -169,6 +169,8 @@ public class GameManager : MonoBehaviour
 
     // Israeli Sasha
     public AudioClip smallTelAviv;
+    public GameObject palmTree;
+    public Quaternion r = Quaternion.identity;
 
     // Ollie Goldstein
 
@@ -771,6 +773,11 @@ public class GameManager : MonoBehaviour
             case "Israeli_Sasha":
                 xFactorsrc.clip = smallTelAviv;
                 Abie_Safdie.xFactor();
+                r.eulerAngles = new Vector3(270f, 0f, 0f);
+                float y = astr.transform.position.y;
+                float z = astr.transform.position.z;
+                Instantiate(palmTree, new Vector3(20f, y, (z + 40f)), r);
+                Instantiate(palmTree, new Vector3(-20f, y, (z + 40f)), r);
                 break;
             case "Ollie_Goldstein":
                 Debug.Log("Ollie");
@@ -921,6 +928,8 @@ public class GameManager : MonoBehaviour
         float currentOxygen = oxygenBar.GetCurrentHealth();
 
         currentOxygen -= (59 * Time.deltaTime);
+
+        Debug.Log(astr.transform.position.x);
 
         oxygenBar.SetHealth(currentOxygen);
 
