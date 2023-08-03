@@ -434,7 +434,7 @@ X factor - Ghosting: Becomes transparent (go through obstacles)
 
 ------------------------------------------------------------------------------------------------------------------------
 
-Rabbi Meir - 
+Rabbi Meir - done
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -444,9 +444,44 @@ Analise Levy -
 
 Adeline Ellison - 
 
+------------------------------------------------------------------------------------------------------------------------
+
 Danielle Richard - 
 
+Bio: Probably the funniest person in existence, Danielle is guaranteed to be the star of A B Ski D. Sadly, she won't be here for long... she's making aliyah with Nathan :(
+
+Strengths: Star of Birthright, Speaks Arabic, hilarious, Muppet Party
+Weaknesses: From Florida
+
+Stats:
+
+Coolness - 100
+Speed - 95
+Stamina - 85
+Skiing IQ - 50
+Alcohol Tolerance - 99
+X factor - Muppet Aliyah: Let's all go home... as Muppets!
+
+
+------------------------------------------------------------------------------------------------------------------------
+
 Israeli Sasha - 
+
+Bio: Nobody is cooler than Sasha... except Israeli Sasha! She's got the tan, she's got the arak, she's got the Tel Avivian beaches... she's got it all.
+
+Strengths: Tan, Absolutely badass, 10 shekel shots, Tubi
+Weaknesses: Arak
+
+Stats:
+
+Coolness - 100
+Speed - 95
+Stamina - 85
+Skiing IQ - 50
+Alcohol Tolerance - 99
+X factor - 10 Shekel Shots: Why are you reading this... start downing the arak!
+
+------------------------------------------------------------------------------------------------------------------------
 
 // Bradley Buchbinder -
 
@@ -454,11 +489,6 @@ Israeli Sasha -
 
 // Ezra Briskin - 
 
-// Tanner Smith - 
-
-// Alli Powell -
-
-// Courtney Weixelman -
 
 
 

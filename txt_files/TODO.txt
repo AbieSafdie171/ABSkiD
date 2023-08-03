@@ -6,6 +6,8 @@ TODO:
 	Ollie
 	Analise
 	Adeline
+	Israeli Sasha
+	Danielle
 
 - Billboards
 
@@ -13,12 +15,12 @@ TODO:
 
 - Fix the inconsistencies with the slider degradation
 
-- add speed stat (20 to 25)
-
 - X Factors
 	Easy: 
 
 	Meh:
+		Danielle (oh. miss piggy? turn astronaut green? bring back israel flag)
+		Israeli Sasha (?)
 		Julia (JUUUULLIIIAAAAA)
 		
 
