@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     public Vector3 skiSize = new Vector3(0.3f, 0.1f, 2f);
     public Vector3 largeSkiSize = new Vector3(0.3f, 0.1f, 4f);
 
-    // Music Code
+    // People Code
     
     private bool played1 = false;
     private bool played2 = false;
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     public AudioClip stellaBrown;
     public AudioClip missingYou;
     public AudioClip niceBoy;
+    public GameObject njb;
 
     // Up for Grabs!
     public AudioClip danceNight;
@@ -182,6 +183,9 @@ public class GameManager : MonoBehaviour
     public AudioClip somewhereRainbow;
 
     // Analise Levy
+    public AudioClip shortRocky;
+    public AudioClip rockyMountainHigh;
+    public GameObject mountain;
 
     // Adeline Ellison
     public AudioClip mammaMia;
@@ -344,9 +348,9 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (Jordan_Cooper.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Jordan_Cooper.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jordan_Cooper.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetMaxHealth(11);
                 xFactorBar.SetHealth(0);
-                src1.clip = yisraelHatikvah;
+                src1.clip = umbrella;
                 src2.clip = endsOfTheEarth;
                 src3.clip = endsOfTheEarth;
                 break;
@@ -616,6 +620,8 @@ public class GameManager : MonoBehaviour
             case "Abie_Safdie":
                 Abie_Safdie.xFactor();
                 xFactorsrc.clip = niceBoy;
+                njb.SetActive(true);
+                StartCoroutine(timer("Abie_Safdie", 6f));
                 break;
             case "Daniel_Moss":
                 xFactorsrc.clip = hinneni;
@@ -679,7 +685,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Jordan_Cooper":
                 xFactorsrc.clip = myLeg;
-                AstronautPlayer.speed -= 1f;
+                AstronautPlayer.speed -= 3f;
                 break;
             case "Kaya_Rubinstein":
                 xFactorsrc.clip = tickTock;
@@ -771,7 +777,7 @@ public class GameManager : MonoBehaviour
                 xFactorsrc.clip = baddies;
                 israelFlag.SetActive(true);
                 Abie_Safdie.xFactor();
-                myMaterials[0].color = Color.green;
+                myMaterials[0].color = Color.yellow;
                 myMaterials[1].color = Color.green;
                 missPiggy.SetActive(true);
                 kermitFrog.SetActive(true);
@@ -790,7 +796,11 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(timer("Sasha_Kaplow", 6f));
                 break;
             case "Analise_Levy":
-                Debug.Log("Analise");
+                xFactorsrc.clip = shortRocky;
+                oxygenBar.SetHealth(oxygenBar.getMaxValue());
+                Abie_Safdie.xFactor();
+                spawnMountain();
+                StartCoroutine(timer("Israeli_Sasha", 8f));
                 break;
             case "Adeline_Ellison":
                 xFactorsrc.clip = mammaMia;
@@ -859,7 +869,9 @@ public class GameManager : MonoBehaviour
           }
           
         switch(p){
-
+            case "Abie_Safdie":
+                    njb.SetActive(false);
+                    break;
             case "Daniel_Moss":
                     AstronautPlayer.danielAlcohol = false;
                     break;
@@ -951,6 +963,20 @@ public class GameManager : MonoBehaviour
             Instantiate(beachChair, new Vector3(-18f, y, z), r);
             Instantiate(beachChair, new Vector3(18f, y, z + 3f), q);
             Instantiate(beachChair, new Vector3(-18f, y, z + 3f), q);
+        }
+
+    }
+
+    public void spawnMountain(){
+        r.eulerAngles = new Vector3(0f, 0f, 0f);
+        float y = -3f;
+        float z = astr.transform.position.z;
+        float scale = 40f;
+        for (int i = 0; i < 5; i++){
+            z += scale;
+            Instantiate(mountain, new Vector3(20f, y, z), r);
+            Instantiate(mountain, new Vector3(-20f, y, z), r);
+
         }
 
     }
