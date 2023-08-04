@@ -155,7 +155,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2079349192}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!65 &68753476
 BoxCollider:
@@ -3106,8 +3106,15 @@ MonoBehaviour:
   missPiggy: {fileID: 68753474}
   kermitFrog: {fileID: 1114783228}
   smallTelAviv: {fileID: 8300000, guid: 91983721ca91743eca376f63c41d45f8, type: 3}
-  palmTree: {fileID: 100000, guid: 90e0a669636106948826136f04acabb8, type: 3}
+  oldStory: {fileID: 8300000, guid: 256bada7c76564129bf48ff4fca1091c, type: 3}
+  palmTree: {fileID: 145482, guid: 92336f8221072014b9384707cb0c760d, type: 3}
+  beachUmbrella: {fileID: 114406, guid: 886eefee3f1e684479b243de8309234a, type: 3}
+  beachChair: {fileID: 148536, guid: 608c04c30b867ef42aa668cfc10f8c75, type: 3}
+  beachBoard: {fileID: 176032, guid: fc75738376221c5409ab9b1dac0bf3da, type: 3}
+  beachBucket: {fileID: 188668, guid: 8177b8237f1d2bf49859a368d79d1c66, type: 3}
   r: {x: 0, y: 0, z: 0, w: 1}
+  q: {x: 0, y: 0, z: 0, w: 1}
+  somewhereRainbow: {fileID: 8300000, guid: 54218de627e5d463c842d9a836ae60c9, type: 3}
   mammaMia: {fileID: 8300000, guid: 67a8d3eb8dde54e57b7163f320c5b156, type: 3}
   slay: {fileID: 8300000, guid: 777edaf7ce7b34fd19f534461a3ed78b, type: 3}
   sword: {fileID: 1112169468}

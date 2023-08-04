@@ -169,10 +169,17 @@ public class GameManager : MonoBehaviour
 
     // Israeli Sasha
     public AudioClip smallTelAviv;
+    public AudioClip oldStory;
     public GameObject palmTree;
+    public GameObject beachUmbrella;
+    public GameObject beachChair;
+    public GameObject beachBoard;
+    public GameObject beachBucket;
     public Quaternion r = Quaternion.identity;
+    public Quaternion q = Quaternion.identity;
 
     // Ollie Goldstein
+    public AudioClip somewhereRainbow;
 
     // Analise Levy
 
@@ -494,7 +501,7 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (Rabbi_Meir.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Rabbi_Meir.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Rabbi_Meir.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
                 src1.clip = yisraelHatikvah;
                 src2.clip = endsOfTheEarth;
@@ -518,12 +525,12 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (50 / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Sasha_Kaplow.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (100 / baseDivisor));
-                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
                 myMaterials[0].color = Color.black;
                 myMaterials[1].color = Color.red;
-                src1.clip = telAviv;
-                src2.clip = yisraelHatikvah;
+                src1.clip = oldStory;
+                src2.clip = telAviv;
                 src3.clip = telAviv;
                 break;
             case "Ollie_Goldstein":
@@ -532,9 +539,9 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (Ollie_Goldstein.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Ollie_Goldstein.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Ollie_Goldstein.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
-                src1.clip = yisraelHatikvah;
+                src1.clip = endsOfTheEarth;
                 src2.clip = endsOfTheEarth;
                 src3.clip = missingYou;
                 break;
@@ -614,20 +621,20 @@ public class GameManager : MonoBehaviour
                 xFactorsrc.clip = hinneni;
                 onSign.SetActive(true);
                 AstronautPlayer.danielAlcohol = true;
-                StartCoroutine(timer("Daniel_Moss"));
+                StartCoroutine(timer("Daniel_Moss", 15f));
                 break;
             case "Sasha_Kaplow":
                 xFactorsrc.clip = rainbow;
                 rainbowObject.SetActive(true);
                 Sasha_Kaplow.xFactor(astr.transform.position);
-                StartCoroutine(timer("Sasha_Kaplow"));
+                StartCoroutine(timer("Sasha_Kaplow", 6f));
                 break;
             case "Jordan_Zicklin":
                 xFactorsrc.clip = dadBod;
                 astr.transform.localScale += baseSize;
                 onSign.SetActive(true);
                 AstronautPlayer.dadBod = true;
-                StartCoroutine(timer("Jordan_Zicklin"));
+                StartCoroutine(timer("Jordan_Zicklin", 15f));
                 break;
             case "Julia_Frank":
                 Debug.Log("Julia");
@@ -638,7 +645,7 @@ public class GameManager : MonoBehaviour
                 AstronautPlayer.fran = true;
                 person.size = carSize;
                 judith.SetActive(true);
-                StartCoroutine(timer("Jonah_Kaplan"));
+                StartCoroutine(timer("Jonah_Kaplan", 15f));
                 break;
             case "Romie_Avivi":
                 xFactorsrc.clip = claySound;
@@ -657,7 +664,7 @@ public class GameManager : MonoBehaviour
                 xFactorsrc.clip = bubbles;
                 leftSki.transform.localScale = largeSkiSize;
                 rightSki.transform.localScale = largeSkiSize;
-                StartCoroutine(timer("Maddie_Studer"));
+                StartCoroutine(timer("Maddie_Studer", 10f));
                 oxygenBar.SetHealth(oxygenBar.getMaxValue());
                 heatBar.SetHealth(heatBar.getMaxValue());
                 break;
@@ -697,13 +704,13 @@ public class GameManager : MonoBehaviour
                 healthBar.SetHealth(healthBar.getMaxValue());
                 heatBar.SetHealth(heatBar.getMaxValue());
                 oxygenBar.SetHealth(oxygenBar.getMaxValue());
-                StartCoroutine(timer("Lucie_Nortman"));
+                StartCoroutine(timer("Lucie_Nortman", 7f));
                 break;
             case "Jacque_Velasco":
                 xFactorsrc.clip = wow;
                 onSign.SetActive(true);
                 AstronautPlayer.jacquePickup = true;
-                StartCoroutine(timer("Jacque_Velasco"));
+                StartCoroutine(timer("Jacque_Velasco", 10f));
                 break;
             case "Hannah_Abikzer":
                 xFactorsrc.clip = lonely;
@@ -711,13 +718,13 @@ public class GameManager : MonoBehaviour
                 AstronautPlayer.fran = true;
                 person.size = carSize;
                 fran.SetActive(true);
-                StartCoroutine(timer("Hannah_Abikzer"));
+                StartCoroutine(timer("Hannah_Abikzer", 15f));
                 break;
             case "Lilah_Silberman":
                 israelFlag.SetActive(true);
                 xFactorsrc.clip = hatikvah;
                 Abie_Safdie.xFactor();
-                StartCoroutine(timer("Lilah_Silberman"));
+                StartCoroutine(timer("Lilah_Silberman", 7f));
                 break;
             case "Andy_Gitelson":
                 xFactorsrc.clip = holdMyBeer;
@@ -736,7 +743,7 @@ public class GameManager : MonoBehaviour
                 healthBar.SetHealth(healthBar.getMaxValue());
                 onSign.SetActive(true);
                 AstronautPlayer.danielAlcohol = true;
-                StartCoroutine(timer("Daniel_Moss"));
+                StartCoroutine(timer("Daniel_Moss", 15f));
                 break;
             case "Bri_Tafoya":
                 xFactorsrc.clip = fallingInLove;
@@ -752,13 +759,13 @@ public class GameManager : MonoBehaviour
                 onSign.SetActive(true);
                 astrBody.SetActive(false);
                 AstronautPlayer.ghoster = true;
-                StartCoroutine(timer("Lucinda_Smith"));
+                StartCoroutine(timer("Lucinda_Smith", 13f));
                 break;
             case "Rabbi_Meir":
                 xFactorsrc.clip = shofar;
                 astr.transform.localScale = smallSize;
                 onSign.SetActive(true);
-                StartCoroutine(timer("Rabbi_Meir"));
+                StartCoroutine(timer("Rabbi_Meir", 13f));
                 break;
             case "Danielle_Richard":
                 xFactorsrc.clip = baddies;
@@ -768,19 +775,19 @@ public class GameManager : MonoBehaviour
                 myMaterials[1].color = Color.green;
                 missPiggy.SetActive(true);
                 kermitFrog.SetActive(true);
-                StartCoroutine(timer("Danielle_Richard"));
+                StartCoroutine(timer("Danielle_Richard", 13f));
                 break;
             case "Israeli_Sasha":
                 xFactorsrc.clip = smallTelAviv;
                 Abie_Safdie.xFactor();
-                r.eulerAngles = new Vector3(270f, 0f, 0f);
-                float y = astr.transform.position.y;
-                float z = astr.transform.position.z;
-                Instantiate(palmTree, new Vector3(20f, y, (z + 40f)), r);
-                Instantiate(palmTree, new Vector3(-20f, y, (z + 40f)), r);
+                beach();
+                StartCoroutine(timer("Israeli_Sasha", 8f));
                 break;
             case "Ollie_Goldstein":
-                Debug.Log("Ollie");
+                xFactorsrc.clip = somewhereRainbow;
+                Ollie_Goldstein.xFactor();
+                rainbowObject.SetActive(true);
+                StartCoroutine(timer("Sasha_Kaplow", 6f));
                 break;
             case "Analise_Levy":
                 Debug.Log("Analise");
@@ -793,13 +800,13 @@ public class GameManager : MonoBehaviour
                 onSign.SetActive(true);
                 sword.SetActive(true);
                 AstronautPlayer.slaySword = true;
-                StartCoroutine(timer("Ido_Katz"));
+                StartCoroutine(timer("Ido_Katz", 13f));
                 break;
             case "Portia_Carney":
                 rack.SetActive(true);
                 xFactorsrc.clip = niceRack;
                 healthBar.SetHealth(healthBar.getMaxValue());
-                StartCoroutine(timer("Portia_Carney"));
+                StartCoroutine(timer("Portia_Carney", 5f));
                 break;
             default:
                 break;
@@ -837,16 +844,15 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public IEnumerator timer(string p){
+    public IEnumerator timer(string p, float dur){
 
         float elapsed = 0.0f;
-        float duration = 15.0f;
 
-          while (elapsed < duration){
+          while (elapsed < dur){
 
             elapsed += Time.deltaTime;
 
-            if (elapsed > 13f)
+            if (elapsed > dur - 2f)
                 onSign.SetActive(false);
             
             yield return null;
@@ -909,6 +915,10 @@ public class GameManager : MonoBehaviour
                     kermitFrog.SetActive(false);
                     break;
             case "Israeli_Sasha":
+                    GameObject[] objs = GameObject.FindGameObjectsWithTag("beach");
+                    int c = objs.Length;
+                    for (int i = 0; i < c; i++)
+                        Destroy(objs[i]);
                     break;
             case "Ido_Katz":
                     sword.SetActive(false);
@@ -921,6 +931,30 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void beach(){
+        r.eulerAngles = new Vector3(270f, 0f, 0f);
+        q.eulerAngles = new Vector3(270f, 0f, 180f);
+        float y = astr.transform.position.y;
+        float z = astr.transform.position.z;
+        float scale = 40f;
+        for (int i = 0; i < 5; i++){
+            z += scale;
+            Instantiate(palmTree, new Vector3(20f, y, z), r);
+            Instantiate(palmTree, new Vector3(-20f, y, z), r);
+            Instantiate(beachBoard, new Vector3(19f, y, z), r);
+            Instantiate(beachBucket, new Vector3(16f, y, z), r);
+            Instantiate(beachBoard, new Vector3(-19f, y, z), r);
+            Instantiate(beachBucket, new Vector3(-16f, y, z), r);
+            Instantiate(beachUmbrella, new Vector3(-17f, y, z), r);
+            Instantiate(beachUmbrella, new Vector3(17f, y, z), r);
+            Instantiate(beachChair, new Vector3(18f, y, z), r);
+            Instantiate(beachChair, new Vector3(-18f, y, z), r);
+            Instantiate(beachChair, new Vector3(18f, y, z + 3f), q);
+            Instantiate(beachChair, new Vector3(-18f, y, z + 3f), q);
+        }
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -929,7 +963,7 @@ public class GameManager : MonoBehaviour
 
         currentOxygen -= (59 * Time.deltaTime);
 
-        Debug.Log(astr.transform.position.x);
+        // Debug.Log(astr.transform.position.x);
 
         oxygenBar.SetHealth(currentOxygen);
 
