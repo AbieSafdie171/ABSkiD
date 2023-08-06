@@ -83,6 +83,9 @@ public class GameManager : MonoBehaviour
     public AudioClip georgia;
     public GameObject judith;
 
+    // Julia Frank
+        // public AudioClip juliaaa;
+
     // Romie Avivi
     public AudioClip telAviv;
     public AudioClip dancingQueen;
@@ -209,6 +212,13 @@ public class GameManager : MonoBehaviour
     public GameObject israelFlag2;
     public AudioClip bornUSA;
 
+    // Emma Healy
+    public AudioClip ucla;
+    public GameObject bear1;
+    public GameObject bear2;
+    public GameObject bear3;
+    public GameObject bear4;
+
 
 
 
@@ -292,7 +302,7 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (Julia_Frank.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Julia_Frank.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Julia_Frank.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetMaxHealth(1);
                 xFactorBar.SetHealth(0);
                 src1.clip = lisztomania;
                 src2.clip = endsOfTheEarth;
@@ -625,6 +635,18 @@ public class GameManager : MonoBehaviour
                 src2.clip = oldStory;
                 src3.clip = missingYou;
                 break;
+            case "Emma_Healy":
+                AstronautPlayer.speed = 25f;
+                alcoholTolerance = 60;
+                healthBar.SetMaxHealth(baseHealth + (60 / 10));
+                oxygenBar.SetMaxHealth(baseOxygen * (85 / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (70 / baseDivisor));
+                xFactorBar.SetMaxHealth(4);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = oldStory;
+                src3.clip = missingYou;
+                break;
             case "Portia_Carney":
                 AstronautPlayer.speed = 23f;
                 alcoholTolerance = Portia_Carney.alcTol;
@@ -684,6 +706,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Julia_Frank":
                 Debug.Log("Julia");
+                // xFactorsrc.clip = juliaaa;
                 break;
             case "Jonah_Kaplan":
                 xFactorsrc.clip = georgia;
@@ -869,6 +892,16 @@ public class GameManager : MonoBehaviour
                 gun2.SetActive(true);
                 StartCoroutine(timer("Tomer", 8f));
                 break;
+            case "Emma_Healy":
+                xFactorsrc.clip = ucla;
+                AstronautPlayer.slaySword = true;
+                bear1.SetActive(true);
+                bear2.SetActive(true);
+                bear3.SetActive(true);
+                bear4.SetActive(true);
+                onSign.SetActive(true);
+                StartCoroutine(timer("Emma_Healy", 13f));
+                break;
             case "Portia_Carney":
                 rack.SetActive(true);
                 xFactorsrc.clip = niceRack;
@@ -1005,6 +1038,13 @@ public class GameManager : MonoBehaviour
                     break;
             case "Nathan_Maryanov":
                     smokeParticle.SetActive(false);
+                    break;
+            case "Emma_Healy":
+                    bear1.SetActive(false);
+                    bear2.SetActive(false);
+                    bear3.SetActive(false);
+                    bear4.SetActive(false);
+                    AstronautPlayer.slaySword = false;
                     break;
             default:
                 break;

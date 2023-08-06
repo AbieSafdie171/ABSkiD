@@ -105,6 +105,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Ido_Katz.unity
     guid: d0eedcf5db22647168c8a058aa019df8
   - enabled: 1
+    path: Assets/Scenes/Emma_Healy.unity
+    guid: dbe66d140594b4ffcb6c479529782398
+  - enabled: 1
     path: Assets/Scenes/Tomer.unity
     guid: b112920f7fd424ed0970f0fb47301673
   - enabled: 1

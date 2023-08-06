@@ -1,11 +1,6 @@
 TODO:
 
-- New Char Sheets
-	Emma?
-
 - Billboards
-
-- fix phasing out of borders if run into side
 
 - Fix the inconsistencies with the slider degradation
 
@@ -18,8 +13,7 @@ TODO:
 
 	Meh:
 		Julia (JUUUULLIIIAAAAA)
-		Adeline Ellison (taylor swift/ greece / mamma mia)
-		Nathan (puff puff)
+		Adeline Ellison (taylor swift / greece / mamma mia)
 
 		
 
@@ -28,7 +22,7 @@ TODO:
 
 	?:
 		
-33 total Characters (30 + 3)
+33 total Characters (31 + 2)
 
 Finished! :)
 	Abie
@@ -61,9 +55,12 @@ Finished! :)
 	Ollie Goldstein (missing 3 songs)
 	Analise Levy (missing 2 songs)(coastline)
 	Tomer (missing 1 song)
+	Nathan (missing 3 songs)
+	Emma (missing 3 songs)
 
 
 // My Highest Score: 141368 as Kaya
+					 127250 as Mady
 
 
 
