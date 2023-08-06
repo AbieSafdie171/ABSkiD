@@ -86,14 +86,15 @@ using UnityEngine.SceneManagement;
 			
 			controller.Move(moveDirection * Time.deltaTime);
 
+
 			if (transform.position.x <= -20f){
 				moveDirection.x += 2.0f;
 			}
-
+			/*
 			if (transform.position.x >= 20f){
 				moveDirection.x -= 2.0f;
 			}
-
+			*/
 
 			moveDirection.y -= gravity * Time.deltaTime;
 		}

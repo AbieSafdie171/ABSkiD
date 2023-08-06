@@ -126,6 +126,10 @@ public class GameManager : MonoBehaviour
 
     // Lilah Silberman
     public GameObject israelFlag;
+    public GameObject flower1;
+    public GameObject flower2;
+    public GameObject flower3;
+    public GameObject flower4;
     public AudioClip hatikvah;
 
     // Rabbi Meir
@@ -193,6 +197,18 @@ public class GameManager : MonoBehaviour
     // Ido Katz
     public AudioClip slay;
     public GameObject sword;
+
+    // Nathan Maryanov
+    public AudioClip smoke;
+    public GameObject smokeParticle;
+
+    // Tomer
+    public GameObject gun1;
+    public GameObject gun2;
+    public GameObject usaFlag;
+    public GameObject israelFlag2;
+    public AudioClip bornUSA;
+
 
 
 
@@ -555,9 +571,9 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (Analise_Levy.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Analise_Levy.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Analise_Levy.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
-                src1.clip = yisraelHatikvah;
+                src1.clip = rockyMountainHigh;
                 src2.clip = endsOfTheEarth;
                 src3.clip = missingYou;
                 break;
@@ -583,6 +599,30 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetHealth(0);
                 src1.clip = yisraelHatikvah;
                 src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
+                break;
+            case "Nathan_Maryanov":
+                AstronautPlayer.speed = 22f;
+                alcoholTolerance = Nathan_Maryanov.alcTol;
+                healthBar.SetMaxHealth(baseHealth + (Nathan_Maryanov.skiingIQ / 10));
+                oxygenBar.SetMaxHealth(baseOxygen * (Nathan_Maryanov.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Nathan_Maryanov.coolness / baseDivisor));
+                xFactorBar.SetMaxHealth(2);
+                xFactorBar.SetHealth(0);
+                src1.clip = imGood;
+                src2.clip = endsOfTheEarth;
+                src3.clip = missingYou;
+                break;
+            case "Tomer":
+                AstronautPlayer.speed = 25f;
+                alcoholTolerance = Kaya_Rubinstein.alcTol;
+                healthBar.SetMaxHealth(baseHealth + (Kaya_Rubinstein.skiingIQ / 10));
+                oxygenBar.SetMaxHealth(baseOxygen * (Kaya_Rubinstein.stamina / baseDivisor));
+                heatBar.SetMaxHealth(baseHeat * (Kaya_Rubinstein.coolness / baseDivisor));
+                xFactorBar.SetMaxHealth(5);
+                xFactorBar.SetHealth(0);
+                src1.clip = yisraelHatikvah;
+                src2.clip = oldStory;
                 src3.clip = missingYou;
                 break;
             case "Portia_Carney":
@@ -694,7 +734,6 @@ public class GameManager : MonoBehaviour
             case "Lucie_Nortman":
                 xFactorsrc.clip = aww;
                 int rand = Random.Range(0, 5);
-
                 switch (rand){
                     case 0: cat.SetActive(true);
                             break;
@@ -730,7 +769,8 @@ public class GameManager : MonoBehaviour
                 israelFlag.SetActive(true);
                 xFactorsrc.clip = hatikvah;
                 Abie_Safdie.xFactor();
-                StartCoroutine(timer("Lilah_Silberman", 7f));
+                flowers();
+                StartCoroutine(timer("Lilah_Silberman", 8f));
                 break;
             case "Andy_Gitelson":
                 xFactorsrc.clip = holdMyBeer;
@@ -811,6 +851,23 @@ public class GameManager : MonoBehaviour
                 sword.SetActive(true);
                 AstronautPlayer.slaySword = true;
                 StartCoroutine(timer("Ido_Katz", 13f));
+                break;
+            case "Nathan_Maryanov":
+                xFactorsrc.clip = smoke;
+                smokeParticle.SetActive(true);
+                oxygenBar.SetHealth(oxygenBar.getMaxValue());
+                StartCoroutine(timer("Nathan_Maryanov", 8f));
+                break;
+            case "Tomer":
+                xFactorsrc.clip = bornUSA;
+                healthBar.SetHealth(healthBar.getMaxValue());
+                heatBar.SetHealth(heatBar.getMaxValue());
+                oxygenBar.SetHealth(oxygenBar.getMaxValue());
+                israelFlag2.SetActive(true);
+                usaFlag.SetActive(true);
+                gun1.SetActive(true);
+                gun2.SetActive(true);
+                StartCoroutine(timer("Tomer", 8f));
                 break;
             case "Portia_Carney":
                 rack.SetActive(true);
@@ -901,6 +958,10 @@ public class GameManager : MonoBehaviour
                     break;
             case "Lilah_Silberman":
                     israelFlag.SetActive(false);
+                    GameObject[] objs = GameObject.FindGameObjectsWithTag("beach");
+                    int c = objs.Length;
+                    for (int i = 0; i < c; i++)
+                        Destroy(objs[i]);
                     break;
             case "Rabbi_Meir":
                     astr.transform.localScale = baseSize;
@@ -927,14 +988,23 @@ public class GameManager : MonoBehaviour
                     kermitFrog.SetActive(false);
                     break;
             case "Israeli_Sasha":
-                    GameObject[] objs = GameObject.FindGameObjectsWithTag("beach");
-                    int c = objs.Length;
-                    for (int i = 0; i < c; i++)
-                        Destroy(objs[i]);
+                    GameObject[] objs2 = GameObject.FindGameObjectsWithTag("beach");
+                    int q = objs2.Length;
+                    for (int i = 0; i < q; i++)
+                        Destroy(objs2[i]);
                     break;
             case "Ido_Katz":
                     sword.SetActive(false);
                     AstronautPlayer.slaySword = false;
+                    break;
+            case "Tomer":
+                    gun1.SetActive(false);
+                    gun2.SetActive(false);
+                    israelFlag2.SetActive(false);
+                    usaFlag.SetActive(false);
+                    break;
+            case "Nathan_Maryanov":
+                    smokeParticle.SetActive(false);
                     break;
             default:
                 break;
@@ -980,6 +1050,41 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    public void flowers(){
+        r.eulerAngles = new Vector3(0f, 0f, 0f);
+        float y = 0f;
+        float z = astr.transform.position.z;
+        float scale = 10f;
+        for (int i = 0; i < 20; i++){
+            z += scale;
+            Instantiate(flower1, new Vector3(randNum(-19f, 19f), y, z + randNum(1f, 10f)), r);
+            Instantiate(flower2, new Vector3(randNum(-19f, 19f), y, z + randNum(1f, 8f)), r);
+            Instantiate(flower3, new Vector3(randNum(-19f, 19f), y, z + randNum(1f, 8f)), r);
+            Instantiate(flower4, new Vector3(randNum(-19f, 19f), y, z + randNum(1f, 8f)), r);
+            Instantiate(flower1, new Vector3(randNum(-19f, 19f), y, z + randNum(1f, 8f)), r);
+            Instantiate(flower2, new Vector3(randNum(-19f, 19f), y, z + randNum(1f, 8f)), r);
+            Instantiate(flower3, new Vector3(randNum(-19f, 19f), y, z + randNum(1f, 8f)), r);
+            Instantiate(flower4, new Vector3(randNum(-19f, 19f), y, z + randNum(1f, 8f)), r);
+
+        }
+
+    }
+
+    public float randNum(float x, float y){
+        return Random.Range(x, y);
+    }
+
+    /*
+    public IEnumerator bars(){
+
+
+
+
+
+    }
+    */
+    
 
     // Update is called once per frame
     void Update()
