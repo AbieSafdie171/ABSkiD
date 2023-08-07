@@ -3787,6 +3787,7 @@ MonoBehaviour:
   toxicMan: 0
   greece: {fileID: 210553784}
   man1: {fileID: 2858590657992640146, guid: ebc4580c7ed532b4cb07171aed640d52, type: 3}
+  m: {x: 0, y: 0, z: 0, w: 1}
   slay: {fileID: 8300000, guid: 777edaf7ce7b34fd19f534461a3ed78b, type: 3}
   sword: {fileID: 1112169468}
   smoke: {fileID: 8300000, guid: a82b9266285f44bd99a02573e2006cf2, type: 3}
@@ -11923,6 +11924,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1177653466652124920, guid: e42ccd7f408af42978506f9ea62fe7d8, type: 3}
+      propertyPath: astrP
+      value: 
+      objectReference: {fileID: 2079349193}
+    - target: {fileID: 1177653466652124920, guid: e42ccd7f408af42978506f9ea62fe7d8, type: 3}
+      propertyPath: billboard
+      value: 
+      objectReference: {fileID: 7472502358917293867, guid: 18b4e1b1ba9c1454b9116c00fc0b4103, type: 3}
     - target: {fileID: 1177653466652124920, guid: e42ccd7f408af42978506f9ea62fe7d8, type: 3}
       propertyPath: treePrefab
       value: 

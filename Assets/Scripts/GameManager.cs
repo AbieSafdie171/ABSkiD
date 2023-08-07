@@ -33,8 +33,6 @@ public class GameManager : MonoBehaviour
     public Vector3 smallSize = new Vector3(0.2f, 0.2f, 0.2f);
     public Vector3 skiSize = new Vector3(0.3f, 0.1f, 2f);
     public Vector3 largeSkiSize = new Vector3(0.3f, 0.1f, 4f);
-
-    // People Code
     
     private bool played1 = false;
     private bool played2 = false;
@@ -1098,6 +1096,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
 
     public void spawnMountain(){
         r.eulerAngles = new Vector3(0f, 0f, 0f);

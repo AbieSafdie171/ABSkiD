@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 
 public class GroundTile : MonoBehaviour
 {
@@ -11,6 +14,13 @@ public class GroundTile : MonoBehaviour
 
     // Rabbi Berel
     public static bool berel = false;
+
+    // Billboards
+    public GameObject billboard;
+    public Quaternion rot = Quaternion.identity;
+    public Material m;
+    public Material danielMoss;
+    public Material[] images;
 
 
     // Start is called before the first frame update
@@ -32,6 +42,7 @@ public class GroundTile : MonoBehaviour
             SpawnSun();
             SpawnAlcohol(false);
             SpawnOxygen();
+            SpawnBillboard();
         } else {
             SpawnTree();
             SpawnXFactor();
@@ -43,7 +54,9 @@ public class GroundTile : MonoBehaviour
             SpawnTree2();
             SpawnBranch();
             SpawnAlcohol(true);
+            SpawnBillboard();
         }
+        
         
     }
 
@@ -196,6 +209,18 @@ public class GroundTile : MonoBehaviour
         if (rand == 8){
             GameObject temp = Instantiate(oxygen, transform);
             temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+        }
+    }
+
+    public void SpawnBillboard(){
+        rot.eulerAngles = new Vector3(0f, 0f, 90f);
+        int rand = Random.Range(1, 20);
+        int qo = Random.Range(0, 24);
+        billboard.transform.GetChild(0).gameObject.GetComponent<Renderer>().sharedMaterial = images[qo];
+        if (rand == 3){
+            int index = Random.Range(41, 43);
+            Transform spawnPoint = transform.GetChild(index).transform;
+            Instantiate(billboard, spawnPoint.position, rot, transform);
         }
     }
 

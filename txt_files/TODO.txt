@@ -1,7 +1,5 @@
 TODO:
 
-	- Billboards
-
 	- Fix the inconsistencies with the slider degradation
 
 	- change skis to black for maddie
@@ -11,7 +9,7 @@ TODO:
 	- X Factors
 		Julia (JUUULLLLIIIIAAAAAAA)
 
-	- Mady Barth speed
+	- Put bears on skis
 
 
 
