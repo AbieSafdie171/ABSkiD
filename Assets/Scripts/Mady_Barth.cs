@@ -7,7 +7,7 @@ public class Mady_Barth : MonoBehaviour
     // Start is called before the first frame update
     public static int coolness = 85;
 
-    public static int speed = 15;
+    public static int speed = 99;
 
     public static int stamina = 60;
 

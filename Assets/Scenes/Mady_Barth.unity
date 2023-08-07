@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Stats: \nCoolness - 85\nSpeed - 15\nStamina - 60\nSkiing IQ - 90\nAlcohol
+  m_text: "Stats: \nCoolness - 85\nSpeed - 99\nStamina - 60\nSkiing IQ - 90\nAlcohol
     Tolerance - 50\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b0b03ebe6eade48a183d34e5d7cdcebc, type: 2}

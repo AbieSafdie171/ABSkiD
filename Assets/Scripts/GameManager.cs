@@ -196,6 +196,10 @@ public class GameManager : MonoBehaviour
 
     // Adeline Ellison
     public AudioClip mammaMia;
+    public bool toxicMan = false;
+    public GameObject greece;
+    public GameObject man1;
+    public Quaternion m = Quaternion.identity;
 
     // Ido Katz
     public AudioClip slay;
@@ -593,9 +597,9 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (Adeline_Ellison.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Adeline_Ellison.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Adeline_Ellison.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
-                src1.clip = yisraelHatikvah;
+                src1.clip = dancingQueen;
                 src2.clip = endsOfTheEarth;
                 src3.clip = missingYou;
                 break;
@@ -844,7 +848,7 @@ public class GameManager : MonoBehaviour
                 myMaterials[1].color = Color.green;
                 missPiggy.SetActive(true);
                 kermitFrog.SetActive(true);
-                StartCoroutine(timer("Danielle_Richard", 13f));
+                StartCoroutine(timer("Danielle_Richard", 9f));
                 break;
             case "Israeli_Sasha":
                 xFactorsrc.clip = smallTelAviv;
@@ -867,6 +871,11 @@ public class GameManager : MonoBehaviour
                 break;
             case "Adeline_Ellison":
                 xFactorsrc.clip = mammaMia;
+                Abie_Safdie.xFactor();
+                toxicMan = true;
+                beach();
+                greece.SetActive(true);
+                StartCoroutine(timer("Adeline_Ellison", 8f));
                 break;
             case "Ido_Katz":
                 xFactorsrc.clip = slay;
@@ -1046,6 +1055,14 @@ public class GameManager : MonoBehaviour
                     bear4.SetActive(false);
                     AstronautPlayer.slaySword = false;
                     break;
+            case "Adeline_Ellison":
+                    greece.SetActive(false);
+                    toxicMan = false;
+                    GameObject[] objs3 = GameObject.FindGameObjectsWithTag("beach");
+                        int h = objs3.Length;
+                    for (int i = 0; i < h; i++)
+                        Destroy(objs3[i]);
+                    break;
             default:
                 break;
 
@@ -1056,11 +1073,16 @@ public class GameManager : MonoBehaviour
     public void beach(){
         r.eulerAngles = new Vector3(270f, 0f, 0f);
         q.eulerAngles = new Vector3(270f, 0f, 180f);
+        m.eulerAngles = new Vector3(0f, 180f, 0f);
         float y = astr.transform.position.y;
         float z = astr.transform.position.z;
         float scale = 40f;
         for (int i = 0; i < 5; i++){
             z += scale;
+            if (toxicMan){
+                Instantiate(man1, new Vector3(14f, y, z), m);
+                Instantiate(man1, new Vector3(-14f, y, z), m);
+            }
             Instantiate(palmTree, new Vector3(20f, y, z), r);
             Instantiate(palmTree, new Vector3(-20f, y, z), r);
             Instantiate(beachBoard, new Vector3(19f, y, z), r);
