@@ -998,6 +998,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a73c6a67c3eb9491d8b324c062c4273c, type: 2}
   - {fileID: 2100000, guid: 6c2ed7a0a9e4549d6a7bddcc37ce38e2, type: 2}
   - {fileID: 2100000, guid: f735a414a79fb46c8919790dc54001d8, type: 2}
+  - {fileID: 2100000, guid: 5aa5262581d054acb8bf936ddb138145, type: 2}
+  - {fileID: 2100000, guid: eaf8b340a25b04669b7936ea913bc65c, type: 2}
+  - {fileID: 2100000, guid: ef7c0d7ff8dc84faba8a5d7bdbe0d29f, type: 2}
   treePrefab: {fileID: 5195130642784693445, guid: f5df276ca8db56049849b11899004d48, type: 3}
   trunkPrefab: {fileID: 1595964372670622283, guid: 6003346dae61b9c4da33e7f1e6b46882, type: 3}
   rockPrefab: {fileID: 162886, guid: 8d4ad672fe2bd3d45872cc5259ceb393, type: 3}

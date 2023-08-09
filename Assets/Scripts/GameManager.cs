@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
     private bool played2 = false;
     private bool played3 = false;
 
+    public bool fixBars = false;
+
     public AudioSource src1;
     public AudioSource src2;
     public AudioSource src3;
@@ -50,11 +52,14 @@ public class GameManager : MonoBehaviour
     public AudioClip missingYou;
     public AudioClip niceBoy;
     public GameObject njb;
+    public GameObject girl;
+    public GameObject redHeart;
 
     // Up for Grabs!
     public AudioClip danceNight;
     public AudioClip holdingHero;
     public AudioClip danceWithSomebody;
+    public AudioClip paradise;
 
     // Lilah Silberman
     public AudioClip escargotBlues;
@@ -124,6 +129,7 @@ public class GameManager : MonoBehaviour
     // Sasha Kaplow
     public AudioClip rainbow;
     public GameObject rainbowObject;
+    public AudioClip heather;
 
     // Lilah Silberman
     public GameObject israelFlag;
@@ -220,6 +226,7 @@ public class GameManager : MonoBehaviour
     public GameObject bear2;
     public GameObject bear3;
     public GameObject bear4;
+    public GameObject bear5;
 
 
 
@@ -258,9 +265,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Abie_Safdie.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
-                src1.clip = endsOfTheEarth;
-                src2.clip = stellaBrown;
-                src3.clip = missingYou;
+                src1.clip = stellaBrown;
+                src2.clip = endsOfTheEarth;
+                src3.clip = paradise;
                 break;
             case "Daniel_Moss":
                 AstronautPlayer.speed = 24f;
@@ -270,8 +277,8 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (Daniel_Moss.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Daniel_Moss.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Daniel_Moss.coolness / baseDivisor));
-                src1.clip = endsOfTheEarth;
-                src2.clip = endsOfTheEarth;
+                src1.clip = telAviv;
+                src2.clip = theLoneliest;
                 src3.clip = endsOfTheEarth;
                 break;
             case "Sasha_Kaplow":
@@ -280,10 +287,10 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (Sasha_Kaplow.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Sasha_Kaplow.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Sasha_Kaplow.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(5);
+                xFactorBar.SetMaxHealth(6);
                 xFactorBar.SetHealth(0);
-                src1.clip = telAviv;
-                src2.clip = dancingQueen;
+                src1.clip = heather;
+                src2.clip = cigaretteDaydreams;
                 src3.clip = telAviv;
                 break;
             case "Jordan_Zicklin":
@@ -331,7 +338,7 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
                 src1.clip = dancingQueen;
-                src2.clip = telAviv;
+                src2.clip = danceNight;
                 src3.clip = telAviv;
                 break;
             case "Maddie_Studer":
@@ -354,9 +361,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Mady_Barth.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
-                src1.clip = lisztomania;
-                src2.clip = endsOfTheEarth;
-                src3.clip = missingYou;
+                src1.clip = imGood;
+                src2.clip = umbrella;
+                src3.clip = dancingQueen;
                 break;
             case "Alex_Malve":
                 AstronautPlayer.speed = 22f;
@@ -367,7 +374,7 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetMaxHealth(2);
                 xFactorBar.SetHealth(0);
                 src1.clip = endsOfTheEarth;
-                src2.clip = endsOfTheEarth;
+                src2.clip = missingYou;
                 src3.clip = endsOfTheEarth;
                 break;
             case "Jordan_Cooper":
@@ -390,9 +397,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Kaya_Rubinstein.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
-                src1.clip = yisraelHatikvah;
-                src2.clip = endsOfTheEarth;
-                src3.clip = endsOfTheEarth;
+                src1.clip = oldStory;
+                src2.clip = telAviv;
+                src3.clip = cigaretteDaydreams;
                 break;
             case "Lucie_Nortman":
                 AstronautPlayer.speed = 25f;
@@ -671,6 +678,8 @@ public class GameManager : MonoBehaviour
 
         hillelian = HowToPlay.getCharacter();
 
+        fixBars = true;
+
         currentHealth = healthBar.GetCurrentHealth();
         float xOxygen = oxygenBar.GetCurrentHealth();
         float xHeat = heatBar.GetCurrentHealth();
@@ -684,8 +693,9 @@ public class GameManager : MonoBehaviour
             case "Abie_Safdie":
                 Abie_Safdie.xFactor();
                 xFactorsrc.clip = niceBoy;
+                girls();
                 njb.SetActive(true);
-                StartCoroutine(timer("Abie_Safdie", 6f));
+                StartCoroutine(timer("Abie_Safdie", 8f));
                 break;
             case "Daniel_Moss":
                 xFactorsrc.clip = hinneni;
@@ -708,6 +718,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Julia_Frank":
                 Debug.Log("Julia");
+                fixBars = false;
                 // xFactorsrc.clip = juliaaa;
                 break;
             case "Jonah_Kaplan":
@@ -730,14 +741,15 @@ public class GameManager : MonoBehaviour
                 } else {
                     heatBar.SetHealth(heatBar.getMaxValue());
                 }
+                fixBars = false;
                 break;
             case "Maddie_Studer":
                 xFactorsrc.clip = bubbles;
                 leftSki.transform.localScale = largeSkiSize;
                 rightSki.transform.localScale = largeSkiSize;
-                StartCoroutine(timer("Maddie_Studer", 10f));
                 oxygenBar.SetHealth(oxygenBar.getMaxValue());
                 heatBar.SetHealth(heatBar.getMaxValue());
+                StartCoroutine(timer("Maddie_Studer", 10f));
                 break;
             case "Mady_Barth":
                 tempName = Mady_Barth.xFactor();
@@ -747,14 +759,17 @@ public class GameManager : MonoBehaviour
             case "Alex_Malve":
                 xFactorsrc.clip = fireSound;
                 heatBar.SetHealth(heatBar.getMaxValue());
+                fixBars = false;
                 break;
             case "Jordan_Cooper":
                 xFactorsrc.clip = myLeg;
                 AstronautPlayer.speed -= 3f;
+                fixBars = false;
                 break;
             case "Kaya_Rubinstein":
                 xFactorsrc.clip = tickTock;
                 AstronautPlayer.speed -= 1f;
+                fixBars = false;
                 break;
             case "Lucie_Nortman":
                 xFactorsrc.clip = aww;
@@ -800,14 +815,17 @@ public class GameManager : MonoBehaviour
             case "Andy_Gitelson":
                 xFactorsrc.clip = holdMyBeer;
                 Andy_Gitelson.xFactor();
+                fixBars = false;
                 break;
             case "Ella_Diamond":
                 xFactorsrc.clip = science;
                 oxygenBar.SetHealth(oxygenBar.getMaxValue());
+                fixBars = false;
                 break;
             case "Chloe_Gold":
                 xFactorsrc.clip = tieSound;
                 Chloe_Gold.xFactor(astr.transform.position);
+                fixBars = false;
                 break;
             case "Rabbi_Berel":
                 xFactorsrc.clip = hinneni;
@@ -824,6 +842,7 @@ public class GameManager : MonoBehaviour
             case "Roy_Wonder":
                 xFactorsrc.clip = ktichenNoises;
                 Roy_Wonder.xFactor(astr.transform.position);
+                fixBars = false;
                 break;
             case "Lucinda_Smith":
                 xFactorsrc.clip = ghostSfx;
@@ -906,6 +925,8 @@ public class GameManager : MonoBehaviour
                 bear2.SetActive(true);
                 bear3.SetActive(true);
                 bear4.SetActive(true);
+                bear5.SetActive(true);
+                astrBody.SetActive(false);
                 onSign.SetActive(true);
                 StartCoroutine(timer("Emma_Healy", 13f));
                 break;
@@ -968,33 +989,45 @@ public class GameManager : MonoBehaviour
         switch(p){
             case "Abie_Safdie":
                     njb.SetActive(false);
+                    fixBars = false;
+                    GameObject[] objs5 = GameObject.FindGameObjectsWithTag("beach");
+                    int g = objs5.Length;
+                    for (int i = 0; i < g; i++)
+                        Destroy(objs5[i]);
                     break;
             case "Daniel_Moss":
                     AstronautPlayer.danielAlcohol = false;
+                    fixBars = false;
                     break;
             case "Hannah_Abikzer":
                     fran.SetActive(false);
                     person.size = personBaseSize;
                     AstronautPlayer.fran = false;
+                    fixBars = false;
                     break;
             case "Jonah_Kaplan":
                     judith.SetActive(false);
                     person.size = personBaseSize;
                     AstronautPlayer.fran = false;
+                    fixBars = false;
                     break;
             case "Jacque_Velasco":
                     AstronautPlayer.jacquePickup = false;
+                    fixBars = false;
                     break;
             case "Jordan_Zicklin":
                     AstronautPlayer.dadBod = false;
                     astr.transform.localScale = baseSize;
+                    fixBars = false;
                     break;
             case "Lucinda_Smith":
                     astrBody.SetActive(true);
                     AstronautPlayer.ghoster = false;
+                    fixBars = false;
                     break;
             case "Sasha_Kaplow":
                     rainbowObject.SetActive(false);
+                    fixBars = false;
                     break;
             case "Lilah_Silberman":
                     israelFlag.SetActive(false);
@@ -1002,6 +1035,7 @@ public class GameManager : MonoBehaviour
                     int c = objs.Length;
                     for (int i = 0; i < c; i++)
                         Destroy(objs[i]);
+                    fixBars = false;
                     break;
             case "Rabbi_Meir":
                     astr.transform.localScale = baseSize;
@@ -1012,13 +1046,16 @@ public class GameManager : MonoBehaviour
                     cat.SetActive(false);
                     cat4.SetActive(false);
                     cat5.SetActive(false);
+                    fixBars = false;
                     break;
             case "Portia_Carney":
                     rack.SetActive(false);
+                    fixBars = false;
                     break;
             case "Maddie_Studer":
                     leftSki.transform.localScale = skiSize;
                     rightSki.transform.localScale = skiSize;
+                    fixBars = false;
                     break;
             case "Danielle_Richard":
                     israelFlag.SetActive(false);
@@ -1026,32 +1063,40 @@ public class GameManager : MonoBehaviour
                     myMaterials[1].color = baseColor1;
                     missPiggy.SetActive(false);
                     kermitFrog.SetActive(false);
+                    fixBars = false;
                     break;
             case "Israeli_Sasha":
                     GameObject[] objs2 = GameObject.FindGameObjectsWithTag("beach");
                     int q = objs2.Length;
                     for (int i = 0; i < q; i++)
                         Destroy(objs2[i]);
+                    fixBars = false;
                     break;
             case "Ido_Katz":
                     sword.SetActive(false);
                     AstronautPlayer.slaySword = false;
+                    fixBars = false;
                     break;
             case "Tomer":
                     gun1.SetActive(false);
                     gun2.SetActive(false);
                     israelFlag2.SetActive(false);
                     usaFlag.SetActive(false);
+                    fixBars = false;
                     break;
             case "Nathan_Maryanov":
                     smokeParticle.SetActive(false);
+                    fixBars = false;
                     break;
             case "Emma_Healy":
                     bear1.SetActive(false);
                     bear2.SetActive(false);
                     bear3.SetActive(false);
                     bear4.SetActive(false);
+                    bear5.SetActive(false);
                     AstronautPlayer.slaySword = false;
+                    astrBody.SetActive(true);
+                    fixBars = false;
                     break;
             case "Adeline_Ellison":
                     greece.SetActive(false);
@@ -1060,8 +1105,10 @@ public class GameManager : MonoBehaviour
                         int h = objs3.Length;
                     for (int i = 0; i < h; i++)
                         Destroy(objs3[i]);
+                    fixBars = false;
                     break;
             default:
+                fixBars = false;
                 break;
 
         }
@@ -1097,6 +1144,8 @@ public class GameManager : MonoBehaviour
 
     }
 
+    
+
 
     public void spawnMountain(){
         r.eulerAngles = new Vector3(0f, 0f, 0f);
@@ -1108,6 +1157,23 @@ public class GameManager : MonoBehaviour
             Instantiate(mountain, new Vector3(20f, y, z), r);
             Instantiate(mountain, new Vector3(-20f, y, z), r);
 
+        }
+
+    }
+
+    public void girls(){
+        r.eulerAngles = new Vector3(0f, 90f, 0f);
+        q.eulerAngles = new Vector3(0f, 270f, 0f);
+        m.eulerAngles = new Vector3(270f, 0f, 90f);
+        float y = 0f;
+        float z = astr.transform.position.z;
+        float scale = 20f;
+        for (int i = 0; i < 10; i++){
+            z += scale;
+            Instantiate(girl, new Vector3(-19f, y, z), r);
+            Instantiate(girl, new Vector3(19f, y, z), q);
+            Instantiate(redHeart, new Vector3(-19f, y + 6, z), m);
+            Instantiate(redHeart, new Vector3(19f, y + 6, z), m);
         }
 
     }
@@ -1153,7 +1219,8 @@ public class GameManager : MonoBehaviour
         
         float currentOxygen = oxygenBar.GetCurrentHealth();
 
-        currentOxygen -= (59 * Time.deltaTime);
+        if (!fixBars)
+            currentOxygen -= (59 * Time.deltaTime);
 
         // Debug.Log(astr.transform.position.x);
 
@@ -1165,7 +1232,8 @@ public class GameManager : MonoBehaviour
 
         float currentHeat = heatBar.GetCurrentHealth();
 
-        currentHeat -= (59 * Time.deltaTime);
+        if (!fixBars)
+            currentHeat -= (59 * Time.deltaTime);
 
         heatBar.SetHealth(currentHeat);
 

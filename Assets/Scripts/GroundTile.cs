@@ -215,7 +215,7 @@ public class GroundTile : MonoBehaviour
     public void SpawnBillboard(){
         rot.eulerAngles = new Vector3(0f, 0f, 90f);
         int rand = Random.Range(1, 20);
-        int qo = Random.Range(0, 24);
+        int qo = Random.Range(0, 27);
         billboard.transform.GetChild(0).gameObject.GetComponent<Renderer>().sharedMaterial = images[qo];
         if (rand == 3){
             int index = Random.Range(41, 43);

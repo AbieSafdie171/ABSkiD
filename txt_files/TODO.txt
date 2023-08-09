@@ -2,18 +2,12 @@ TODO:
 
 	- Fix the inconsistencies with the slider degradation
 
-	- change skis to black for maddie
-
-	- make heels for ollie?
-
 	- X Factors
 		Julia (JUUULLLLIIIIAAAAAAA)
-
-	- Put bears on skis
-
-
-
 		
+	- Put bear in middle for emma
+
+
 33 total Characters (32 + 1)
 
 Finished! :)
@@ -24,17 +18,17 @@ Finished! :)
 	Hannah
 	Danielle
 	Jonah (missing 2 songs)
-	Romie (missing 2 songs)
+	Romie
 	Bri (missing 3 songs)
-	Alex (missing 3 songs)
-	D$ (missing 3 songs)
+	Alex (missing 1 songs)
+	D$ (missing 1 song)
 	Jacque (missing 3 songs)
 	Jordan (missing 2 songs)
 	Lucinda (missing 3 songs)
 	Chloe (missing 3 songs)
-	Mady (missing 3 songs)
+	Mady (missing 1 songs)
 	Roy (missing 3 songs) {could improve functionality if i want -- stacking, cloning a clone of a clone causes issues (name changes, height, etc)}
-	Sasha (missing 3 songs)
+	Sasha (missing 1 songs)
 	Rabbi Meir (missing 2 songs)
 	Kaya (missing 3 songs)
 	JCoop (missing 3 songs)
