@@ -27,19 +27,19 @@ Finished! :)
 	Israeli Sasha
 	Tomer
 	Jordan
-	Jonah (missing 2 songs)
-	Jacque (missing 1 song)
-	Lucinda (missing 1 songs)
-	Chloe (missing 3 songs)
-	Roy (missing 2 songs)
-	Sasha (missing 1 song)
-	JCoop (missing 3 songs)
-	Andy (missing 2 songs)
-	Portia (missing 3 songs)
-	Studer (missing 3 songs)
-	Ollie Goldstein (missing 3 songs)
-	Emma (missing 3 songs)
-	Adeline Ellison (missing 2 songs)
+	Andy
+	Jacque
+	Lucinda
+	Studer
+	Sasha
+	Roy
+	Chloe
+	Ollie Goldstein
+	Jonah
+	JCoop
+	Portia
+	Emma
+	Adeline Ellison
 
 
 // My Highest Score: 141368 as Kaya

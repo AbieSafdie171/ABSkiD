@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     public GameObject judith;
 
     // Julia Frank
-        // public AudioClip juliaaa;
+    public AudioClip happyTrails;
 
     // Romie Avivi
     public AudioClip telAviv;
@@ -153,6 +153,7 @@ public class GameManager : MonoBehaviour
 
     // Andy Gitelson
     public AudioClip holdMyBeer;
+    public AudioClip comingHome;
 
     // Lucie Nortman
     public GameObject cat;
@@ -165,6 +166,7 @@ public class GameManager : MonoBehaviour
     // Portia Carney
     public GameObject rack;
     public AudioClip niceRack;
+    public AudioClip feeling22;
 
     // Maddie Studer
     public AudioClip bubbles;
@@ -295,7 +297,7 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetHealth(0);
                 src1.clip = heather;
                 src2.clip = cigaretteDaydreams;
-                src3.clip = telAviv;
+                src3.clip = fearForNobody;
                 break;
             case "Jordan_Zicklin":
                 AstronautPlayer.speed = 25f;
@@ -311,15 +313,16 @@ public class GameManager : MonoBehaviour
                 break;
             case "Julia_Frank":
                 AstronautPlayer.speed = 22f;
+                AstronautPlayer.danielAlcohol = true;
                 alcoholTolerance = Julia_Frank.alcTol;
                 healthBar.SetMaxHealth(baseHealth + (Julia_Frank.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Julia_Frank.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Julia_Frank.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(1);
                 xFactorBar.SetHealth(0);
-                src1.clip = rockyMountainHigh;
-                src2.clip = endsOfTheEarth;
-                src3.clip = missingYou;
+                src1.clip = happyTrails;
+                src2.clip = happyTrails;
+                src3.clip = happyTrails;
                 break;
             case "Jonah_Kaplan":
                 AstronautPlayer.speed = 23f;
@@ -330,8 +333,8 @@ public class GameManager : MonoBehaviour
                 oxygenBar.SetMaxHealth(baseOxygen * (Jonah_Kaplan.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Jonah_Kaplan.coolness / baseDivisor));
                 src1.clip = dontStopBelieving;
-                src2.clip = theLoneliest;
-                src3.clip = escargotBlues;
+                src2.clip = passengers;
+                src3.clip = danceNight;
                 break;
             case "Romie_Avivi":
                 AstronautPlayer.speed = 25f;
@@ -343,7 +346,7 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetHealth(0);
                 src1.clip = dancingQueen;
                 src2.clip = danceNight;
-                src3.clip = telAviv;
+                src3.clip = danceWithSomebody;
                 break;
             case "Maddie_Studer":
                 AstronautPlayer.speed = 22f;
@@ -353,9 +356,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Maddie_Studer.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(2);
                 xFactorBar.SetHealth(0);
-                src1.clip = dancingQueen;
-                src2.clip = telAviv;
-                src3.clip = telAviv;
+                src1.clip = danceWithSomebody;
+                src2.clip = dancingQueen;
+                src3.clip = danceNight;
                 break;
             case "Mady_Barth":
                 AstronautPlayer.speed = 25f;
@@ -389,9 +392,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Jordan_Cooper.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(11);
                 xFactorBar.SetHealth(0);
-                src1.clip = umbrella;
-                src2.clip = endsOfTheEarth;
-                src3.clip = endsOfTheEarth;
+                src1.clip = dontStopBelieving;
+                src2.clip = the505;
+                src3.clip = lisztomania;
                 break;
             case "Kaya_Rubinstein":
                 AstronautPlayer.speed = 25f;
@@ -427,7 +430,7 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetHealth(0);
                 src1.clip = rockyMountainHigh;
                 src2.clip = the505;
-                src3.clip = endsOfTheEarth;
+                src3.clip = passengers;
                 break;
             case "Hannah_Abikzer":
                 AstronautPlayer.speed = 23f;
@@ -461,9 +464,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Andy_Gitelson.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
-                src1.clip = surfinUSA;
-                src2.clip = imGood;
-                src3.clip = countOnMe;
+                src1.clip = comingHome;
+                src2.clip = surfinUSA;
+                src3.clip = dontStopBelieving;
                 break;
             case "Ella_Diamond":
                 AstronautPlayer.speed = 21f;
@@ -485,9 +488,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Chloe_Gold.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(5);
                 xFactorBar.SetHealth(0);
-                src1.clip = endsOfTheEarth;
-                src2.clip = endsOfTheEarth;
-                src3.clip = endsOfTheEarth;
+                src1.clip = heather;
+                src2.clip = escargotBlues;
+                src3.clip = cigaretteDaydreams;
                 break;
             case "Rabbi_Berel":
                 AstronautPlayer.speed = 24f;
@@ -523,8 +526,8 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
                 src1.clip = lisztomania;
-                src2.clip = endsOfTheEarth;
-                src3.clip = holdingHero;
+                src2.clip = dontStopBelieving;
+                src3.clip = rainbowConnections;
                 break;
             case "Lucinda_Smith":
                 AstronautPlayer.speed = 25f;
@@ -536,7 +539,7 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetHealth(0);
                 src1.clip = the505;
                 src2.clip = countOnMe;
-                src3.clip = endsOfTheEarth;
+                src3.clip = comingHome;
                 break;
             case "Rabbi_Meir":
                 AstronautPlayer.speed = 24f;
@@ -584,9 +587,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Ollie_Goldstein.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(3);
                 xFactorBar.SetHealth(0);
-                src1.clip = endsOfTheEarth;
-                src2.clip = endsOfTheEarth;
-                src3.clip = missingYou;
+                src1.clip = danceWithSomebody;
+                src2.clip = rainbowConnections;
+                src3.clip = endsOfTheEarth;
                 break;
             case "Analise_Levy":
                 AstronautPlayer.speed = 23f;
@@ -609,8 +612,8 @@ public class GameManager : MonoBehaviour
                 xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
                 src1.clip = dancingQueen;
-                src2.clip = endsOfTheEarth;
-                src3.clip = missingYou;
+                src2.clip = feeling22;
+                src3.clip = passengers;
                 break;
             case "Ido_Katz":
                 AstronautPlayer.speed = 23f;
@@ -656,9 +659,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (70 / baseDivisor));
                 xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
-                src1.clip = yisraelHatikvah;
-                src2.clip = oldStory;
-                src3.clip = missingYou;
+                src1.clip = coastline;
+                src2.clip = feeling22;
+                src3.clip = passengers;
                 break;
             case "Portia_Carney":
                 AstronautPlayer.speed = 23f;
@@ -668,9 +671,9 @@ public class GameManager : MonoBehaviour
                 heatBar.SetMaxHealth(baseHeat * (Portia_Carney.coolness / baseDivisor));
                 xFactorBar.SetMaxHealth(2);
                 xFactorBar.SetHealth(0);
-                src1.clip = yisraelHatikvah;
-                src2.clip = endsOfTheEarth;
-                src3.clip = missingYou;
+                src1.clip = feeling22;
+                src2.clip = countOnMe;
+                src3.clip = passengers;
                 break;
             default:
                 break;
