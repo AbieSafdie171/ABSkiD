@@ -1,11 +1,7 @@
 TODO:
 
-	- Fix the inconsistencies with the slider degradation
-
 	- X Factors
 		Julia (JUUULLLLIIIIAAAAAAA)
-		
-	- Put bear in middle for emma
 
 
 33 total Characters (32 + 1)
@@ -17,31 +13,31 @@ Finished! :)
 	Ella
 	Hannah
 	Danielle
-	Jonah (missing 2 songs)
+	Lucie
 	Romie
-	Bri (missing 3 songs)
-	Alex (missing 1 songs)
-	D$ (missing 1 song)
-	Jacque (missing 3 songs)
-	Jordan (missing 2 songs)
-	Lucinda (missing 3 songs)
+	Analise Levy
+	Alex
+	D$
+	Bri
+	Kaya
+	Nathan
+	Mady
+	Rabbi Meir
+	Ido Katz
+	Israeli Sasha
+	Tomer
+	Jordan
+	Jonah (missing 2 songs)
+	Jacque (missing 1 song)
+	Lucinda (missing 1 songs)
 	Chloe (missing 3 songs)
-	Mady (missing 1 songs)
-	Roy (missing 3 songs) {could improve functionality if i want -- stacking, cloning a clone of a clone causes issues (name changes, height, etc)}
-	Sasha (missing 1 songs)
-	Rabbi Meir (missing 2 songs)
-	Kaya (missing 3 songs)
+	Roy (missing 2 songs)
+	Sasha (missing 1 song)
 	JCoop (missing 3 songs)
-	Andy (missing 3 songs)
-	Lucie (missing 3 songs)
+	Andy (missing 2 songs)
 	Portia (missing 3 songs)
 	Studer (missing 3 songs)
-	Ido (missing 2 songs)
-	Israeli Sasha (missing 1 song)
 	Ollie Goldstein (missing 3 songs)
-	Analise Levy (missing 2 songs)(coastline)
-	Tomer (missing 1 song)
-	Nathan (missing 3 songs)
 	Emma (missing 3 songs)
 	Adeline Ellison (missing 2 songs)
 
