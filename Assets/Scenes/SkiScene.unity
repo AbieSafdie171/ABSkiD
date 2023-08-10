@@ -4290,7 +4290,7 @@ MonoBehaviour:
   kermitFrog: {fileID: 1114783228}
   smallTelAviv: {fileID: 8300000, guid: 91983721ca91743eca376f63c41d45f8, type: 3}
   oldStory: {fileID: 8300000, guid: 256bada7c76564129bf48ff4fca1091c, type: 3}
-  omerAdam: {fileID: 0}
+  omerAdam: {fileID: 8300000, guid: 050449062e7054870a9c7b28904fa4cd, type: 3}
   palmTree: {fileID: 145482, guid: 92336f8221072014b9384707cb0c760d, type: 3}
   beachUmbrella: {fileID: 114406, guid: 886eefee3f1e684479b243de8309234a, type: 3}
   beachChair: {fileID: 148536, guid: 608c04c30b867ef42aa668cfc10f8c75, type: 3}
