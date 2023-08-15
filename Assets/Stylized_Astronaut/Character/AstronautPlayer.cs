@@ -58,7 +58,7 @@ using UnityEngine.SceneManagement;
 			anim = gameObject.GetComponentInChildren<Animator>();
 		}
 
-		void Update (){
+		void FixedUpdate (){
 
 			if(controller.isGrounded){
 				moveDirection = transform.forward * speed;
@@ -198,13 +198,10 @@ using UnityEngine.SceneManagement;
 				cHealth4 += increase;
 				oxygenBar.SetHealth(cHealth4);
 
-				GameManager.increaseScore(500);
-
 			}
 
 			if (other.gameObject.name == "Alcohol(Clone)" || other.gameObject.name == "Alcohol(Clone)(Clone)")
 			{
-				GameManager.increaseScore(250);
 
 				float tol = (float)GameManager.alcoholTolerance;
 

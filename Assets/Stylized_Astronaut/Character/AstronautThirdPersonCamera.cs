@@ -50,7 +50,6 @@ using UnityEngine;
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
         camTransform.position = lookAt.position + rotation * dir;
         camTransform.LookAt(lookAt.position);
-        // Debug.Log(camTransform.position);
     }
 
 

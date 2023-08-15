@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public int currentHealth;
     public static float score;
     public float scoreLevel = 5000f;
-    public float time;
+    public float timeValue;
     public static GameManager inst;
     public TMP_Text scoreText;
     public TMP_Text chosenPlayer;
@@ -88,7 +88,10 @@ public class GameManager : MonoBehaviour
 
     // Julia Frank
     public AudioClip happyTrails;
-        // public AudioClip juliaaa;
+    public AudioClip wayToGo;
+    public GameObject bat;
+    public GameObject soccer1;
+    public GameObject soccer2;
 
     // Romie Avivi
     public AudioClip telAviv;
@@ -243,11 +246,7 @@ public class GameManager : MonoBehaviour
     }
 
     public static float getScore(){
-        return score;
-    }
-
-    public static void increaseScore(int x){
-        score += x;
+        return Mathf.Round(score);
     }
 
     public void setValues(){
@@ -319,7 +318,7 @@ public class GameManager : MonoBehaviour
                 healthBar.SetMaxHealth(baseHealth + (Julia_Frank.skiingIQ / 10));
                 oxygenBar.SetMaxHealth(baseOxygen * (Julia_Frank.stamina / baseDivisor));
                 heatBar.SetMaxHealth(baseHeat * (Julia_Frank.coolness / baseDivisor));
-                xFactorBar.SetMaxHealth(1);
+                xFactorBar.SetMaxHealth(4);
                 xFactorBar.SetHealth(0);
                 src1.clip = happyTrails;
                 src2.clip = happyTrails;
@@ -725,9 +724,14 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(timer("Jordan_Zicklin", 15f));
                 break;
             case "Julia_Frank":
-                Debug.Log("Julia");
-                fixBars = false;
-                // xFactorsrc.clip = juliaaa;
+                xFactorsrc.clip = wayToGo;
+                healthBar.SetHealth(healthBar.getMaxValue());
+                heatBar.SetHealth(heatBar.getMaxValue());
+                oxygenBar.SetHealth(oxygenBar.getMaxValue());
+                bat.SetActive(true);
+                soccer1.SetActive(true);
+                soccer2.SetActive(true);
+                StartCoroutine(timer("Julia_Frank", 6f));
                 break;
             case "Jonah_Kaplan":
                 xFactorsrc.clip = georgia;
@@ -846,6 +850,7 @@ public class GameManager : MonoBehaviour
                 xFactorsrc.clip = fallingInLove;
                 heatBar.SetHealth(heatBar.getMaxValue());
                 healthBar.SetHealth(healthBar.getMaxValue());
+                fixBars = false;
                 break;
             case "Roy_Wonder":
                 xFactorsrc.clip = ktichenNoises;
@@ -975,6 +980,7 @@ public class GameManager : MonoBehaviour
         sword.SetActive(false);
         GroundTile.berel = false;
         AstronautPlayer.speed = 25f;
+        fixBars = false;
         setValues();
         score = 0;
 
@@ -997,11 +1003,11 @@ public class GameManager : MonoBehaviour
         switch(p){
             case "Abie_Safdie":
                     njb.SetActive(false);
-                    fixBars = false;
                     GameObject[] objs5 = GameObject.FindGameObjectsWithTag("beach");
                     int g = objs5.Length;
                     for (int i = 0; i < g; i++)
                         Destroy(objs5[i]);
+                    fixBars = false;
                     break;
             case "Daniel_Moss":
                     AstronautPlayer.danielAlcohol = false;
@@ -1047,6 +1053,7 @@ public class GameManager : MonoBehaviour
                     break;
             case "Rabbi_Meir":
                     astr.transform.localScale = baseSize;
+                    fixBars = false;
                     break;
             case "Lucie_Nortman":
                     cuteCat.SetActive(false);
@@ -1113,6 +1120,12 @@ public class GameManager : MonoBehaviour
                         int h = objs3.Length;
                     for (int i = 0; i < h; i++)
                         Destroy(objs3[i]);
+                    fixBars = false;
+                    break;
+            case "Julia_Frank":
+                    bat.SetActive(false);
+                    soccer1.SetActive(false);
+                    soccer2.SetActive(false);
                     fixBars = false;
                     break;
             default:
@@ -1210,73 +1223,66 @@ public class GameManager : MonoBehaviour
         return Random.Range(x, y);
     }
 
-    /*
-    public IEnumerator bars(){
-
-
-
-
-
-    }
-    */
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        float currentOxygen = oxygenBar.GetCurrentHealth();
-
-        if (!fixBars)
-            currentOxygen -= (59 * Time.deltaTime);
-
-        // Debug.Log(astr.transform.position.x);
-
-        oxygenBar.SetHealth(currentOxygen);
-
-        if (oxygenBar.GetCurrentHealth() == 0){
-				SceneManager.LoadScene("OxygenDeath");
-			}
-
-        float currentHeat = heatBar.GetCurrentHealth();
-
-        if (!fixBars)
-            currentHeat -= (59 * Time.deltaTime);
-
-        heatBar.SetHealth(currentHeat);
-
-        if (heatBar.GetCurrentHealth() == 0){
-				SceneManager.LoadScene("ColdDeath");
-			}
-
-        time = (Time.deltaTime * 100);
-
-        counter += Time.deltaTime;
-
-        score += time;
-
-        score = Mathf.Round(score);
-
-        if (score >= scoreLevel){
-            AstronautPlayer.speed += 2;
-            // Debug.Log(AstronautPlayer.speed);
-            scoreLevel += 5000f;
-        }
-
-        scoreText.text = "SCORE: " + score;
-
-
+    void Update(){
         if (Input.GetKeyDown("space"))
         {
             int max = xFactorBar.getMaxValue();
             int cur = xFactorBar.GetCurrentHealth();
-            if(cur == max){
+            if (cur == max){
                 getXFactor();
                 xFactorsrc.Play();
                 xFactorBar.SetHealth(0);
             } 
         }
+    }
+    
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+    
+        counter += Time.deltaTime;
 
+        float currentOxygen = oxygenBar.GetCurrentHealth();
+        float currentHeat = heatBar.GetCurrentHealth();
+
+        if (!fixBars && counter >= 0.5f){
+            counter = 0f;
+            currentOxygen -= 7;
+            currentHeat -= 7;
+            }
+
+        oxygenBar.SetHealth(currentOxygen);
+        heatBar.SetHealth(currentHeat);
+
+        if (oxygenBar.GetCurrentHealth() == 0){
+				SceneManager.LoadScene("OxygenDeath");
+			}            
+
+        if (heatBar.GetCurrentHealth() == 0){
+				SceneManager.LoadScene("ColdDeath");
+			}
+
+        score += (Time.deltaTime * 140);
+
+        if (score >= scoreLevel){
+            AstronautPlayer.speed += 2;
+            scoreLevel += 5000f;
+        }
+
+        scoreText.text = "SCORE: " + score.ToString("0");
+
+        /*
+        if (Input.GetKeyDown("space"))
+        {
+            int max = xFactorBar.getMaxValue();
+            int cur = xFactorBar.GetCurrentHealth();
+            if (cur == max){
+                getXFactor();
+                xFactorsrc.Play();
+                xFactorBar.SetHealth(0);
+            } 
+        }
+        */
         
         if (!src1.isPlaying && !played1 && !src3.isPlaying){
             src1.Play();
